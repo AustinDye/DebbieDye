@@ -28,9 +28,16 @@
       </div>
 
       <div
-        class="col-12 text-center bg-secondary second position-absolute second-section"
+        class="
+          col-12
+          text-center
+          bg-secondary
+          second
+          position-absolute
+          second-section
+        "
       >
-        <h1>loremlorem</h1>
+        <h1>Glabglogabgalab</h1>
       </div>
     </div>
   </div>
