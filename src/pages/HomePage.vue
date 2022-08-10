@@ -5,11 +5,28 @@
 
     <!--Top SECTION-->
 
+    <div class="col-md-12 bg-primary blue-2 d-flex p-0">
+      <img
+        class="img-fluid"
+        src="src/assets/img/Screen Shot 2022-08-10 at 5.36.51 PM.png"
+        alt=""
+      />
+      <div class="position-absolute word-wrapper">
+        <h1>Hello World</h1>
+        <h5>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ipsa
+          tempore repellat repudiandae ut aperiam atque molestias fuga dolorem
+          dolor dolorum odit, totam doloribus nam delectus! Deleniti molestias
+          soluta aliquid.
+        </h5>
+      </div>
+    </div>
+
     <div class="col-md-6 bg-primary blue d-flex p-0">
       <div class="angle-other-3 position-absolute"></div>
       <div class="angle-other-2 position-absolute"></div>
       <div class="angle-other-4 position-absolute"></div>
-      <div class="position-absolute word-wrapper">
+      <div class="">
         <h1>Hello World</h1>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ipsa
@@ -19,7 +36,7 @@
         </p>
       </div>
     </div>
-    <!--About SECTION-->
+
     <div class="col-md-6 d-flex p-0">
       <div class="angle3 position-absolute"></div>
       <div class="angle2 position-absolute"></div>
@@ -31,29 +48,8 @@
         alt=""
       />
     </div>
+    <!--About SECTION-->
 
-    <div class="col-md-6 d-flex p-0">
-      <div class="angle-other-3 position-absolute"></div>
-      <div class="angle-other-2 position-absolute"></div>
-      <div class="angle-other-4 position-absolute"></div>
-      <div class="angle-other"></div>
-      <img
-        class="head-img position-absolute"
-        src="src/assets/img/stock-photo-remove-bg.png"
-        alt=""
-      />
-    </div>
-    <div class="col-md-6 bg-primary blue d-flex p-0">
-      <div class="">
-        <h1>Hello World</h1>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ipsa
-          tempore repellat repudiandae ut aperiam atque molestias fuga dolorem
-          dolor dolorum odit, totam doloribus nam delectus! Deleniti molestias
-          soluta aliquid.
-        </p>
-      </div>
-    </div>
     <!--Services and Price SECTION-->
     <div class="col-md-6 p-5">
       <div class="card p-4">
@@ -119,11 +115,16 @@ export default {
 
 .word-wrapper {
   z-index: 2;
-  width: 550px;
+  padding: 2em;
+  width: 70vw;
   top: 25%;
   left: 10%;
+  background-color: rgba(255, 255, 255, 0.253);
 }
 .blue {
+  height: 85vh;
+}
+.blue-2 {
   height: 85vh;
 }
 
