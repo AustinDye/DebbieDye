@@ -1,6 +1,10 @@
 <template>
   <div class="row">
+    <!--TODO  make sections into components-->
     <div class="col-12 sticky-top bg-secondary w-100"><h1>Header</h1></div>
+
+    <!--Top SECTION-->
+
     <div class="col-md-6 bg-primary blue d-flex p-0">
       <div class="angle-other-3 position-absolute"></div>
       <div class="angle-other-2 position-absolute"></div>
@@ -15,6 +19,7 @@
         </p>
       </div>
     </div>
+    <!--About SECTION-->
     <div class="col-md-6 d-flex p-0">
       <div class="angle3 position-absolute"></div>
       <div class="angle2 position-absolute"></div>
@@ -49,6 +54,7 @@
         </p>
       </div>
     </div>
+    <!--Services and Price SECTION-->
     <div class="col-md-6 p-5">
       <div class="card p-4">
         <h1>contract to close</h1>
