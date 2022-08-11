@@ -24,8 +24,8 @@
     <!--About SECTION-->
 
     <div class="col-md-7 col-lg-6 blue d-flex pe-5 align-items-center">
-      <div class="ps-lg-5 ms-lg-5 ps-5">
-        <h1>Hello World</h1>
+      <div class="ps-lg-5 ms-lg-5 ps-5 about-holder">
+        <h1 class="">Hello World</h1>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ipsa
           tempore repellat repudiandae ut aperiam atque molestias fuga dolorem
@@ -35,12 +35,12 @@
           molestias fuga dolorem dolor dolorum odit, totam doloribus nam
           delectus! Deleniti molestias soluta aliquid.
         </p>
-        <span class="d-flex pt-lg-2 mt-lg-2 justify-content-between">
-          <div class="rounded-circle bg-info text-center fs-1">content</div>
-          <div class="rounded-circle bg-info text-center fs-1">content</div>
-          <div class="rounded-circle bg-info text-center fs-1">
-            content
-          </div></span
+        <span
+          class="d-flex pt-lg-2 mt-lg-2 justify-content-between pt-sm-1 pt-md-5"
+        >
+          <div class="text-center fs-1 p-2 info-square">con</div>
+          <div class="text-center fs-1 p-2">con</div>
+          <div class="text-center fs-1 p-2">con</div></span
         >
       </div>
     </div>
@@ -102,7 +102,7 @@ export default {
 .blue {
   z-index: 1;
   height: 85vh;
-  background-color: rgba($primary, 0.8);
+  background-color: rgba($primary, 1);
 }
 
 .head-img {
@@ -116,7 +116,7 @@ export default {
 .angle3,
 .angle4 {
   z-index: 3;
-  border-top: 100% solid rgba($primary, 0.2);
+  border-top: 85vh solid rgba($primary, 0.2);
   border-right: 80vw solid transparent;
   position: absolute;
 }
@@ -130,27 +130,27 @@ export default {
 
 .angle3 {
   z-index: 1;
-  border-top: 85vh solid rgba($primary, 0.4);
+  border-top: 85vh solid rgba($primary, 0.5);
   border-right: 40vw solid transparent;
   position: absolute;
 }
 
 .angle4 {
   z-index: 1;
-  border-top: 85vh solid rgba($primary, 0.8);
+  border-top: 85vh solid rgba($primary, 0.4);
   border-right: 20vw solid transparent;
   position: absolute;
 }
 
 @media (max-width: 1100px) {
   .angle {
-    border-top: 10vh solid rgba($secondary, 0.2);
+    border-top: 10vh solid rgba($primary, 0.2);
     border-right: 0em solid transparent;
     position: relative;
     z-index: 0;
   }
   .angle2 {
-    border-top: 10vh solid rgba($secondary, 0.8);
+    border-top: 10vh solid rgba($primary, 0.8);
     border-right: 0em solid transparent;
     position: relative;
     z-index: 0;
@@ -158,14 +158,14 @@ export default {
 
   .angle3 {
     z-index: 0;
-    border-top: 10vh solid rgba($secondary, 1);
+    border-top: 10vh solid rgba($primary, 1);
     border-right: 0vw solid transparent;
     position: relative;
   }
 
   .angle4 {
     z-index: 0;
-    border-top: 10vh solid rgba($secondary, 0.4);
+    border-top: 10vh solid rgba($primary, 0.4);
     border-right: 0vw solid transparent;
     position: relative;
   }
@@ -174,12 +174,51 @@ export default {
     bottom: 0;
     z-index: 1;
     left: -20vw;
-    width: 700px;
+    width: 650px;
   }
 
   .blue {
     height: 65vh;
-    background-color: rgba($secondary, 1);
+    background-color: rgba($primary, 1);
+  }
+}
+
+@media (max-width: 760px) {
+  .about-holder {
+    padding-top: 10em;
+  }
+  .head-img {
+    bottom: 0;
+    z-index: 1;
+    left: 0;
+    width: 425px;
+  }
+
+  .angle {
+    border-top: 15vh solid rgba($primary, 0.2);
+    border-right: 0em solid transparent;
+    position: relative;
+    z-index: 0;
+  }
+  .angle2 {
+    border-top: 15vh solid rgba($primary, 0.8);
+    border-right: 0em solid transparent;
+    position: relative;
+    z-index: 0;
+  }
+
+  .angle3 {
+    z-index: 0;
+    border-top: 15vh solid rgba($primary, 1);
+    border-right: 0vw solid transparent;
+    position: relative;
+  }
+
+  .angle4 {
+    z-index: 0;
+    border-top: 15vh solid rgba($primary, 0.4);
+    border-right: 0vw solid transparent;
+    position: relative;
   }
 }
 </style>
