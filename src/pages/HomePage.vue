@@ -58,54 +58,16 @@
     </div>
 
     <!--Services and Price SECTION-->
-    <div class="col-12">
-      <h1 class="text-center">transaction coordination</h1>
-      <p class="px-5">
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit rem
-        porro consectetur distinctio exercitationem cupiditate repellat sequi,
-        ut, optio, laboriosam sunt. Repellendus fuga consequatur necessitatibus
-        cumque dolores fugiat assumenda illo?
-      </p>
-    </div>
-    <div class="col-md-6 p-5">
-      <div class="card p-4">
-        <b class="fs-1">contract to close</b>
-        <p>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Saepe,
-          facilis totam nisi doloribus obcaecati ipsa! Magni repellat dolores
-          sequi vel ipsa neque exercitationem numquam dolorem, enim saepe
-          reiciendis minus assumenda?
-        </p>
-      </div>
-    </div>
-    <div class="col-md-6 p-5">
-      <div class="card p-4">
-        <b class="fs-1">contract to close</b>
-        <p>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente
-          odit cumque, exercitationem nobis placeat molestiae veniam, nostrum
-          fugit facere enim reprehenderit quibusdam magnam earum sed? Minima
-          excepturi suscipit itaque aut?
-        </p>
-      </div>
-    </div>
-    <div class="col-md-12 d-flex justify-content-center p-5">
-      <div class="d-block p-2">
-        <h1>Pricing</h1>
-        <ul class="">
-          <li>lorem lorem lorem : $250</li>
-          <li></li>
-          Ipsum Ipsum Ipsum : $250
-        </ul>
-      </div>
-    </div>
+    <ServicesSection />
     <div class="col-12 bg-primary w-100 h-25"><h1>Footer</h1></div>
   </div>
 </template>
 
 <script>
+import ServicesSection from "../components/ServicesSection.vue";
 export default {
   name: "Home",
+  components: { ServicesSection },
 };
 </script>
 
@@ -129,10 +91,7 @@ export default {
     }
   }
 }
-.angle-holer {
-  overflow: hidden;
-}
-
+//top section
 .word-wrapper {
   z-index: 2;
   color: white;
@@ -141,16 +100,25 @@ export default {
   top: 30%;
   left: 45%;
 }
-.blue {
-  z-index: 1;
-  height: 85vh;
-  background-color: rgba($primary, 0.8);
+
+@media (max-width: 1100px) {
+  .word-wrapper {
+    left: 16vw;
+    top: 10vh;
+    width: 80vw;
+  }
 }
 
+//about section
 .second {
   height: 100vh;
   top: 86%;
   z-index: 5;
+}
+.blue {
+  z-index: 1;
+  height: 85vh;
+  background-color: rgba($primary, 0.8);
 }
 
 .head-img {
@@ -190,21 +158,6 @@ export default {
   position: absolute;
 }
 
-.top-card {
-  position: absolute;
-  left: 200px;
-  width: 30em;
-}
-
-.sash {
-  height: 25em;
-  width: 100%;
-  top: 20em;
-  left: -11em;
-  transform: rotate(140deg);
-  z-index: 1;
-}
-
 @media (max-width: 1100px) {
   .angle {
     border-top: 10vh solid rgba($secondary, 0.2);
@@ -238,12 +191,6 @@ export default {
     z-index: 1;
     left: -20vw;
     width: 700px;
-  }
-
-  .word-wrapper {
-    left: 16vw;
-    top: 10vh;
-    width: 80vw;
   }
 
   .blue {
