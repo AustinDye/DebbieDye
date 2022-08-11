@@ -39,8 +39,8 @@
           class="d-flex pt-lg-2 mt-lg-2 justify-content-between pt-sm-1 pt-md-5"
         >
           <div class="text-center fs-1 p-2 info-square">con</div>
-          <div class="text-center fs-1 p-2">con</div>
-          <div class="text-center fs-1 p-2">con</div></span
+          <div class="text-center fs-1 p-2 info-square-2">con</div>
+          <div class="text-center fs-1 p-2 info-square-3">con</div></span
         >
       </div>
     </div>
@@ -59,9 +59,8 @@
 
     <!--Services and Price SECTION-->
     <ServicesSection />
-    <div class="col-12 bg-primary w-100 h-25"><h1>Footer</h1></div>
+    <Footer />
   </div>
-  <div class="col-12 bg-primary w-100 h-25"><h1>Footer</h1></div>
 </template>
 
 <script>
@@ -83,6 +82,16 @@ export default {
   width: 50vw;
   top: 30%;
   left: 45%;
+}
+
+.info-square-3 {
+  background-color: rgba($secondary, 0.2);
+}
+.info-square-2 {
+  background-color: rgba($secondary, 0.4);
+}
+.info-square {
+  background-color: rgba($secondary, 0.8);
 }
 
 @media (max-width: 1100px) {
