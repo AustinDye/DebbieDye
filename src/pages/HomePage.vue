@@ -23,8 +23,8 @@
     </div>
     <!--About SECTION-->
 
-    <div class="col-md-6 bg-primary blue d-flex p-5 align-items-center">
-      <div class="ps-lg-5 ms-lg-5">
+    <div class="col-md-7 col-lg-6 blue d-flex pe-5 align-items-center">
+      <div class="ps-lg-5 ms-lg-5 ps-5">
         <h1>Hello World</h1>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ipsa
@@ -35,7 +35,7 @@
           molestias fuga dolorem dolor dolorum odit, totam doloribus nam
           delectus! Deleniti molestias soluta aliquid.
         </p>
-        <span class="d-flex pt-md-5 mt-md-5 justify-content-between">
+        <span class="d-flex pt-lg-2 mt-lg-2 justify-content-between">
           <div class="rounded-circle bg-info text-center fs-1">content</div>
           <div class="rounded-circle bg-info text-center fs-1">content</div>
           <div class="rounded-circle bg-info text-center fs-1">
@@ -45,7 +45,7 @@
       </div>
     </div>
 
-    <div class="col-md-6 p-0 angle-holder">
+    <div class="col-md-5 p-0 angle-holder position-relative">
       <div class="angle3"></div>
       <div class="angle2"></div>
       <div class="angle4"></div>
@@ -114,6 +114,7 @@ export default {
 
 <style scoped lang="scss">
 @import "src/assets/scss/_variables.scss";
+
 .home {
   display: grid;
   height: 80vh;
@@ -146,6 +147,7 @@ export default {
 .blue {
   z-index: 1;
   height: 85vh;
+  background-color: rgba($primary, 0.8);
 }
 
 .second {
@@ -208,33 +210,37 @@ export default {
 
 @media (max-width: 1100px) {
   .angle {
-    display: none;
-  }
-  .angle2 {
-    border-top: 2em solid rgba($secondary, 1);
+    border-top: 10vh solid rgba($secondary, 0.2);
     border-right: 0em solid transparent;
     position: relative;
-    z-index: 3;
+    z-index: 0;
+  }
+  .angle2 {
+    border-top: 10vh solid rgba($secondary, 0.8);
+    border-right: 0em solid transparent;
+    position: relative;
+    z-index: 0;
   }
 
   .angle3 {
-    z-index: 1;
-    border-top: 16vh solid rgba($secondary, 0.4);
+    z-index: 0;
+    border-top: 10vh solid rgba($secondary, 1);
     border-right: 0vw solid transparent;
     position: relative;
   }
 
   .angle4 {
-    z-index: 1;
-    border-top: 8vh solid rgba($secondary, 0.8);
+    z-index: 0;
+    border-top: 10vh solid rgba($secondary, 0.4);
     border-right: 0vw solid transparent;
     position: relative;
   }
 
   .head-img {
-    left: 25vw;
-    z-index: 0;
-    display: none;
+    bottom: 0;
+    z-index: 1;
+    left: -20vw;
+    width: 700px;
   }
 
   .word-wrapper {
@@ -244,6 +250,8 @@ export default {
   }
 
   .blue {
+    height: 65vh;
+    background-color: rgba($secondary, 1);
   }
 }
 </style>
