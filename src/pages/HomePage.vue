@@ -59,7 +59,6 @@
 
     <!--Services and Price SECTION-->
     <ServicesSection />
-    <div class="col-12 bg-primary w-100 h-25"><h1>Footer</h1></div>
   </div>
   <div class="col-12 bg-primary w-100 h-25"><h1>Footer</h1></div>
 </template>
