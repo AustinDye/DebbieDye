@@ -2,7 +2,7 @@
   <div class="container-fluid">
     <div class="row d-flex justify-content-center">
       <div class="col-10">
-        <h1 class="text-center">transaction coordination</h1>
+        <h1 class="text-center mt-5">transaction coordination</h1>
         <p class="px-5 mb-5">
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit rem
           porro consectetur distinctio exercitationem cupiditate repellat sequi,
@@ -117,6 +117,6 @@ export default {
 }
 
 .card p {
-  height: 35vh;
+  min-height: 20vh;
 }
 </style>
