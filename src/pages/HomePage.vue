@@ -56,19 +56,18 @@
         alt=""
       />
     </div>
-
     <!--Services and Price SECTION-->
     <ServicesSection />
-
-    <Footer />
   </div>
+  <Footer />
 </template>
 
 <script>
 import ServicesSection from "../components/ServicesSection.vue";
+import Footer from "../components/Footer.vue";
 export default {
   name: "Home",
-  components: { ServicesSection },
+  components: { ServicesSection, Footer },
 };
 </script>
 
