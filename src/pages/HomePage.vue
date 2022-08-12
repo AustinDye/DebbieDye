@@ -39,7 +39,14 @@
     </div>
     <div class="col-12 position-absolute card-holder">
       <span
-        class="d-flex pt-lg-2 mt-lg-2 justify-content-between pt-sm-1 pt-md-5 position-absolute"
+        class="
+          d-flex
+          pt-lg-2
+          mt-lg-2
+          justify-content-between
+          pt-sm-1 pt-md-5
+          position-absolute
+        "
       >
         <div class="text-center info-square position-relative d-flex">
           <div class="little-shape"></div>

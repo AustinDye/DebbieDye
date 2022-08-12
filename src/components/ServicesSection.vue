@@ -2,8 +2,10 @@
   <div class="container-fluid">
     <div class="row d-flex justify-content-center">
       <div class="col-10">
-        <h1 class="text-center mt-5">transaction coordination</h1>
-        <p class="px-5 mb-5">
+        <h1 class="text-center mt-5" v-scrollanimation>
+          transaction coordination
+        </h1>
+        <p v-scrollanimation class="px-5 mb-5">
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit rem
           porro consectetur distinctio exercitationem cupiditate repellat sequi,
           ut, optio, laboriosam sunt. Repellendus fuga consequatur
@@ -23,18 +25,19 @@
           coordinator handles the behind-the-scenes tasks.
         </p>
       </div>
+      <div class="spacer-20"></div>
       <div class="row">
         <div class="col-12 d-flex justify-content-center">
           <div class="d-flex justify-content-center text-center">
-            <h2 class="tagline">What's your timeline?</h2>
+            <h2 v-scrollanimation class="tagline">What's your timeline?</h2>
           </div>
         </div>
       </div>
       <div class="col-md-6 p-5">
         <div class="card contract p-4">
           <div>
-            <b class="fs-1">contract to close</b>
-            <p class="mt-3">
+            <b v-scrollanimation class="fs-1">contract to close</b>
+            <p v-scrollanimation class="mt-3">
               Contract to Close is all about what happens once your contract has
               been accepted until the day of closing. Our goal is to ensure that
               you and your clients have a smooth transaction from executed
@@ -56,8 +59,10 @@
       <div class="col-md-6 p-5">
         <div class="card pre-listing p-4">
           <div>
-            <b class="fs-1">From pre-listing until contract to close</b>
-            <p class="mt-3">
+            <b v-scrollanimation class="fs-1"
+              >From pre-listing until contract to close</b
+            >
+            <p v-scrollanimation class="mt-3">
               Instead of simply working through the closing and escrow services,
               we can help work from the very beginning of the pre-listing
               process and all the way until the home is sold. While the agent

@@ -16,6 +16,16 @@ main {
   overflow: hidden;
 }
 
+.spacer-10{
+  height: 10vh;
+}
+.spacer-20{
+  height: 20vh;
+}
+.spacer-30{
+  height: 30vh;
+}
+
 .min-width{
   width: min-content;
 }
@@ -24,6 +34,23 @@ main {
   margin-top: 3rem;
   margin-bottom: 3rem;
   font-size: 4rem;
+}
+
+.before-enter {
+  opacity: 0;
+  transform: translateY(25px);
+  transition: all .8s cubic-bezier( 0.47, 0.22, 0.79, 0.4 );
+}
+
+.enter {
+  opacity: 1;
+  transition-delay: .25s;
+  transform: translateY(0);
+}
+
+.upon-exit {
+  opacity: 0;
+  transform: translateY(100em);
 }
 
 h1 {
