@@ -72,6 +72,7 @@
     </div>
     <!--Services and Price SECTION-->
     <ServicesSection />
+    <ReviewsSwiper />
   </div>
   <Footer />
 </template>

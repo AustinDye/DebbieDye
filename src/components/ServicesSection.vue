@@ -5,7 +5,7 @@
         <h1 class="text-center mt-5" v-scrollanimation>
           transaction coordination
         </h1>
-        <p v-scrollanimation class="px-5 mb-5">
+        <p v-scrollanimation class="px-5 my-4">
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit rem
           porro consectetur distinctio exercitationem cupiditate repellat sequi,
           ut, optio, laboriosam sunt. Repellendus fuga consequatur
@@ -17,15 +17,17 @@
           must work together to close a successful deal and ensure everyone is
           satisfied with the ultimate outcome. The transaction coordinator works
           hard with the paperwork (both paper and electronic), coordination,
-          phone calls, and other tedious tasks. The agent handles the
-          face-to-face customer service part of the job with the sellers,
-          buyers, and others. A successful agent depends on their transaction
-          coordinator and vice versa. The agent will show properties and focus
-          on all aspects of real estate marketing while the transaction
-          coordinator handles the behind-the-scenes tasks.
+          phone calls, and other tasks. The agent handles the face-to-face
+          customer service part of the job with the sellers, buyers, and others.
+          A successful agent depends on their transaction coordinator and vice
+          versa. The agent will show properties and focus on all aspects of real
+          estate marketing while the transaction coordinator handles the
+          behind-the-scenes tasks.
         </p>
       </div>
-      <div class="spacer-20"></div>
+      <div class="spacer-20">
+        <h2 class="text-center">I'd consider a parallax effect here</h2>
+      </div>
       <div class="row">
         <div class="col-12 d-flex justify-content-center">
           <div class="d-flex justify-content-center text-center">
