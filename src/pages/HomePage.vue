@@ -23,9 +23,9 @@
     </div>
     <!--About SECTION-->
 
-    <div class="col-md-7 col-lg-6 blue d-flex pe-5 align-items-center">
+    <div class="col-md-7 col-lg-6 blue d-flex pe-5">
       <div class="ps-lg-5 ms-lg-5 ps-5 about-holder">
-        <h1 class="">Hello World</h1>
+        <h1 class="pt-5">Hello World</h1>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ipsa
           tempore repellat repudiandae ut aperiam atque molestias fuga dolorem
@@ -35,14 +35,21 @@
           molestias fuga dolorem dolor dolorum odit, totam doloribus nam
           delectus! Deleniti molestias soluta aliquid.
         </p>
-        <span
-          class="d-flex pt-lg-2 mt-lg-2 justify-content-between pt-sm-1 pt-md-5"
-        >
-          <div class="text-center fs-1 p-2 info-square">con</div>
-          <div class="text-center fs-1 p-2 info-square-2">con</div>
-          <div class="text-center fs-1 p-2 info-square-3">con</div></span
-        >
       </div>
+    </div>
+    <div class="col-12 position-absolute card-holder">
+      <span
+        class="d-flex pt-lg-2 mt-lg-2 justify-content-between pt-sm-1 pt-md-5 position-absolute"
+      >
+        <div class="text-center info-square position-relative d-flex">
+          <div class="little-shape"></div>
+          <div class="little-shape-4"></div>
+        </div>
+        <div class="text-center info-square-2 position-relative">
+          <div class="little-shape-2"></div>
+          <div class="little-shape-3"></div>
+        </div>
+      </span>
     </div>
 
     <div class="col-md-5 p-0 angle-holder position-relative">
@@ -83,15 +90,97 @@ export default {
   top: 30%;
   left: 45%;
 }
+.card-holder {
+  top: 125vh;
+  left: 10vw;
+  z-index: 15;
+}
 
+.info-square,
+.info-square-2,
 .info-square-3 {
-  background-color: rgba($secondary, 0.2);
+  background-color: rgb($light, 0.35);
+  margin-top: 5em;
+  border: 4px rgba(255, 255, 255, 0) solid;
+  padding: 2em;
+  transition: all 1s;
+  width: 15vw;
+  height: 200px;
+  border: 4px rgba($secondary, 0.5) solid;
+
+  z-index: 4;
+  margin-right: 2em;
+  &:hover {
+    width: 400px;
+    height: 275px;
+
+    background-color: rgb($light, 1);
+
+    .little-shape-2 {
+      border-top: 40px solid rgba($primary, 1);
+    }
+    .little-shape-3 {
+      border-bottom: 40px solid rgba($secondary, 1);
+    }
+    .little-shape {
+      border-top: 40px solid rgba($primary, 1);
+    }
+    .little-shape-4 {
+      border-bottom: 40px solid rgba($secondary, 1);
+    }
+  }
 }
-.info-square-2 {
-  background-color: rgba($secondary, 0.4);
-}
+
 .info-square {
-  background-color: rgba($secondary, 0.8);
+  &:hover {
+    border-right: 4px rgba($secondary, 0) solid;
+    border-bottom: 6px rgba($secondary, 0) solid;
+  }
+}
+
+.info-square-2 {
+  &:hover {
+    border-left: 6px rgba($secondary, 0) solid;
+    border-bottom: 6px rgba($secondary, 0) solid;
+  }
+}
+.little-shape {
+  border-top: 40px solid rgba($primary, 0);
+  border-right: 40px solid transparent;
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  z-index: 0;
+  transition: all 200ms;
+}
+.little-shape-2 {
+  border-top: 40px solid rgba($primary, 0);
+  border-left: 40px solid transparent;
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  z-index: 0;
+  transition: all 200ms;
+}
+
+.little-shape-3 {
+  border-bottom: 40px solid rgba($primary, 0);
+  border-right: 40px solid transparent;
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  z-index: 0;
+  transition: all 200ms;
+}
+
+.little-shape-4 {
+  border-bottom: 40px solid transparent;
+  border-left: 40px solid transparent;
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  z-index: 0;
+  transition: all 200ms;
 }
 
 @media (max-width: 1100px) {
@@ -108,6 +197,7 @@ export default {
   top: 86%;
   z-index: 5;
 }
+
 .blue {
   z-index: 1;
   height: 85vh;
