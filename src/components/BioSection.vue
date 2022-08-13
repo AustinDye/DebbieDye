@@ -1,5 +1,5 @@
 <template>
-  <div class="row">
+  <div class="row bg-light">
     <div class="col-md-7 col-lg-6 blue d-flex pe-5">
       <div class="ps-lg-5 ms-lg-5 ps-5 about-holder text-white">
         <h1 class="pt-5">Hello World</h1>

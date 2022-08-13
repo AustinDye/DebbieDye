@@ -14,6 +14,12 @@
 main {
   flex-grow: 1;
   overflow: hidden;
+  background-image: url("src/assets/img/Ocean.jpeg");
+  min-height: 150vh;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .spacer-10 {
@@ -81,10 +87,12 @@ form:invalid button[type="submit"] {
 }
 //Hi Dylan, all you should have to change is the height and img in the components style when re-using the effect
 .parallax {
-  background-image: url("src/assets/img/Ocean.jpeg");
+  // background-image: url("src/assets/img/Ocean.jpeg");
+  // min-height: 100vh;
+  // background-attachment: fixed;
+  // background-position: center;
+  // background-repeat: no-repeat;
+  // background-size: cover;
+  background: rgba(255, 255, 255, 0);
   min-height: 100vh;
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
 }
