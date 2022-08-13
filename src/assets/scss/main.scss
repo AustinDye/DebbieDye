@@ -16,21 +16,21 @@ main {
   overflow: hidden;
 }
 
-.spacer-10{
+.spacer-10 {
   height: 10vh;
 }
-.spacer-20{
+.spacer-20 {
   height: 20vh;
 }
-.spacer-30{
+.spacer-30 {
   height: 30vh;
 }
 
-.min-width{
+.min-width {
   width: min-content;
 }
 
-.tagline{
+.tagline {
   margin-top: 3rem;
   margin-bottom: 3rem;
   font-size: 4rem;
@@ -39,17 +39,17 @@ main {
 .before-enter {
   opacity: 0;
   transform: translateY(30%);
-  transition: all .8s ease;
+  transition: all 0.8s ease;
 }
 
 .enter {
   opacity: 1;
-  transition-delay: .08s;
+  transition-delay: 0.08s;
   transform: translateY(0);
 }
 
 .upon-exit {
-  opacity: 0;
+  opacity: 1;
   transform: translateY(100em);
 }
 
@@ -78,4 +78,13 @@ select {
 form:invalid button[type="submit"] {
   filter: grayscale(1);
   pointer-events: none;
+}
+//Hi Dylan, all you should have to change is the height and img in the components style when re-using the effect
+.parallax {
+  background-image: url("src/assets/img/Ocean.jpeg");
+  min-height: 100vh;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }

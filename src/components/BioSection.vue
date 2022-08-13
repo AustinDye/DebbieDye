@@ -1,5 +1,43 @@
 <template>
-  <div class="row"></div>
+  <div class="row">
+    <div class="col-md-7 col-lg-6 blue d-flex pe-5">
+      <div class="ps-lg-5 ms-lg-5 ps-5 about-holder text-white">
+        <h1 class="pt-5">Hello World</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ipsa
+          tempore repellat repudiandae ut aperiam atque molestias fuga dolorem
+          dolor dolorum odit, totam doloribus nam delectus! Deleniti molestias
+          soluta aliquid. Lorem ipsum dolor sit amet consectetur adipisicing
+          elit. Soluta ipsa tempore repellat repudiandae ut aperiam atque
+          molestias fuga dolorem dolor dolorum odit, totam doloribus nam
+          delectus! Deleniti molestias soluta aliquid.
+        </p>
+      </div>
+    </div>
+    <!--<div class="col-12 position-absolute card-holder">
+      <span
+        class="d-flex pt-lg-2 mt-lg-2 justify-content-between pt-sm-1 pt-md-5 position-absolute"
+      >
+        <div class="text-center info-square position-relative d-flex">
+          <div class="little-shape"></div>
+          <div class="little-shape-4"></div>
+        </div>
+      </span>
+    </div>-->
+
+    <div class="col-md-5 p-0 position-relative">
+      <div class="angle3"></div>
+      <div class="angle2"></div>
+      <div class="angle4"></div>
+      <div class="angle"></div>
+      <img
+        class="head-img"
+        src="src/assets/img/stock-photo-remove-bg.png"
+        alt=""
+        scrollan
+      />
+    </div>
+  </div>
 </template>
 
 <script>
@@ -10,4 +48,237 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+@import "src/assets/scss/_variables.scss";
+.card-holder {
+  top: 125vh;
+  left: 10vw;
+  z-index: 15;
+}
+
+.info-square,
+.info-square-2,
+.info-square-3 {
+  background-color: rgb($light, 0.35);
+  margin-top: 5em;
+  border: 4px rgba(255, 255, 255, 0.354) solid;
+  outline: 4px rgba(255, 255, 255, 0.354) solid;
+  padding: 2em;
+  transition: all 1s;
+  width: 30vw;
+  height: 200px;
+  border-radius: 5px;
+
+  z-index: 4;
+  margin-right: 2em;
+  &:hover {
+    width: 400px;
+    height: 275px;
+
+    background-color: rgb($light, 1);
+
+    .little-shape-2 {
+      border-top: 40px solid rgba($primary, 1);
+    }
+    .little-shape-3 {
+      border-bottom: 40px solid rgba($secondary, 1);
+    }
+    .little-shape {
+      border-top: 40px solid rgba($primary, 1);
+    }
+    .little-shape-4 {
+      border-bottom: 40px solid rgba($primary, 0.5);
+    }
+  }
+}
+
+.info-square {
+  &:hover {
+    border-right: 4px rgba($secondary, 0) solid;
+    border-bottom: 6px rgba($secondary, 0) solid;
+  }
+}
+
+.info-square-2 {
+  &:hover {
+    border-left: 6px rgba($secondary, 0) solid;
+    border-bottom: 6px rgba($secondary, 0) solid;
+  }
+}
+.little-shape {
+  border-top: 40px solid rgba($primary, 0);
+  border-right: 40px solid transparent;
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  z-index: 0;
+  transition: all 200ms;
+}
+.little-shape-2 {
+  border-top: 40px solid rgba($primary, 0);
+  border-left: 40px solid transparent;
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  z-index: 0;
+  transition: all 200ms;
+}
+
+.little-shape-3 {
+  border-bottom: 40px solid rgba($primary, 0);
+  border-right: 40px solid transparent;
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  z-index: 0;
+  transition: all 200ms;
+}
+
+.little-shape-4 {
+  border-bottom: 40px solid transparent;
+  border-left: 40px solid transparent;
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  z-index: 0;
+  transition: all 200ms;
+}
+
+@media (max-width: 1100px) {
+  .word-wrapper {
+    left: 16vw;
+    top: 10vh;
+    width: 80vw;
+  }
+}
+
+//about section
+.second {
+  height: 100vh;
+  top: 86%;
+  z-index: 5;
+}
+
+.blue {
+  z-index: 1;
+  height: 85vh;
+  background-color: rgba($secondary, 1);
+}
+
+.head-img {
+  z-index: 10;
+  width: 700px;
+  position: absolute;
+}
+
+.angle,
+.angle2,
+.angle3,
+.angle4 {
+  z-index: 3;
+  border-top: 85vh solid rgba($secondary, 0.2);
+  border-right: 80vw solid transparent;
+  position: absolute;
+}
+
+.angle2 {
+  border-top: 85vh solid rgba($secondary, 1);
+  border-right: 10vw solid transparent;
+  z-index: 2;
+  position: absolute;
+}
+
+.angle3 {
+  z-index: 1;
+  border-top: 85vh solid rgba($secondary, 0.5);
+  border-right: 40vw solid transparent;
+  position: absolute;
+}
+
+.angle4 {
+  z-index: 1;
+  border-top: 85vh solid rgba($secondary, 0.4);
+  border-right: 20vw solid transparent;
+  position: absolute;
+}
+
+@media (max-width: 1100px) {
+  .angle {
+    border-top: 10vh solid rgba($secondary, 0.2);
+    border-right: 0em solid transparent;
+    position: relative;
+    z-index: 0;
+  }
+  .angle2 {
+    border-top: 10vh solid rgba($secondary, 0.8);
+    border-right: 0em solid transparent;
+    position: relative;
+    z-index: 0;
+  }
+
+  .angle3 {
+    z-index: 0;
+    border-top: 10vh solid rgba($secondary, 1);
+    border-right: 0vw solid transparent;
+    position: relative;
+  }
+
+  .angle4 {
+    z-index: 0;
+    border-top: 10vh solid rgba($secondary, 0.4);
+    border-right: 0vw solid transparent;
+    position: relative;
+  }
+
+  .head-img {
+    bottom: 0;
+    z-index: 1;
+    left: -20vw;
+    width: 650px;
+  }
+
+  .blue {
+    height: 65vh;
+    background-color: rgba($secondary, 1);
+  }
+}
+
+@media (max-width: 760px) {
+  .about-holder {
+    padding-top: 3em;
+  }
+  .head-img {
+    bottom: 0;
+    z-index: 1;
+    left: 0;
+    width: 425px;
+  }
+
+  .angle {
+    border-top: 17vh solid rgba($primary, 0.2);
+    border-right: 0em solid transparent;
+    position: relative;
+    z-index: 0;
+  }
+  .angle2 {
+    border-top: 17vh solid rgba($primary, 0.8);
+    border-right: 0em solid transparent;
+    position: relative;
+    z-index: 0;
+  }
+
+  .angle3 {
+    z-index: 0;
+    border-top: 17vh solid rgba($primary, 1);
+    border-right: 0vw solid transparent;
+    position: relative;
+  }
+
+  .angle4 {
+    z-index: 0;
+    border-top: 17vh solid rgba($primary, 0.4);
+    border-right: 0vw solid transparent;
+    position: relative;
+  }
+}
+</style>
