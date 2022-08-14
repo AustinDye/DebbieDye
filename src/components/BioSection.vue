@@ -10,7 +10,7 @@
         align-items-center
       "
     >
-      <div class="ps-lg-5 ms-lg-5 ps-5 about-holder text-white">
+      <div class="ps-lg-5 ms-lg-5 ps-5 about-holder">
         <h1 class="pt-5">Hello World</h1>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ipsa
@@ -24,7 +24,7 @@
       </div>
     </div>
 
-    <div class="col-md-5 py-5 position-relative angle-img-holder">
+    <div class="col-md-5 position-relative angle-img-holder">
       <div>
         <div class="angle3"></div>
         <div class="angle2"></div>
@@ -130,6 +130,7 @@ export default {
 }
 
 .info-square,
+.info-square-1,
 .info-square-2,
 .info-square-3,
 .info-square-4 {
