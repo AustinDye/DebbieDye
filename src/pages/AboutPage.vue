@@ -1,5 +1,5 @@
 <template>
-  <div class="row">
+  <div class="row pt-5">
     <div class="col-12">
       <div class="top-box position-absolute bg-info"></div>
     </div>
