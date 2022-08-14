@@ -1,6 +1,6 @@
 <template>
   <div class="container-fluid">
-    <div class="row d-flex justify-content-center">
+    <div class="row d-flex justify-content-center bg-light">
       <div class="col-10">
         <h1 class="text-center mt-5" v-scrollanimation>
           transaction coordination
@@ -25,16 +25,17 @@
           behind-the-scenes tasks.
         </p>
       </div>
-      <div class="spacer-20">
-        <h2 class="text-center">I'd consider a parallax effect here</h2>
-      </div>
-      <div class="row">
-        <div class="col-12 d-flex justify-content-center">
-          <div class="d-flex justify-content-center text-center">
-            <h2 v-scrollanimation class="tagline">What's your timeline?</h2>
-          </div>
+      <div class="spacer-10"></div>
+    </div>
+    <div class="spacer-20"></div>
+
+    <div class="row bg-light">
+      <div class="col-12 d-flex justify-content-center">
+        <div class="d-flex justify-content-center text-center">
+          <h2 v-scrollanimation class="tagline">What's your timeline?</h2>
         </div>
       </div>
+
       <div class="col-md-6 p-5">
         <div class="card contract p-4">
           <div>
@@ -108,6 +109,10 @@ export default {
 
 <style lang="scss" scoped>
 @import "src/assets/scss/_variables.scss";
+.spacer-20 {
+  background: rgba(255, 255, 255, 0);
+}
+
 .bubble {
   font-size: 6rem;
   color: rgba($secondary, 1);

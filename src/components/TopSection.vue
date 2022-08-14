@@ -4,7 +4,9 @@
       <h1>Hello World</h1>
       <span class="d-flex"
         ><div class="mdi mdi-format-quote-open"></div>
-        <h5>It's possible that I am the god of parallax</h5>
+        <h5>
+          It's possible that I am the god of <s>parallax</s> background images
+        </h5>
         <div class="mdi mdi-format-quote-close pt-1"></div
       ></span>
     </div>

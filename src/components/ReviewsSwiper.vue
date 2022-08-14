@@ -1,5 +1,6 @@
 <template>
   <div class="container-fluid">
+    <div class="spacer-20"></div>
     <div class="row d-flex justify-content-center">
       <div class="col-8">
         <div class="swiper-container">

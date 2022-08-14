@@ -183,7 +183,7 @@ export default {
   background: rgba($primary, 0.6);
   border-left: 10px rgba($primary, 0.8) solid;
   border-right: 10px rgba($primary, 0.8) solid;
-  box-shadow: 0px 0px 2px 5px rgba($primary, 0.8);
+  box-shadow: 0px 10px 2px 5px rgba($primary, 0.8);
 
   border-radius: 10%;
 }
