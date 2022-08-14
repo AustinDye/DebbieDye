@@ -1,5 +1,5 @@
 <template>
-  <div class="row bg-light">
+  <div class="no-parallax row bg-light">
     <div class="col-md-7 col-lg-6 blue d-flex pe-5">
       <div class="ps-lg-5 ms-lg-5 ps-5 about-holder text-white">
         <h1 class="pt-5">Hello World</h1>
@@ -50,6 +50,12 @@ export default {
 
 <style lang="scss" scoped>
 @import "src/assets/scss/_variables.scss";
+
+.no-parallax {
+  position: relative;
+  min-height: 100vh;
+}
+
 .card-holder {
   top: 125vh;
   left: 10vw;
@@ -161,13 +167,15 @@ export default {
 
 .blue {
   z-index: 1;
-  height: 85vh;
+  height: 100vh;
   background-color: rgba($secondary, 1);
 }
 
 .head-img {
   z-index: 10;
-  width: 700px;
+  width: 750px;
+  bottom: 0;
+  right: 0;
   position: absolute;
 }
 
@@ -176,13 +184,13 @@ export default {
 .angle3,
 .angle4 {
   z-index: 3;
-  border-top: 85vh solid rgba($secondary, 0.2);
+  border-top: 100vh solid rgba($secondary, 0.2);
   border-right: 80vw solid transparent;
   position: absolute;
 }
 
 .angle2 {
-  border-top: 85vh solid rgba($secondary, 1);
+  border-top: 100vh solid rgba($secondary, 1);
   border-right: 10vw solid transparent;
   z-index: 2;
   position: absolute;
@@ -190,14 +198,14 @@ export default {
 
 .angle3 {
   z-index: 1;
-  border-top: 85vh solid rgba($secondary, 0.5);
+  border-top: 100vh solid rgba($secondary, 0.5);
   border-right: 40vw solid transparent;
   position: absolute;
 }
 
 .angle4 {
   z-index: 1;
-  border-top: 85vh solid rgba($secondary, 0.4);
+  border-top: 100vh solid rgba($secondary, 0.4);
   border-right: 20vw solid transparent;
   position: absolute;
 }

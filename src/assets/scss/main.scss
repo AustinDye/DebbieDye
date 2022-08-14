@@ -11,14 +11,53 @@
   background-color: $body-bg;
 }
 
+// main {
+//   flex-grow: 1;
+//   overflow: hidden;
+//   background-image: url("src/assets/img/Ocean.jpeg");
+//   min-height: 150vh;
+//   background-attachment: fixed;
+//   background-position: center;
+//   background-repeat: no-repeat;
+//   background-size: cover;
+// }
+
+body {
+  margin: 0;
+}
+
 main {
-  flex-grow: 1;
-  overflow: hidden;
-  background-image: url("src/assets/img/Ocean.jpeg");
-  min-height: 150vh;
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
+  height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  perspective: 2px;
+}
+
+.no-parallax {
+  z-index: 2;
+  transform-style: preserve-3d;
+  min-height: 100vh;
+}
+
+.parallax {
+  min-height: 100vh;
+  transform-style: preserve-3d;
+}
+
+.parallax::after {
+  content: " ";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transform: translateZ(-1px) scale(1.6);
+  background-size: 100%;
+  z-index: -1;
+}
+
+.bg::after {
+  background: url("https://picsum.photos/1080/720");
   background-size: cover;
 }
 
@@ -86,13 +125,13 @@ form:invalid button[type="submit"] {
   pointer-events: none;
 }
 //Hi Dylan, all you should have to change is the height and img in the components style when re-using the effect
-.parallax {
-  // background-image: url("src/assets/img/Ocean.jpeg");
-  // min-height: 100vh;
-  // background-attachment: fixed;
-  // background-position: center;
-  // background-repeat: no-repeat;
-  // background-size: cover;
-  background: rgba(255, 255, 255, 0);
-  min-height: 100vh;
-}
+// .parallax {
+//   background-image: url("src/assets/img/Ocean.jpeg");
+//   min-height: 100vh;
+//   background-attachment: fixed;
+//   background-position: center;
+//   background-repeat: no-repeat;
+//   background-size: cover;
+//   background: rgba(255, 255, 255, 0);
+//   min-height: 100vh;
+// }

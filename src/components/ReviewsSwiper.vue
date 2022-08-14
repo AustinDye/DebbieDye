@@ -1,5 +1,5 @@
 <template>
-  <div class="container-fluid">
+  <div class="no-parallax container-fluid">
     <div class="spacer-20"></div>
     <div class="row d-flex justify-content-center">
       <div class="col-8">
@@ -95,10 +95,14 @@ export default {
 
 
 <style lang="scss" scoped>
+.no-parallax {
+  min-height: 30vh;
+}
+
 .swiper-container {
   display: flex;
   justify-content: center;
-  min-height: 20vh;
+  min-height: 17vh;
   padding: 1rem;
   background: white;
   border-radius: 3px;

@@ -1,5 +1,6 @@
 <template>
-  <div class="container-fluid">
+  <div class="parallax bg container-fluid">
+    <div class="spacer-20"></div>
     <div class="row d-flex justify-content-center bg-light">
       <div class="col-10">
         <h1 class="text-center mt-5" v-scrollanimation>

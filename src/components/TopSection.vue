@@ -1,5 +1,5 @@
 <template>
-  <div class="parallax">
+  <div class="parallax bg">
     <div class="word-wrapper text-dark">
       <h1>Hello World</h1>
       <span class="d-flex"
