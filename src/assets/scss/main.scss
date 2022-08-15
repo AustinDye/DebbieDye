@@ -4,13 +4,6 @@
 @import "./utilities.scss";
 @import "./loaders.scss";
 
-#app {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  background-color: $body-bg;
-}
-
 // main {
 //   flex-grow: 1;
 //   overflow: hidden;
@@ -34,12 +27,14 @@ main {
 }
 
 .no-parallax {
+  position: relative;
   z-index: 2;
   transform-style: preserve-3d;
   min-height: 100vh;
 }
 
 .parallax {
+  position: relative;
   min-height: 100vh;
   transform-style: preserve-3d;
 }
