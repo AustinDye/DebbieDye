@@ -1,11 +1,10 @@
 <template>
   <header>
-    <Navbar />
+    <Navbar @scroll="scrollToElement" />
   </header>
   <main>
     <router-view />
   </main>
-  <footer></footer>
 </template>
 
 <script>

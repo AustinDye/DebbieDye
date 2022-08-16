@@ -1,19 +1,4 @@
 <template>
-  <!-- <div class="row nav-container">
-    <div class="col-md-2 d-flex justify-content-between align-items-center">
-      <b>About Me</b>
-      <b>Services</b>
-    </div>
-    <div class="col-md-4 d-flex justify-content-center">
-      <div>
-        <h2>Debbie Dye</h2>
-      </div>
-    </div>
-    <div class="col-md-2 d-flex justify-content-between align-items-center">
-      <b>Reviews</b>
-      <b>Contact</b>
-    </div>
-  </div> -->
   <nav class="navbar fixed-top navbar-expand-lg navbar-dark">
     <div class="container-fluid nav-container">
       <button
@@ -38,36 +23,22 @@
       >
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link" href="#">About Me</a>
+            <a class="nav-link" @click="$emit('scroll', 'Bio')">About Me</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Services</a>
+            <a class="nav-link" @click="$emit('scroll', 'Services')"
+              >Services</a
+            >
           </li>
         </ul>
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link" href="#">Reviews</a>
+            <a class="nav-link" @click="$emit('scroll', 'Reviews')">Reviews</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Contact</a>
           </li>
         </ul>
-
-        <!-- <li class="nav-item dropdown">
-            <a
-              class="nav-link dropdown-toggle"
-              href="#"
-              id="dropdown08"
-              data-bs-toggle="dropdown"
-              aria-expanded="false"
-              >Dropdown</a
-            >
-            <ul class="dropdown-menu" aria-labelledby="dropdown08">
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
-            </ul>
-          </li> -->
       </div>
     </div>
   </nav>
@@ -84,13 +55,17 @@ export default {
 <style lang="scss" scoped>
 @import "src/assets/scss/_variables.scss";
 
+.navbar {
+  background: lighten($primary, 20);
+}
+
 .nav-container {
   display: flex;
   justify-content: start;
-  // background: lighten($primary, 20);
 }
 
 .float {
+  z-index: 10;
   content: "";
   position: absolute;
   width: 100%;
@@ -104,9 +79,22 @@ export default {
   position: absolute;
 }
 
+ul {
+  z-index: 11;
+}
+
+a:hover {
+  cursor: pointer;
+}
+
 @media (max-width: 576px) {
-  .nav-container {
-    // width: 75%;
+  .navbar {
+    background: linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.25843840954350494) 0%,
+      rgba(0, 0, 0, 0) 45%,
+      rgba(0, 0, 0, 0) 100%
+    );
   }
   .float,
   .debbie {
