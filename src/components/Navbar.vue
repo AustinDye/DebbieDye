@@ -22,20 +22,20 @@
         id="navbarsExample08"
       >
         <ul class="navbar-nav">
-          <li class="nav-item">
+          <li class="nav-item mx-md-5">
             <a class="nav-link" @click="$emit('scroll', 'Bio')">About Me</a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item mx-md-5">
             <a class="nav-link" @click="$emit('scroll', 'Services')"
               >Services</a
             >
           </li>
         </ul>
         <ul class="navbar-nav">
-          <li class="nav-item">
+          <li class="nav-item mx-md-5">
             <a class="nav-link" @click="$emit('scroll', 'Reviews')">Reviews</a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item mx-md-5">
             <a class="nav-link" href="#">Contact</a>
           </li>
         </ul>
