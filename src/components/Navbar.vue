@@ -1,5 +1,5 @@
 <template>
-  <nav class="navbar fixed-top navbar-expand-lg navbar-dark">
+  <nav class="navbar sticky-top navbar-expand-lg navbar-dark">
     <div class="container-fluid nav-container">
       <button
         class="navbar-toggler"
@@ -13,7 +13,7 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="float">
-        <a class="nav-link active debbie" aria-current="page" href="#"
+        <a class="nav-link active debbie" @click="$emit('scroll', 'Landing')"
           ><h2 class="mb-0">Debbie Dye</h2></a
         >
       </div>
@@ -36,7 +36,10 @@
             <a class="nav-link" @click="$emit('scroll', 'Reviews')">Reviews</a>
           </li>
           <li class="nav-item mx-md-5">
-            <a class="nav-link" href="#">Contact</a>
+            <a v-if="bottom" class="nav-link" href="#">Contact</a>
+          </li>
+          <li>
+            <button @click="doIt = !doIt">CLic me</button>
           </li>
         </ul>
       </div>
@@ -57,6 +60,12 @@ export default {
 
 .navbar {
   background: $dark;
+  transform: translate3d(0, 0, 0);
+  transition: all 0.1s ease-out;
+}
+
+.navbar_hidden {
+  transform: translate3d(0, -100%, 0);
 }
 
 .nav-container {
