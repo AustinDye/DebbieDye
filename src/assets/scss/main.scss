@@ -47,6 +47,12 @@ main {
   z-index: -1;
 }
 
+@media(max-width: 768px){
+  .parallax::after{
+    transform: translateZ(-1px) scale(1.5);
+  }
+}
+
 .bg::after {
   background: url("src/assets/img/Ocean.jpeg");
   background-size: cover;
