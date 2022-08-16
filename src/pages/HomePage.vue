@@ -1,7 +1,7 @@
 <template>
   <main>
     <Navbar @scroll="scrollToElement" />
-    <div ref="Top"></div>
+    <div ref="Landing"></div>
     <TopSection />
     <div ref="Bio"></div>
     <BioSection />
