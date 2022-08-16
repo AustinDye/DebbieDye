@@ -112,6 +112,10 @@ export default {
   min-height: 80vh;
 }
 
+.card {
+  min-height: 65vh;
+}
+
 .bubble {
   font-size: 6rem;
   color: rgba($secondary, 1);
@@ -125,10 +129,6 @@ export default {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-}
-
-.card p {
-  min-height: 20vh;
 }
 
 @media (max-width: 576px) {
