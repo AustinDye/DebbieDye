@@ -1,12 +1,10 @@
 <template>
   <div class="parallax bg">
-    <div class="word-wrapper text-dark">
+    <div class="word-wrapper text-info">
       <h1>Hello World</h1>
       <span class="d-flex"
         ><div class="mdi mdi-format-quote-open"></div>
-        <h5>
-          It's possible that I am the god of <s>parallax</s> background images
-        </h5>
+        <h5>sub header text be a ray of sunshine</h5>
         <div class="mdi mdi-format-quote-close pt-1"></div
       ></span>
     </div>

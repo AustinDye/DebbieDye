@@ -5,6 +5,7 @@
     <TopSection />
     <div ref="Bio"></div>
     <BioSection />
+    <ReviewsSection />
     <div ref="Services"></div>
     <ServicesSection />
     <div ref="Reviews"></div>
@@ -19,6 +20,7 @@ import Footer from "../components/Footer.vue";
 import AboutPage from "./AboutPage.vue";
 import BioSection from "../components/BioSection.vue";
 import TopSection from "../components/TopSection.vue";
+import ReviewsSection from "../components/ReviewsSection.vue";
 export default {
   name: "Home",
   methods: {
@@ -30,7 +32,14 @@ export default {
       }
     },
   },
-  components: { ServicesSection, Footer, AboutPage, BioSection, TopSection },
+  components: {
+    ServicesSection,
+    Footer,
+    AboutPage,
+    BioSection,
+    TopSection,
+    ReviewsSection,
+  },
 };
 </script>
 
