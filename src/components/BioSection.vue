@@ -119,10 +119,6 @@ export default {
   min-height: 100vh;
 }
 
-.parallax {
-  min-height: 20vh;
-}
-
 .angle {
   z-index: 1;
   width: 60vw;

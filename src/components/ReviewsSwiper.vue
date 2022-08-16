@@ -1,8 +1,8 @@
 <template>
-  <div class="no-parallax container-fluid">
-    <div class="spacer-20"></div>
+  <div class="parallax bg container-fluid">
+    <div class="spacer-10"></div>
     <div class="row d-flex justify-content-center">
-      <div class="col-8">
+      <div class="col-md-8 col-sm-10">
         <div class="swiper-container">
           <swiper
             :modules="modules"
@@ -98,6 +98,9 @@ export default {
 .no-parallax {
   min-height: 30vh;
 }
+.parallax {
+  min-height: 50vh;
+}
 
 .swiper-container {
   display: flex;
@@ -110,5 +113,11 @@ export default {
 
 .mySwiper {
   text-align: center;
+}
+
+@media (max-width: 576px) {
+  .parallax {
+    min-height: 70vh;
+  }
 }
 </style>

@@ -9,24 +9,19 @@ body {
 }
 
 main {
-  // flex-grow: 1;
-  // overflow: hidden;
-  // background-image: url("src/assets/img/Ocean.jpeg");
-  // min-height: 150vh;
-}
-
-main {
   height: 100vh;
   overflow-y: auto;
   overflow-x: hidden;
   perspective: 2px;
+  display: flex;
+  flex-direction: column;
 }
 
 .no-parallax {
   position: relative;
   z-index: 2;
   transform-style: preserve-3d;
-  min-height: 100vh;
+  // min-height: 100vh;
 }
 
 .parallax {
@@ -121,14 +116,4 @@ form:invalid button[type="submit"] {
   filter: grayscale(1);
   pointer-events: none;
 }
-//Hi Dylan, all you should have to change is the height and img in the components style when re-using the effect
-// .parallax {
-//   background-image: url("src/assets/img/Ocean.jpeg");
-//   min-height: 100vh;
-//   background-attachment: fixed;
-//   background-position: center;
-//   background-repeat: no-repeat;
-//   background-size: cover;
-//   background: rgba(255, 255, 255, 0);
-//   min-height: 100vh;
-// }
+

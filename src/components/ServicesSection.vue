@@ -2,7 +2,7 @@
   <div class="parallax bg container-fluid">
     <div class="spacer-20"></div>
     <div class="row d-flex justify-content-center bg-light">
-      <div class="col-10">
+      <div class="col-md-10 col-sm-12">
         <h1 class="text-center mt-5" v-scrollanimation>
           transaction coordination
         </h1>
@@ -26,10 +26,11 @@
           behind-the-scenes tasks.
         </p>
       </div>
-      <div class="spacer-10"></div>
+      <div class="spacer-10" v-if="mobile"></div>
+      <!-- <div class="spacer-20"></div> -->
     </div>
-    <div class="spacer-20"></div>
-
+  </div>
+  <div class="no-parallax container-fluid">
     <div class="row bg-light">
       <div class="col-12 d-flex justify-content-center">
         <div class="d-flex justify-content-center text-center">
@@ -41,7 +42,7 @@
         <div class="card contract p-4">
           <div>
             <b v-scrollanimation class="fs-1">contract to close</b>
-            <p v-scrollanimation class="mt-3">
+            <p v-scrollanimation class="text-body-mobile mt-3">
               Contract to Close is all about what happens once your contract has
               been accepted until the day of closing. Our goal is to ensure that
               you and your clients have a smooth transaction from executed
@@ -66,7 +67,7 @@
             <b v-scrollanimation class="fs-1"
               >From pre-listing until contract to close</b
             >
-            <p v-scrollanimation class="mt-3">
+            <p v-scrollanimation class="text-body-mobile mt-3">
               Instead of simply working through the closing and escrow services,
               we can help work from the very beginning of the pre-listing
               process and all the way until the home is sold. While the agent
@@ -87,31 +88,28 @@
           </h6>
         </div>
       </div>
-      <div class="col-md-12 d-flex justify-content-center p-5">
-        <!-- <div class="d-block p-2">
-          <h1>Pricing</h1>
-          <ul class="">
-            <li></li>
-            <li>Ipsum Ipsum Ipsum : $250</li>
-          </ul>
-        </div> -->
-      </div>
     </div>
   </div>
 </template>
 
 <script>
+import { computed, ref } from "@vue/reactivity";
 export default {
   setup() {
-    return {};
+    return {
+      mobile: computed(() => {
+        return window.screen.width > 578;
+      }),
+    };
   },
 };
 </script>
 
 <style lang="scss" scoped>
 @import "src/assets/scss/_variables.scss";
-.spacer-20 {
-  background: rgba(255, 255, 255, 0);
+
+.parallax {
+  min-height: 80vh;
 }
 
 .bubble {
@@ -131,5 +129,18 @@ export default {
 
 .card p {
   min-height: 20vh;
+}
+
+@media (max-width: 576px) {
+  .parallax {
+    min-height: 200vh;
+  }
+  .text-body-mobile {
+    display: -webkit-box;
+    line-clamp: 6;
+    -webkit-line-clamp: 6;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
 }
 </style>

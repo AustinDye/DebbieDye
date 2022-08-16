@@ -89,10 +89,17 @@ a:hover {
 
 @media (max-width: 576px) {
   .navbar {
+    // background: linear-gradient(
+    //   90deg,
+    //   rgba(0, 0, 0, 0.25843840954350494) 0%,
+    //   rgba(0, 0, 0, 0) 45%,
+    //   rgba(0, 0, 0, 0) 100%
+    // );
+    background: rgb(0, 0, 0);
     background: linear-gradient(
       90deg,
-      rgba(0, 0, 0, 0.25843840954350494) 0%,
-      rgba(0, 0, 0, 0) 45%,
+      rgba(0, 0, 0, 0.3981967787114846) 0%,
+      rgba(0, 0, 0, 0.20211834733893552) 50%,
       rgba(0, 0, 0, 0) 100%
     );
   }
