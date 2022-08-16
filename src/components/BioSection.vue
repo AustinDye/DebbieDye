@@ -32,16 +32,6 @@
         </div>
       </div>
       <div class="angle-back"></div>
-      <span
-        class="position-absolute background-text"
-        id="flavoursContainer"
-        @click="groobis"
-        ><b class="bck-txt">very good</b>
-        <b class="bck-txt">very good</b>
-        <b class="bck-txt">very good</b>
-        <b class="bck-txt">very good</b>
-        <b class="bck-txt">very good</b>
-      </span>
     </div>
   </div>
 </template>
@@ -50,18 +40,7 @@
 import { onMounted } from "@vue/runtime-core";
 export default {
   setup() {
-    return {
-      groobis() {
-        const flavoursContainer = document.getElementById("flavoursContainer");
-        const flavoursScrollWidth = flavoursContainer.scrollWidth;
-        console.log(flavoursContainer, flavoursScrollWidth);
-        self.setInterval(() => {
-          if (flavoursContainer.scrollLeft !== flavoursScrollWidth) {
-            flavoursContainer.scrollTo(flavoursContainer.scrollLeft + 1, 0);
-          }
-        }, 10);
-      },
-    };
+    return {};
   },
 };
 </script>
