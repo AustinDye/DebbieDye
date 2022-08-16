@@ -56,7 +56,7 @@ export default {
 @import "src/assets/scss/_variables.scss";
 
 .navbar {
-  background: lighten($primary, 20);
+  background: $dark;
 }
 
 .nav-container {

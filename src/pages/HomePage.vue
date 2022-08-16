@@ -1,8 +1,6 @@
 <template>
-  <header>
-    <Navbar @scroll="scrollToElement" />
-  </header>
   <main>
+    <Navbar @scroll="scrollToElement" />
     <div ref="Top"></div>
     <TopSection />
     <div ref="Bio"></div>
