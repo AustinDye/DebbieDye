@@ -1,14 +1,18 @@
 <template>
-  <div ref="Top"></div>
-  <TopSection />
-  <div ref="Bio"></div>
-  <BioSection />
-  <div ref="Services"></div>
-  <ServicesSection />
-  <div ref="Reviews"></div>
-  <ReviewsSwiper />
-
-  <Footer />
+  <header>
+    <Navbar @scroll="scrollToElement" />
+  </header>
+  <main>
+    <div ref="Top"></div>
+    <TopSection />
+    <div ref="Bio"></div>
+    <BioSection />
+    <div ref="Services"></div>
+    <ServicesSection />
+    <div ref="Reviews"></div>
+    <ReviewsSwiper />
+    <Footer />
+  </main>
 </template>
 
 <script>

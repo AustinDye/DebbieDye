@@ -4,19 +4,15 @@
 @import "./utilities.scss";
 @import "./loaders.scss";
 
-// main {
-//   flex-grow: 1;
-//   overflow: hidden;
-//   background-image: url("src/assets/img/Ocean.jpeg");
-//   min-height: 150vh;
-//   background-attachment: fixed;
-//   background-position: center;
-//   background-repeat: no-repeat;
-//   background-size: cover;
-// }
-
 body {
   margin: 0;
+}
+
+main {
+  // flex-grow: 1;
+  // overflow: hidden;
+  // background-image: url("src/assets/img/Ocean.jpeg");
+  // min-height: 150vh;
 }
 
 main {
