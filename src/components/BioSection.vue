@@ -16,36 +16,64 @@
             alt=""
           />
           <div class="angle"></div>
+          <div class="angle-2"></div>
         </div>
       </div>
-      <div class="angle-front parallax"></div>
+      <div class="angle-front"></div>
       <div class="bio-text w-50">
         <p class="fs-4">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores,
           accusantium veritatis cumque iure culpa, repellendus magnam fugit
           debitis natus voluptatum velit voluptas mollitia!
         </p>
-
         <div class="btn d-flex ms-5">
           Read Reviews
           <div class="mdi text-dark ms-2 mdi-arrow-down"></div>
         </div>
       </div>
       <div class="angle-back"></div>
+      <span
+        class="position-absolute background-text"
+        id="flavoursContainer"
+        @click="groobis"
+        ><b class="bck-txt">very good</b>
+        <b class="bck-txt">very good</b>
+        <b class="bck-txt">very good</b>
+        <b class="bck-txt">very good</b>
+        <b class="bck-txt">very good</b>
+      </span>
     </div>
   </div>
 </template>
 
 <script>
+import { onMounted } from "@vue/runtime-core";
 export default {
   setup() {
-    return {};
+    return {
+      groobis() {
+        const flavoursContainer = document.getElementById("flavoursContainer");
+        const flavoursScrollWidth = flavoursContainer.scrollWidth;
+        console.log(flavoursContainer, flavoursScrollWidth);
+        self.setInterval(() => {
+          if (flavoursContainer.scrollLeft !== flavoursScrollWidth) {
+            flavoursContainer.scrollTo(flavoursContainer.scrollLeft + 1, 0);
+          }
+        }, 10);
+      },
+    };
   },
 };
 </script>
 
 <style lang="scss" scoped>
 @import "src/assets/scss/_variables.scss";
+.bio-section {
+  &:hover {
+    .background-text {
+    }
+  }
+}
 
 .head-img {
   z-index: 2;
@@ -68,20 +96,31 @@ export default {
   color: white;
 }
 
+.bck-txt {
+  z-index: 0;
+
+  margin-right: 5em;
+}
+.angle-bottom {
+  z-index: 100;
+  width: 100vw;
+  top: 90vh;
+  border-bottom: 15vh transparent solid;
+  border-right: 100vw rgba($primary, 1) solid;
+  border-top: 30vh transparent solid;
+  position: absolute;
+}
 .angle-front {
   z-index: 5;
   width: 100vw;
   top: 45vh;
   border-bottom: 15vh transparent solid;
-  border-left: 120vw rgba($secondary, 1) solid;
+  border-left: 120vw rgba($primary, 1) solid;
   border-top: 30vh transparent solid;
   position: absolute;
-
   &:hover {
-    border-left: 120vw rgba($secondary, 1) solid;
-    border-bottom: 100vh transparent solid;
+    border-bottom: 0vh transparent solid;
   }
-
   .bio-text {
     opacity: 1;
   }
@@ -91,14 +130,14 @@ export default {
   z-index: 1;
   width: 100vw;
   min-height: 20vh;
-  top: 40vh;
+  top: 45vh;
   border-bottom: 15vh transparent solid;
-  border-left: 120vw rgba($secondary, 0.5) solid;
-  border-top: 30vh transparent solid;
+  border-left: 120vw rgba($primary, 0.7) solid;
+  border-top: 25vh transparent solid;
   position: absolute;
 }
 .no-parallax {
-  min-height: 200vh;
+  min-height: 100vh;
 }
 
 .parallax {
@@ -109,8 +148,27 @@ export default {
   z-index: 1;
   width: 60vw;
   top: 0;
-  border-top: 30vh solid rgba($primary, 0.3);
+  border-top: 30vh solid rgba($primary, 0.7);
   border-left: 60vw transparent solid;
   position: absolute;
+}
+.angle-2 {
+  z-index: 2;
+  width: 60vw;
+  top: 0;
+  border-top: 25vh solid rgba($primary, 1);
+  border-left: 60vw transparent solid;
+  position: absolute;
+}
+
+.background-text {
+  bottom: 1em;
+  z-index: 0;
+  font-size: 2em;
+  rotate: -6deg;
+  margin-left: 5em;
+  width: 75vw;
+  overflow-x: scroll;
+  white-space: nowrap;
 }
 </style>
