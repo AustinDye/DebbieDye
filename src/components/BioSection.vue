@@ -97,12 +97,6 @@ export default {
   border-left: 120vw rgba($primary, 1) solid;
   border-top: 30vh transparent solid;
   position: absolute;
-  &:hover {
-    border-bottom: 0vh transparent solid;
-  }
-  .bio-text {
-    opacity: 1;
-  }
 }
 
 .angle-back {
@@ -116,7 +110,7 @@ export default {
   position: absolute;
 }
 .no-parallax {
-  min-height: 100vh;
+  min-height: 75vh;
 }
 
 .angle {
