@@ -22,9 +22,9 @@
       <div class="angle-front"></div>
       <div class="bio-text w-50">
         <p class="fs-4">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores,
-          accusantium veritatis cumque iure culpa, repellendus magnam fugit
-          debitis natus voluptatum velit voluptas mollitia!
+          With over 14 yrs experience as a Real Estate Transaction Coordinator,
+          I enjoy assisting agents with the details of their transactions, so
+          they can be out doing what they love to do.
         </p>
         <div class="btn d-flex ms-5">
           Read Reviews
