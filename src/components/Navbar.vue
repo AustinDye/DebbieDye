@@ -48,7 +48,6 @@
 import { onMounted, ref } from "@vue/runtime-core";
 export default {
   setup() {
-    const currentScrollPos = ref(0);
     onMounted(() => {
       let main = document.querySelector("main");
       let prevScrollpos = main.scrollTop;
