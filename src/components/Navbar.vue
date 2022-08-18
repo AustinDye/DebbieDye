@@ -45,8 +45,26 @@
 </template>
 
 <script>
+import { onMounted, ref } from "@vue/runtime-core";
 export default {
   setup() {
+    const currentScrollPos = ref(0);
+    onMounted(() => {
+      let main = document.querySelector("main");
+      let prevScrollpos = main.scrollTop;
+      let nav = document.querySelector(".navbar");
+      main.onscroll = function () {
+        let currentScrollPos = main.scrollTop;
+        if (prevScrollpos > currentScrollPos) {
+          // @ts-ignore
+          nav.classList.add("navbar_hidden");
+        } else {
+          // @ts-ignore
+          nav.classList.remove("navbar_hidden");
+        }
+        prevScrollpos = currentScrollPos;
+      };
+    });
     return {};
   },
 };
@@ -58,7 +76,7 @@ export default {
 .navbar {
   background: $dark;
   transform: translate3d(0, 0, 0);
-  transition: all 0.1s ease-out;
+  transition: all 0.2s ease-out;
 }
 
 .navbar_hidden {

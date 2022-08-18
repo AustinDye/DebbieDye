@@ -26,11 +26,12 @@
           behind-the-scenes tasks.
         </p>
       </div>
-      <div class="spacer-10" v-if="mobile"></div>
+      <div class="spacer-10" v-if="!mobile"></div>
       <!-- <div class="spacer-20"></div> -->
     </div>
   </div>
   <div class="no-parallax container-fluid">
+    <div class="spacer-20" v-if="!mobile"></div>
     <div class="row bg-light">
       <div class="col-12 d-flex justify-content-center">
         <div class="d-flex justify-content-center text-center">
@@ -98,7 +99,7 @@ export default {
   setup() {
     return {
       mobile: computed(() => {
-        return window.screen.width > 578;
+        return window.screen.width <= 578;
       }),
     };
   },
@@ -113,7 +114,7 @@ export default {
 }
 
 .card {
-  min-height: 65vh;
+  min-height: 100%;
 }
 
 .bubble {

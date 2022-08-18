@@ -100,24 +100,29 @@ export default {
 }
 .parallax {
   min-height: 50vh;
+  @media (max-width: 576px) {
+    min-height: 80vh;
+  }
+}
+
+.mySwiper {
+  height: 25vh;
+  z-index: 5;
+  @media (max-width: 576px) {
+    min-height: 55vh;
+  }
 }
 
 .swiper-container {
-  display: flex;
-  justify-content: center;
-  min-height: 17vh;
   padding: 1rem;
   background: white;
   border-radius: 3px;
+  @media (max-width: 576px) {
+    padding: 1.5rem;
+  }
 }
 
 .mySwiper {
   text-align: center;
-}
-
-@media (max-width: 576px) {
-  .parallax {
-    min-height: 70vh;
-  }
 }
 </style>

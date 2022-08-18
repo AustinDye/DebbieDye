@@ -20,7 +20,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-//top section
+.bg::after {
+  transform: translateZ(-1px) scale(1.8);
+}
+
 .word-wrapper {
   position: absolute;
   z-index: 2;
