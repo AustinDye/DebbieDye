@@ -36,10 +36,7 @@
             <a class="nav-link" @click="$emit('scroll', 'Reviews')">Reviews</a>
           </li>
           <li class="nav-item mx-md-5">
-            <a v-if="bottom" class="nav-link" href="#">Contact</a>
-          </li>
-          <li>
-            <button @click="doIt = !doIt">CLic me</button>
+            <a class="nav-link" href="#">Contact</a>
           </li>
         </ul>
       </div>
