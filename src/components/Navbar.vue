@@ -56,10 +56,10 @@ export default {
         let currentScrollPos = main.scrollTop;
         if (prevScrollpos > currentScrollPos) {
           // @ts-ignore
-          nav.classList.add("navbar_hidden");
+          nav.classList.remove("navbar_hidden");
         } else {
           // @ts-ignore
-          nav.classList.remove("navbar_hidden");
+          nav.classList.add("navbar_hidden");
         }
         prevScrollpos = currentScrollPos;
       };

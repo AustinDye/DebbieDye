@@ -3,8 +3,8 @@
     <div class="col-12 position-relative">
       <div class="row">
         <div class="col-6 d-flex justify-content-center r">
-          <div class="d-block pt-5 mt-4">
-            <h1>Debbie Dye</h1>
+          <div class="title-text d-block pt-5 mt-4">
+            <h1 class="debbie">Debbie Dye</h1>
             <div class="color-splash"></div>
             <h2>Transaction Coordination</h2>
           </div>
@@ -19,6 +19,7 @@
           <div class="angle-2"></div>
         </div>
       </div>
+      <div class="backsplash-angle"></div>
       <div class="angle-front"></div>
       <div class="bio-text w-50">
         <p class="fs-4">
@@ -54,8 +55,33 @@ export default {
   }
 }
 
+.title-text {
+  z-index: 10;
+  // color: darken($primary, 10);
+}
+
+.debbie {
+  z-index: 11;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.debbie::after {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  left: 2.5%;
+  right: 0;
+  bottom: 9%;
+  height: 20%;
+  width: 95%;
+  background: #fbe557cc;
+  border-radius: 10px;
+}
+
 .head-img {
-  z-index: 2;
+  z-index: 3;
   height: 60vh;
   margin-left: 18%;
   border-radius: 10%;
@@ -99,6 +125,15 @@ export default {
   position: absolute;
 }
 
+.backsplash-angle {
+  z-index: 2;
+  top: 0;
+  border-bottom: 60vh transparent solid;
+  border-left: 150vw rgba($secondary, 0.5) solid;
+  border-top: 0vh transparent solid;
+  position: absolute;
+}
+
 .angle-back {
   z-index: 1;
   width: 100vw;
@@ -109,20 +144,21 @@ export default {
   border-top: 25vh transparent solid;
   position: absolute;
 }
+
 .no-parallax {
   min-height: 75vh;
 }
 
 .angle {
-  z-index: 1;
+  z-index: 3;
   width: 60vw;
   top: 0;
-  border-top: 30vh solid rgba($primary, 0.7);
+  border-top: 30vh solid rgba(#4cb2bd, 1);
   border-left: 60vw transparent solid;
   position: absolute;
 }
 .angle-2 {
-  z-index: 2;
+  z-index: 4;
   width: 60vw;
   top: 0;
   border-top: 25vh solid rgba($primary, 1);
