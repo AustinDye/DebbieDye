@@ -144,6 +144,9 @@ export default {
   padding: 1em;
   outline: none;
   border: 0.2em black solid;
+  @media (orientation: portrait) {
+    max-width: 100vw;
+  }
 }
 
 .selling-point {
