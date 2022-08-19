@@ -1,6 +1,7 @@
 <template>
   <div class="parallax bg container-fluid">
     <div class="spacer-20"></div>
+
     <div class="row d-flex justify-content-center bg-light">
       <div class="col-md-10 col-sm-12">
         <h1 class="text-center mt-5" v-scrollanimation>
@@ -32,15 +33,13 @@
     <div class="spacer-20" v-if="!mobile"></div>
     <div class="row bg position-relative">
       <div class="col-12 d-flex justify-content-center">
-        <div class="d-flex justify-content-center text-center">
-          <h2 v-scrollanimation class="tagline bg-light">
-            What's your timeline?
-          </h2>
-        </div>
+        <!--<div class="d-flex justify-content-center text-center">
+          <h2 v-scrollanimation class="tagline">What's your timeline?</h2>
+        </div>-->
       </div>
 
       <div class="col-md-6 p-5">
-        <div class="card contract">
+        <div class="card card-1 contract">
           <div>
             <b v-scrollanimation class="fs-1">contract to close</b>
             <p v-scrollanimation class="text-body-mobile mt-3">
@@ -60,12 +59,17 @@
           <h6 class="fs-2">
             Price per file : <span class="bubble">$250</span>
           </h6>
-          <div class="angle-card"></div>
-          <div class="angle-card-2"></div>
         </div>
+
+        <span class="d-block position-relative w-50 bg-info"
+          ><p>dog do tricks</p>
+          <div class="triangle"></div>
+          <div class="triangle-2"></div>
+        </span>
       </div>
+
       <div class="col-md-6 p-5">
-        <div class="card pre-listing p-4">
+        <div class="card card-2 pre-listing p-4">
           <div>
             <b v-scrollanimation class="fs-1"
               >From pre-listing until contract to close</b
@@ -115,21 +119,34 @@ export default {
 <style lang="scss" scoped>
 @import "src/assets/scss/_variables.scss";
 
+.col-md-6 {
+  height: 85vh;
+}
 .parallax {
   min-height: 270vh;
 }
 
 .card {
-  min-height: 100%;
+  margin-top: 10em;
+  min-height: 80%;
   border-radius: 0;
   z-index: 5;
   padding: 5em;
+  outline: none;
+  border: 0.3em black solid;
+}
+
+.card-1 {
+  box-shadow: -1em 1em 0em rgba($info, 0.5);
+}
+.card-2 {
+  box-shadow: 1em 1em 0em rgba($info, 0.5);
 }
 
 .review-angle-right {
   width: 48vw;
   height: 100%;
-  background: rgba($primary, 1);
+  background: rgba($light, 1);
   position: absolute;
   z-index: 2;
   bottom: 0;
@@ -139,7 +156,7 @@ export default {
 .review-angle-left {
   width: 48vw;
   height: 100%;
-  background: rgba($secondary, 1);
+  background: rgba($light, 1);
   position: absolute;
   z-index: 2;
   bottom: 0;
@@ -151,26 +168,7 @@ export default {
   width: 100vw;
   top: -20vh;
   border-bottom: 20vh transparent solid;
-  border-right: 48vw rgba($light, 1) solid;
-  border-top: 20vh transparent solid;
-  position: absolute;
-}
-
-.angle-front {
-  z-index: 3;
-  width: 100vw;
-  top: -20vh;
-  border-bottom: 20vh transparent solid;
-  border-left: 48vw rgba($light, 1) solid;
-  border-top: 20vh transparent solid;
-  position: absolute;
-}
-.angle-front {
-  z-index: 3;
-  width: 100vw;
-  top: -20vh;
-  border-bottom: 20vh transparent solid;
-  border-right: 48vw rgba($light, 1) solid;
+  border-right: 48vw rgba($primary, 1) solid;
   border-top: 20vh transparent solid;
   position: absolute;
 }
@@ -180,7 +178,7 @@ export default {
   width: 100vw;
   top: -10vh;
   border-bottom: 10vh transparent solid;
-  border-left: 48vw rgba($light, 1) solid;
+  border-left: 48vw rgba($secondary, 1) solid;
   border-top: 10vh transparent solid;
   position: absolute;
 }
@@ -189,7 +187,7 @@ export default {
   width: 100vw;
   bottom: -10vh;
   border-bottom: 10vh transparent solid;
-  border-left: 48vw rgba($secondary, 1) solid;
+  border-left: 48vw rgba($light, 1) solid;
   border-top: 10vh transparent solid;
   position: absolute;
 }
@@ -199,7 +197,7 @@ export default {
   width: 100vw;
   bottom: -10vh;
   border-bottom: 10vh transparent solid;
-  border-right: 48vw rgba($primary, 1) solid;
+  border-right: 48vw rgba($light, 1) solid;
   border-top: 10vh transparent solid;
   position: absolute;
 }
@@ -210,18 +208,40 @@ export default {
   top: -11vh;
   left: -1em;
   border-bottom: 10vh transparent solid;
-  border-left: 25vw rgba($secondary, 1) solid;
+  border-left: 30vw rgba($light, 1) solid;
   border-top: 10vh transparent solid;
   position: absolute;
 }
 
 .angle-card-2 {
-  z-index: 1;
+  z-index: 2;
   width: 100vw;
   bottom: -10vh;
   left: -0.04em;
   border-bottom: 10vh transparent solid;
-  border-left: 25vw rgba($light, 1) solid;
+  border-left: 15vw rgba($light, 1) solid;
+  border-top: 10vh transparent solid;
+  position: absolute;
+}
+
+.angle-card-other {
+  z-index: 3;
+  width: 100vw;
+  top: -11vh;
+  right: -1em;
+  border-bottom: 10vh transparent solid;
+  border-right: 30vw rgba($light, 1) solid;
+  border-top: 10vh transparent solid;
+  position: absolute;
+}
+
+.angle-card-2-other {
+  z-index: 2;
+  width: 100vw;
+  bottom: -10vh;
+  right: -0.04em;
+  border-bottom: 10vh transparent solid;
+  border-right: 15vw rgba($light, 1) solid;
   border-top: 10vh transparent solid;
   position: absolute;
 }
@@ -258,5 +278,12 @@ h2,
     -webkit-box-orient: vertical;
     overflow: hidden;
   }
+}
+
+.tagline {
+  box-shadow: 0.2em 0.2em 0em rgba($info, 0.5);
+  padding: 0.2em;
+  outline: 0.08em black solid;
+  background: rgba($light, 1);
 }
 </style>
