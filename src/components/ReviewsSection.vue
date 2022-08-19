@@ -69,23 +69,23 @@ q {
 }
 
 .review-angle-right {
-  width: 60vw;
+  width: 50vw;
   height: 120%;
-  background: rgba($primary, 0.2);
+  background: rgba(255, 255, 255, 0);
   position: absolute;
   z-index: 3;
   top: -2em;
-  right: -10em;
+  right: -1em;
 }
 
 .review-angle-left {
-  width: 60vw;
+  width: 50vw;
   height: 120%;
-  background: rgba($secondary, 0.2);
+  background: rgba($secondary, 0.7);
   position: absolute;
   z-index: 3;
   top: 0;
-  left: -10em;
+  left: -1em;
 }
 
 .review-text {

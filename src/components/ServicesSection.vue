@@ -32,15 +32,17 @@
   </div>
   <div class="no-parallax container-fluid">
     <div class="spacer-20" v-if="!mobile"></div>
-    <div class="row bg-light">
+    <div class="row bg position-relative">
       <div class="col-12 d-flex justify-content-center">
         <div class="d-flex justify-content-center text-center">
-          <h2 v-scrollanimation class="tagline">What's your timeline?</h2>
+          <h2 v-scrollanimation class="tagline bg-light">
+            What's your timeline?
+          </h2>
         </div>
       </div>
 
       <div class="col-md-6 p-5">
-        <div class="card contract p-4">
+        <div class="card contract">
           <div>
             <b v-scrollanimation class="fs-1">contract to close</b>
             <p v-scrollanimation class="text-body-mobile mt-3">
@@ -60,6 +62,8 @@
           <h6 class="fs-2">
             Price per file : <span class="bubble">$250</span>
           </h6>
+          <div class="angle-card"></div>
+          <div class="angle-card-2"></div>
         </div>
       </div>
       <div class="col-md-6 p-5">
@@ -89,6 +93,10 @@
           </h6>
         </div>
       </div>
+      <div class="review-angle-right"></div>
+      <div class="review-angle-left"></div>
+      <div class="angle-front"></div>
+      <div class="angle-back"></div>
     </div>
   </div>
 </template>
@@ -109,12 +117,121 @@ export default {
 <style lang="scss" scoped>
 @import "src/assets/scss/_variables.scss";
 
+.review-angle-right {
+  width: 48vw;
+  height: 100%;
+  background: rgba($primary, 1);
+  position: absolute;
+  z-index: 2;
+  bottom: 0;
+  right: 0em;
+}
+
+.review-angle-left {
+  width: 48vw;
+  height: 100%;
+  background: rgba($secondary, 1);
+  position: absolute;
+  z-index: 2;
+  bottom: 0;
+  left: 0em;
+}
+
+.angle-front {
+  z-index: 3;
+  width: 100vw;
+  top: -20vh;
+  border-bottom: 20vh transparent solid;
+  border-right: 48vw rgba($light, 1) solid;
+  border-top: 20vh transparent solid;
+  position: absolute;
+}
+
+.angle-front {
+  z-index: 3;
+  width: 100vw;
+  top: -20vh;
+  border-bottom: 20vh transparent solid;
+  border-left: 48vw rgba($light, 1) solid;
+  border-top: 20vh transparent solid;
+  position: absolute;
+}
+.angle-front {
+  z-index: 3;
+  width: 100vw;
+  top: -20vh;
+  border-bottom: 20vh transparent solid;
+  border-right: 48vw rgba($light, 1) solid;
+  border-top: 20vh transparent solid;
+  position: absolute;
+}
+
+.angle-front {
+  z-index: 3;
+  width: 100vw;
+  top: -10vh;
+  border-bottom: 10vh transparent solid;
+  border-left: 48vw rgba($light, 1) solid;
+  border-top: 10vh transparent solid;
+  position: absolute;
+}
+.angle-back {
+  z-index: 3;
+  width: 100vw;
+  bottom: -10vh;
+  border-bottom: 10vh transparent solid;
+  border-left: 48vw rgba($secondary, 1) solid;
+  border-top: 10vh transparent solid;
+  position: absolute;
+}
+
+.angle-back {
+  z-index: 3;
+  width: 100vw;
+  bottom: -10vh;
+  border-bottom: 10vh transparent solid;
+  border-right: 48vw rgba($primary, 1) solid;
+  border-top: 10vh transparent solid;
+  position: absolute;
+}
+
+.angle-card {
+  z-index: 3;
+  width: 100vw;
+  top: -11vh;
+  left: -1em;
+  border-bottom: 10vh transparent solid;
+  border-left: 25vw rgba($secondary, 1) solid;
+  border-top: 10vh transparent solid;
+  position: absolute;
+}
+
+.angle-card-2 {
+  z-index: 1;
+  width: 100vw;
+  bottom: -10vh;
+  left: -0.04em;
+  border-bottom: 10vh transparent solid;
+  border-left: 25vw rgba($light, 1) solid;
+  border-top: 10vh transparent solid;
+  position: absolute;
+}
+h6,
+h2,
+.card,
+.p {
+  z-index: 5;
+}
+
 .parallax {
   min-height: 80vh;
 }
 
 .card {
   min-height: 100%;
+  border-radius: 0;
+  z-index: 5;
+  padding: 5em;
 }
 
 .bubble {
