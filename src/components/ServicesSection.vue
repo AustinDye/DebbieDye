@@ -29,8 +29,6 @@
       <div class="spacer-10" v-if="!mobile"></div>
       <!-- <div class="spacer-20"></div> -->
     </div>
-  </div>
-  <div class="no-parallax container-fluid">
     <div class="spacer-20" v-if="!mobile"></div>
     <div class="row bg position-relative">
       <div class="col-12 d-flex justify-content-center">
@@ -116,6 +114,17 @@ export default {
 
 <style lang="scss" scoped>
 @import "src/assets/scss/_variables.scss";
+
+.parallax {
+  min-height: 270vh;
+}
+
+.card {
+  min-height: 100%;
+  border-radius: 0;
+  z-index: 5;
+  padding: 5em;
+}
 
 .review-angle-right {
   width: 48vw;
@@ -221,17 +230,6 @@ h2,
 .card,
 .p {
   z-index: 5;
-}
-
-.parallax {
-  min-height: 80vh;
-}
-
-.card {
-  min-height: 100%;
-  border-radius: 0;
-  z-index: 5;
-  padding: 5em;
 }
 
 .bubble {

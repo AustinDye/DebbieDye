@@ -1,8 +1,8 @@
 <template>
-  <div class="parallax bg container-fluid">
+  <div class="no-parallax container-fluid bg-light">
     <div class="spacer-10"></div>
     <div class="row d-flex justify-content-center">
-      <div class="col-md-8 col-sm-10">
+      <div class="col-10">
         <div class="swiper-container">
           <swiper
             :modules="modules"
@@ -96,7 +96,7 @@ export default {
 
 <style lang="scss" scoped>
 .no-parallax {
-  min-height: 30vh;
+  min-height: 50vh;
 }
 .parallax {
   min-height: 50vh;
