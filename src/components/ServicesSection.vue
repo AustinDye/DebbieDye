@@ -2,43 +2,59 @@
   <div class="parallax bg container-fluid">
     <div class="spacer-20"></div>
 
-    <div class="row d-flex justify-content-center bg-light">
-      <div class="col-md-10 col-sm-12">
+    <div class="row d-flex bg-light">
+      <div class="col-md-12 col-sm-12">
         <h1 class="text-center mt-5" v-scrollanimation>
           transaction coordination
         </h1>
-        <p v-scrollanimation class="px-5 my-4">
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit rem
-          porro consectetur distinctio exercitationem cupiditate repellat sequi,
-          ut, optio, laboriosam sunt. Repellendus fuga consequatur
-          necessitatibus cumque dolores fugiat assumenda illo? The job of a real
-          estate agent is a lot like the two sides of a coin. There is the
-          customer service aspect of the career, and then there is the
-          transaction side. Both are as different as night and day but are both
-          necessary to be a successful real estate agent. They are integral and
-          must work together to close a successful deal and ensure everyone is
-          satisfied with the ultimate outcome. The transaction coordinator works
-          hard with the paperwork (both paper and electronic), coordination,
-          phone calls, and other tasks. The agent handles the face-to-face
-          customer service part of the job with the sellers, buyers, and others.
-          A successful agent depends on their transaction coordinator and vice
-          versa. The agent will show properties and focus on all aspects of real
-          estate marketing while the transaction coordinator handles the
-          behind-the-scenes tasks.
+        <p v-scrollanimation class="px-5 my-3">
+          The job of a real estate agent is a lot like the two sides of a coin.
+          There is the customer service aspect of the career, and then there is
+          the transaction side. Both are as different as night and day but are
+          both necessary to be a successful real estate agent. They are integral
+          and must work together to close a successful deal and ensure everyone
+          is satisfied with the ultimate outcome. The transaction coordinator
+          works hard with the paperwork (both paper and electronic),
+          coordination, phone calls, and other tasks. The agent handles the
+          face-to-face customer service part of the job with the sellers,
+          buyers, and others. A successful agent depends on their transaction
+          coordinator and vice versa. The agent will show properties and focus
+          on all aspects of real estate marketing while the transaction
+          coordinator handles the behind-the-scenes tasks.
         </p>
+      </div>
+      <div class="col-md-12 d-flex align-items-center px-5">
+        <div class="selling-point p-4">
+          <h2 class="text-primary text-center p-4 fs-1 fw-bolder">
+            Grow Your Buisness
+          </h2>
+          <b class="">
+            Most agents hire a transaction coordinator in order to help them get
+            more contracts signed. Agents view a transaction coordinator as an
+            investment to grow their business
+          </b>
+        </div>
+        <div class="selling-point p-4">
+          <h2 class="text-primary text-center p-4 fs-1 fw-bolder">
+            More Time Closing Deals
+          </h2>
+          <b>
+            If you dislike the paperwork and attention to detail necessary for
+            the closing process you will love having a TC. However, agents also
+            want to use TC’s in order to “save themselves” from
+            paperwork/administrative tasks and to ensure they can deliver
+            fantastic service to clients
+          </b>
+        </div>
       </div>
       <div class="spacer-10" v-if="!mobile"></div>
       <!-- <div class="spacer-20"></div> -->
     </div>
     <div class="spacer-20" v-if="!mobile"></div>
     <div class="row bg position-relative">
-      <div class="col-12 d-flex justify-content-center">
-        <!--<div class="d-flex justify-content-center text-center">
-          <h2 v-scrollanimation class="tagline">What's your timeline?</h2>
-        </div>-->
-      </div>
+      <div class="col-12 d-flex justify-content-center"></div>
 
-      <div class="col-md-6 p-5">
+      <div class="col-md-6 p-5 d-flex justify-content-center">
         <div class="card card-1 contract">
           <div>
             <b v-scrollanimation class="fs-1">contract to close</b>
@@ -60,16 +76,12 @@
             Price per file : <span class="bubble">$250</span>
           </h6>
         </div>
-
-        <span class="d-block position-relative w-50 bg-info"
-          ><p>dog do tricks</p>
-          <div class="triangle"></div>
-          <div class="triangle-2"></div>
-        </span>
       </div>
 
-      <div class="col-md-6 p-5">
-        <div class="card card-2 pre-listing p-4">
+      <div
+        class="col-md-6 p-5 d-flex justify-content-center align-items-center"
+      >
+        <div class="card card-2 pre-listing">
           <div>
             <b v-scrollanimation class="fs-1"
               >From pre-listing until contract to close</b
@@ -95,6 +107,7 @@
           </h6>
         </div>
       </div>
+
       <div class="review-angle-right"></div>
       <div class="review-angle-left"></div>
       <div class="angle-front"></div>
@@ -119,32 +132,38 @@ export default {
 <style lang="scss" scoped>
 @import "src/assets/scss/_variables.scss";
 
-.col-md-6 {
-  height: 85vh;
-}
 .parallax {
   min-height: 270vh;
 }
 
 .card {
-  margin-top: 10em;
-  min-height: 80%;
+  min-height: 100%;
+  max-width: 40vw;
   border-radius: 0;
   z-index: 5;
-  padding: 5em;
+  padding: 1em;
   outline: none;
-  border: 0.3em black solid;
+  border: 0.2em black solid;
+}
+
+.selling-point {
+  position: relative;
+  min-height: 25vh;
+  width: 50vw;
+  bottom: 0em;
+  border-radius: 0;
+  z-index: 5;
 }
 
 .card-1 {
-  box-shadow: -1em 1em 0em rgba($info, 0.5);
+  box-shadow: -1em 1em 0em rgba($info, 0.6);
 }
 .card-2 {
-  box-shadow: 1em 1em 0em rgba($info, 0.5);
+  box-shadow: 1em 1em 0em rgba($info, 0.6);
 }
 
 .review-angle-right {
-  width: 48vw;
+  width: 47vw;
   height: 100%;
   background: rgba($light, 1);
   position: absolute;
@@ -154,7 +173,7 @@ export default {
 }
 
 .review-angle-left {
-  width: 48vw;
+  width: 47vw;
   height: 100%;
   background: rgba($light, 1);
   position: absolute;
@@ -165,39 +184,39 @@ export default {
 
 .angle-front {
   z-index: 3;
-  width: 100vw;
-  top: -20vh;
-  border-bottom: 20vh transparent solid;
-  border-right: 48vw rgba($primary, 1) solid;
-  border-top: 20vh transparent solid;
+  top: -10vh;
+  border-bottom: 10vh transparent solid;
+  border-right: 47vw rgba($light, 1) solid;
+
+  border-top: 10vh transparent solid;
   position: absolute;
 }
 
 .angle-front {
   z-index: 3;
-  width: 100vw;
   top: -10vh;
+
   border-bottom: 10vh transparent solid;
-  border-left: 48vw rgba($secondary, 1) solid;
+  border-left: 47vw rgba($light, 1) solid;
   border-top: 10vh transparent solid;
   position: absolute;
 }
 .angle-back {
   z-index: 3;
-  width: 100vw;
+
   bottom: -10vh;
   border-bottom: 10vh transparent solid;
-  border-left: 48vw rgba($light, 1) solid;
+  border-left: 47vw rgba($light, 1) solid;
   border-top: 10vh transparent solid;
   position: absolute;
 }
 
 .angle-back {
   z-index: 3;
-  width: 100vw;
+
   bottom: -10vh;
   border-bottom: 10vh transparent solid;
-  border-right: 48vw rgba($light, 1) solid;
+  border-right: 47vw rgba($light, 1) solid;
   border-top: 10vh transparent solid;
   position: absolute;
 }
@@ -283,7 +302,7 @@ h2,
 .tagline {
   box-shadow: 0.2em 0.2em 0em rgba($info, 0.5);
   padding: 0.2em;
-  outline: 0.08em black solid;
+  outline: 0.06em black solid;
   background: rgba($light, 1);
 }
 </style>
