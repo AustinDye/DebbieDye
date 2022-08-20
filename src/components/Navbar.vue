@@ -56,10 +56,10 @@ export default {
         let currentScrollPos = main.scrollTop;
         if (prevScrollpos > currentScrollPos) {
           // @ts-ignore
-          nav.classList.remove("navbar_hidden");
+          nav.classList.add("navbar_show");
         } else {
           // @ts-ignore
-          nav.classList.add("navbar_hidden");
+          nav.classList.remove("navbar_show");
         }
         prevScrollpos = currentScrollPos;
       };
@@ -74,12 +74,12 @@ export default {
 
 .navbar {
   background: $dark;
-  transform: translate3d(0, 0, 0);
+  transform: translate3d(0, -100%, 0);
   transition: all 0.2s ease-out;
 }
 
-.navbar_hidden {
-  transform: translate3d(0, -100%, 0);
+.navbar_show {
+  transform: translate3d(0, 0, 0);
 }
 
 .nav-container {
