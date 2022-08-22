@@ -4,28 +4,30 @@
 
     <div class="row d-flex bg-light justify-content-center">
       <div class="col-10">
-        <h1 class="text-center mt-5" v-scrollanimation>
-          transaction coordination
-        </h1>
-        <p v-scrollanimation class="p-5 my-3">
-          The job of a real estate agent is a lot like the two sides of a coin.
-          There is the customer service aspect of the career, and then there is
-          the transaction side. Both are as different as night and day but are
-          both necessary to be a successful real estate agent. They are integral
-          and must work together to close a successful deal and ensure everyone
-          is satisfied with the ultimate outcome. The transaction coordinator
-          works hard with the paperwork (both paper and electronic),
-          coordination, phone calls, and other tasks. The agent handles the
-          face-to-face customer service part of the job with the sellers,
-          buyers, and others. A successful agent depends on their transaction
-          coordinator and vice versa. The agent will show properties and focus
-          on all aspects of real estate marketing while the transaction
-          coordinator handles the behind-the-scenes tasks.
-        </p>
+        <div class="title-item">
+          <h1 class="text-center mt-5" v-scrollanimation>
+            transaction coordination
+          </h1>
+          <p v-scrollanimation class="my-3">
+            The job of a real estate agent is a lot like the two sides of a
+            coin. There is the customer service aspect of the career, and then
+            there is the transaction side. Both are as different as night and
+            day but are both necessary to be a successful real estate agent.
+            They are integral and must work together to close a successful deal
+            and ensure everyone is satisfied with the ultimate outcome. The
+            transaction coordinator works hard with the paperwork (both paper
+            and electronic), coordination, phone calls, and other tasks. The
+            agent handles the face-to-face customer service part of the job with
+            the sellers, buyers, and others. A successful agent depends on their
+            transaction coordinator and vice versa. The agent will show
+            properties and focus on all aspects of real estate marketing while
+            the transaction coordinator handles the behind-the-scenes tasks.
+          </p>
+        </div>
       </div>
       <div class="col-10 d-flex align-items-center px-5 mt-5">
         <div class="selling-point">
-          <h2 class="text-primary text-center p-4 fs-1 fw-bolder">
+          <h2 class="text-secondary text-center fs-1 fw-bolder">
             Grow Your Buisness
           </h2>
           <p class="">
@@ -35,7 +37,7 @@
           </p>
         </div>
         <div class="selling-point">
-          <h2 class="text-primary text-center p-4 fs-1 fw-bolder">
+          <h2 class="text-secondary text-center fs-1 fw-bolder">
             More Time Closing Deals
           </h2>
           <p>
@@ -51,7 +53,7 @@
       <!-- <div class="spacer-20"></div> -->
     </div>
     <div class="spacer-20" v-if="!mobile"></div>
-    <div class="row bg position-relative">
+    <div class="row position-relative">
       <div class="col-12 d-flex justify-content-center"></div>
 
       <div
@@ -129,19 +131,34 @@ export default {
 @import "src/assets/scss/_variables.scss";
 
 .parallax {
-  min-height: 225vh;
+  min-height: 260vh;
+}
+
+.title-item p {
+  padding-left: 6rem;
+  padding-right: 6rem;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
 }
 
 .selling-point {
   position: relative;
-  padding: 3rem;
-  min-height: 25vh;
+  padding: 1rem;
+  min-height: 40vh;
   width: 50vw;
   bottom: 0em;
   margin: 1rem;
   background: white;
   border-radius: 10px;
   z-index: 5;
+  h2 {
+    margin-top: 2rem;
+  }
+  p {
+    padding: 3rem;
+    padding-top: 0;
+    margin-top: 3rem;
+  }
 }
 .col-md-6 {
   min-height: 85vh;
