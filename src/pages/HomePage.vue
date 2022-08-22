@@ -5,7 +5,6 @@
     <TopSection />
     <div ref="Bio"></div>
     <BioSection />
-    <ReviewsSection />
     <div ref="Services"></div>
     <ServicesSection />
     <div ref="Reviews"></div>
