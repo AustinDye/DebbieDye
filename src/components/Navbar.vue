@@ -2,24 +2,25 @@
   <nav class="navbar sticky-top navbar-expand-lg navbar-dark">
     <div class="container-fluid nav-container">
       <button
+        @click="toggleStyle"
         class="navbar-toggler"
         type="button"
         data-bs-toggle="collapse"
-        data-bs-target="#navbarsExample08"
-        aria-controls="navbarsExample08"
+        data-bs-target="#myNavbar"
+        aria-controls="myNavbar"
         aria-expanded="false"
         aria-label="Toggle navigation"
       >
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="float">
-        <a class="nav-link active debbie" @click="$emit('scroll', 'Landing')"
+        <a class="debbie" @click="$emit('scroll', 'Landing')"
           ><h2 class="mb-0">Debbie Dye</h2></a
         >
       </div>
       <div
         class="collapse navbar-collapse justify-content-md-around"
-        id="navbarsExample08"
+        id="myNavbar"
       >
         <ul class="navbar-nav">
           <li class="nav-item mx-md-5">
@@ -44,10 +45,12 @@
   </nav>
 </template>
 
+
 <script>
-import { onMounted, ref } from "@vue/runtime-core";
+import { onMounted, ref, watchEffect } from "@vue/runtime-core";
 export default {
   setup() {
+    const nav = ref(null);
     onMounted(() => {
       let main = document.querySelector("main");
       let prevScrollpos = main.scrollTop;
@@ -64,7 +67,20 @@ export default {
         prevScrollpos = currentScrollPos;
       };
     });
-    return {};
+    return {
+      // nav,
+      toggleStyle() {
+        let nav = document.querySelector(".navbar");
+        console.log(nav);
+        if (nav.classList.contains("opaque")) {
+          console.log(nav.classList.contains("opaque"), "removing");
+          nav.classList.remove("opaque");
+        } else {
+          console.log(nav.classList.contains("opaque"), "adding");
+          nav.classList.add("opaque");
+        }
+      },
+    };
   },
 };
 </script>
@@ -73,9 +89,15 @@ export default {
 @import "src/assets/scss/_variables.scss";
 
 .navbar {
-  background: $dark;
+  background-color: #5d0149;
   transform: translate3d(0, -100%, 0);
-  transition: all 0.2s ease-out;
+  transition: transform 0.2s ease-out, background-color 0.4s ease-out 0.15s;
+}
+
+.opaque {
+  @media (max-width: 576px) {
+    background-color: rgba(255, 255, 255, 0.171) !important;
+  }
 }
 
 .navbar_show {
@@ -83,6 +105,7 @@ export default {
 }
 
 .nav-container {
+  position: relative;
   display: flex;
   justify-content: start;
 }
@@ -99,7 +122,14 @@ export default {
 }
 
 .debbie {
-  position: absolute;
+  h2 {
+    font-family: "nycd";
+  }
+  // text-decoration: none;
+  @media (max-width: 576px) {
+    color: black;
+  }
+  color: white;
 }
 
 ul {
@@ -112,24 +142,37 @@ a:hover {
 
 @media (max-width: 576px) {
   .navbar {
+    // background: rgb(0, 0, 0);
     // background: linear-gradient(
     //   90deg,
-    //   rgba(0, 0, 0, 0.25843840954350494) 0%,
-    //   rgba(0, 0, 0, 0) 45%,
+    //   rgba(0, 0, 0, 0.3981967787114846) 0%,
+    //   rgba(0, 0, 0, 0.20211834733893552) 50%,
     //   rgba(0, 0, 0, 0) 100%
     // );
-    background: rgb(0, 0, 0);
-    background: linear-gradient(
-      90deg,
-      rgba(0, 0, 0, 0.3981967787114846) 0%,
-      rgba(0, 0, 0, 0.20211834733893552) 50%,
-      rgba(0, 0, 0, 0) 100%
-    );
+    background: transparent;
   }
-  .float,
-  .debbie {
-    position: relative;
+  .navbar-collapse {
+    position: absolute;
+    top: 120%;
+    left: 0;
+    z-index: 100;
+    background-color: rgba(255, 255, 255, 0.171);
+  }
+  .float {
+    position: static;
     width: auto;
+    height: auto;
+  }
+  .nav-link {
+    color: rgba(0, 0, 0, 0.774) !important;
+    padding-left: 0.5rem;
+    padding-right: 45vw;
+  }
+  // .float {
+  //   position: relative;
+  // }
+  .debbie {
+    padding-left: 1rem;
   }
 }
 </style>

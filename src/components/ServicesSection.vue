@@ -2,12 +2,12 @@
   <div class="parallax bg container-fluid">
     <div class="spacer-20"></div>
 
-    <div class="row d-flex bg-light">
-      <div class="col-md-12 col-sm-12">
+    <div class="row d-flex bg-light justify-content-center">
+      <div class="col-10">
         <h1 class="text-center mt-5" v-scrollanimation>
           transaction coordination
         </h1>
-        <p v-scrollanimation class="px-5 my-3">
+        <p v-scrollanimation class="p-5 my-3">
           The job of a real estate agent is a lot like the two sides of a coin.
           There is the customer service aspect of the career, and then there is
           the transaction side. Both are as different as night and day but are
@@ -23,28 +23,28 @@
           coordinator handles the behind-the-scenes tasks.
         </p>
       </div>
-      <div class="col-md-12 d-flex align-items-center px-5">
-        <div class="selling-point p-4">
+      <div class="col-10 d-flex align-items-center px-5 mt-5">
+        <div class="selling-point">
           <h2 class="text-primary text-center p-4 fs-1 fw-bolder">
             Grow Your Buisness
           </h2>
-          <b class="">
+          <p class="">
             Most agents hire a transaction coordinator in order to help them get
             more contracts signed. Agents view a transaction coordinator as an
             investment to grow their business
-          </b>
+          </p>
         </div>
-        <div class="selling-point p-4">
+        <div class="selling-point">
           <h2 class="text-primary text-center p-4 fs-1 fw-bolder">
             More Time Closing Deals
           </h2>
-          <b>
+          <p>
             If you dislike the paperwork and attention to detail necessary for
             the closing process you will love having a TC. However, agents also
             want to use TC’s in order to “save themselves” from
             paperwork/administrative tasks and to ensure they can deliver
             fantastic service to clients
-          </b>
+          </p>
         </div>
       </div>
       <div class="spacer-10" v-if="!mobile"></div>
@@ -54,8 +54,10 @@
     <div class="row bg position-relative">
       <div class="col-12 d-flex justify-content-center"></div>
 
-      <div class="col-md-6 p-5 d-flex justify-content-center">
-        <div class="card card-1 contract">
+      <div
+        class="col-md-6 p-5 d-flex justify-content-center align-items-center"
+      >
+        <div class="card card-1">
           <div>
             <b v-scrollanimation class="fs-1">contract to close</b>
             <p v-scrollanimation class="text-body-mobile mt-3">
@@ -81,11 +83,9 @@
       <div
         class="col-md-6 p-5 d-flex justify-content-center align-items-center"
       >
-        <div class="card card-2 pre-listing">
+        <div class="card card-2">
           <div>
-            <b v-scrollanimation class="fs-1"
-              >From pre-listing until contract to close</b
-            >
+            <b v-scrollanimation class="fs-1">From pre-listing until close</b>
             <p v-scrollanimation class="text-body-mobile mt-3">
               Instead of simply working through the closing and escrow services,
               we can help work from the very beginning of the pre-listing
@@ -95,11 +95,7 @@
               eye on the seller’s transactions, initial contract to the
               finalization of the agreement, and assists the real estate agent
               with preparing all materials such as pre-listing presentations,
-              seller’s disclosures, listing agreement. They might also prepare
-              the property’s comparative market analysis, research on old
-              multiple listing service (MLS) listings, or pull an online
-              property profile. We're available to work part or full-time, and
-              can charge on an hourly or per-file basis.
+              seller’s disclosures, listing agreement.
             </p>
           </div>
           <h6 class="fs-2">
@@ -133,29 +129,46 @@ export default {
 @import "src/assets/scss/_variables.scss";
 
 .parallax {
-  min-height: 270vh;
-}
-
-.card {
-  min-height: 100%;
-  max-width: 40vw;
-  border-radius: 0;
-  z-index: 5;
-  padding: 1em;
-  outline: none;
-  border: 0.2em black solid;
-  @media (orientation: portrait) {
-    max-width: 100vw;
-  }
+  min-height: 225vh;
 }
 
 .selling-point {
   position: relative;
+  padding: 3rem;
   min-height: 25vh;
   width: 50vw;
   bottom: 0em;
-  border-radius: 0;
+  margin: 1rem;
+  background: white;
+  border-radius: 10px;
   z-index: 5;
+}
+.col-md-6 {
+  min-height: 85vh;
+  @media (min-height: 1100px) {
+    min-height: 70vh;
+  }
+}
+
+.card {
+  height: 100%;
+  max-width: 40vw;
+  z-index: 5;
+  padding: 1em;
+  outline: none;
+  border: 0.2em black solid;
+  justify-content: space-between;
+  @media (orientation: portrait) {
+    max-width: 100vw;
+  }
+  @media (min-height: 1100px) {
+    height: 75%;
+  }
+}
+
+.card div,
+h6 {
+  padding: 1rem;
 }
 
 .card-1 {
@@ -166,7 +179,7 @@ export default {
 }
 
 .review-angle-right {
-  width: 47vw;
+  width: 48vw;
   height: 100%;
   background: rgba($light, 1);
   position: absolute;
@@ -176,7 +189,7 @@ export default {
 }
 
 .review-angle-left {
-  width: 47vw;
+  width: 48vw;
   height: 100%;
   background: rgba($light, 1);
   position: absolute;
@@ -189,7 +202,7 @@ export default {
   z-index: 3;
   top: -10vh;
   border-bottom: 10vh transparent solid;
-  border-right: 47vw rgba($light, 1) solid;
+  border-right: 48vw rgba($light, 1) solid;
 
   border-top: 10vh transparent solid;
   position: absolute;
@@ -200,7 +213,7 @@ export default {
   top: -10vh;
 
   border-bottom: 10vh transparent solid;
-  border-left: 47vw rgba($light, 1) solid;
+  border-left: 48vw rgba($light, 1) solid;
   border-top: 10vh transparent solid;
   position: absolute;
 }
@@ -209,7 +222,7 @@ export default {
 
   bottom: -10vh;
   border-bottom: 10vh transparent solid;
-  border-left: 47vw rgba($light, 1) solid;
+  border-left: 48vw rgba($light, 1) solid;
   border-top: 10vh transparent solid;
   position: absolute;
 }
@@ -219,7 +232,7 @@ export default {
 
   bottom: -10vh;
   border-bottom: 10vh transparent solid;
-  border-right: 47vw rgba($light, 1) solid;
+  border-right: 48vw rgba($light, 1) solid;
   border-top: 10vh transparent solid;
   position: absolute;
 }
@@ -278,16 +291,6 @@ h2,
   font-size: 6rem;
   color: rgba($secondary, 1);
 }
-.contract {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-.pre-listing {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
 
 @media (max-width: 576px) {
   .parallax {
@@ -299,6 +302,10 @@ h2,
     -webkit-line-clamp: 6;
     -webkit-box-orient: vertical;
     overflow: hidden;
+  }
+  .card div,
+  h6 {
+    padding: 0;
   }
 }
 
