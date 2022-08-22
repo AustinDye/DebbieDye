@@ -11,9 +11,7 @@
           learned what an underwriter was looking for in a loan file. After
           about 6 months, I transitioned into a loan processor and within a
           couple of years my manager asked me to be a back-up
-          underwriter/processor/closer. One of my specialties was in FHA 203 k
-          rehab loans. Most of my colleagues avoided those types of loans, but I
-          have always enjoyed a challenge. I believe my background in mortgage
+          underwriter/processor/closer. I believe my background in mortgage
           lending has given me an advantage to understand the full process of
           what takes place from contract to closing on all levels. On a personal
           level, I like to golf, play cards with friends and family and just
