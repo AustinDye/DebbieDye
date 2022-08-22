@@ -177,4 +177,16 @@ export default {
   width: 90%;
   box-shadow: -1em 1em 0em rgba($info, 0.6);
 }
+
+.mySwiper {
+  .swiper-horizontal > .swiper-pagination-bullets,
+  .swiper-pagination-bullets.swiper-pagination-horizontal,
+  .swiper-pagination-custom,
+  .swiper-pagination-fraction {
+    bottom: 0;
+  }
+  .swiper-pagination-bullet-active {
+    background: orange;
+  }
+}
 </style>
