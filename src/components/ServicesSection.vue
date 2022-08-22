@@ -25,7 +25,7 @@
           </p>
         </div>
       </div>
-      <div class="col-10 d-flex align-items-center px-5 mt-5">
+      <div class="col-10 d-flex align-items-center px-5 mt-3">
         <div class="selling-point">
           <h2 class="text-secondary text-center fs-1 fw-bolder">
             Grow Your Buisness
@@ -142,7 +142,7 @@ export default {
 .selling-point {
   position: relative;
   padding: 1rem;
-  min-height: 40vh;
+  min-height: 45vh;
   width: 50vw;
   bottom: 0em;
   margin: 1rem;
@@ -155,7 +155,9 @@ export default {
   p {
     padding: 3rem;
     padding-top: 0;
+    padding-bottom: 0;
     margin-top: 3rem;
+    margin-bottom: 3rem;
   }
 }
 .col-md-6 {
