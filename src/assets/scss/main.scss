@@ -128,4 +128,14 @@ form:invalid button[type="submit"] {
 
 /* NOTE Don't include this with imports */
 // styling for swiper elements
-
+.mySwiper {
+  .swiper-horizontal > .swiper-pagination-bullets,
+  .swiper-pagination-bullets.swiper-pagination-horizontal,
+  .swiper-pagination-custom,
+  .swiper-pagination-fraction {
+    bottom: 0;
+  }
+  .swiper-pagination-bullet-active {
+    background: orange;
+  }
+}
