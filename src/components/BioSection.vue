@@ -1,39 +1,59 @@
 <template>
-  <div class="row no-parallax bg-white bio-section">
-    <div class="col-12 position-relative">
-      <div class="row">
-        <div class="col-6 d-flex justify-content-center r">
-          <div class="title-text d-block pt-5 mt-4">
-            <h1 class="debbie">Debbie Dye</h1>
-            <div class="color-splash"></div>
-            <h2>Transaction Coordination</h2>
-          </div>
+  <div class="row no-parallax bio-section justify-content-center">
+    <div class="col-md-12 d-flex position-relative justify-content-center">
+      <div class="card card-2 text-center">
+        <div class="text-bio-start">
+          <h2>
+            Over 14 yrs experience as a Real Estate Transaction Coordinator
+          </h2>
         </div>
-        <div class="col-6 position-relative">
-          <img
-            class="head-img"
-            src="src/assets/img/stock-photo-remove-bg.png"
-            alt=""
-          />
-          <div class="angle"></div>
-          <div class="angle-2"></div>
-        </div>
-      </div>
-      <div class="backsplash-angle"></div>
-      <div class="angle-front"></div>
-      <div class="bio-text w-50">
-        <p class="fs-4">
-          With over 14 yrs experience as a Real Estate Transaction Coordinator,
+        <b class="fs-4 text-secondary">
           I enjoy assisting agents with the details of their transactions, so
-          they can be out doing what they love to do.
-        </p>
-        <div class="btn d-flex ms-5">
-          Read Reviews
-          <div class="mdi text-dark ms-2 mdi-arrow-down"></div>
-        </div>
+          they can be out doing what they love.
+        </b>
       </div>
-      <div class="angle-back"></div>
+      <div class="shadow-right"></div>
+      <div class="shadow-left"></div>
     </div>
+
+    <div
+      class="col-md-6 d-flex position-relative justify-content-center align-items-center"
+    >
+      <div class="review-angle-top"></div>
+      <img
+        src="src/assets/img/istockphoto-500161061-1024x1024.jpeg"
+        alt=""
+        class="head-img"
+      />
+      <div class="review-angle-bottom"></div>
+    </div>
+    <div class="col-6 d-flex position-relative justify-content-center">
+      <div class="card-1 px-5 py-4">
+        <p class="fs-5">
+          In the past I was a realtor and realized that my giftings were in
+          taking care of all the details of the transaction. An opportunity
+          arose for me to become an underwriting assistant for a wholesale
+          lender. With that position, I leaned in, asked a lot of questions and
+          learned what an underwriter was looking for in a loan file. After
+          about 6 months, I transitioned into a loan processor and within a
+          couple of years my manager asked me to be a back-up
+          underwriter/processor/closer.
+        </p>
+        <b class="fs-4 text-secondary">
+          I believe my background in mortgage lending has given me an advantage
+          to understand the full process of what takes place from contract to
+          closing on all levels.
+        </b>
+        <p class="fs-5 py-4">
+          On a personal level, I like to golf, play cards with friends and
+          family and just recently started doing watercolor painting with my
+          grandchildren.
+        </p>
+      </div>
+    </div>
+    <div class="trap-shape"></div>
+    <div class="trap-shape-2"></div>
+    <div class="square-shape"></div>
   </div>
 </template>
 
@@ -55,125 +75,142 @@ export default {
   }
 }
 
+.text-bio-start {
+  z-index: 5;
+  font-size: 1.2em;
+}
+
+.card {
+  border-radius: 0px;
+  z-index: 5;
+  outline: none;
+  background: rgba($light, 1);
+  border: 0em black solid;
+  @media (orientation: portrait) {
+    max-width: 100vw;
+  }
+}
+
+.card-1 {
+  border-radius: 0px;
+  position: absolute;
+  z-index: 5;
+
+  outline: none;
+  width: 40vw;
+  font-size: 1em;
+  color: rgba($info, 1);
+  height: 10vh;
+}
+
+h2 {
+  margin-top: 1em;
+  font-size: 2.5em;
+  font-family: "Unna", serif;
+}
+
+.card-2 {
+  min-width: 70vw;
+  max-height: 20vh;
+  z-index: 6;
+  top: 2vh;
+  background: rgba($light, 1);
+  color: rgba($info, 1);
+  border: 0.2em black solid;
+}
+
+.shadow-left {
+  height: 9.5em;
+  width: 36em;
+  position: absolute;
+  z-index: 5;
+  top: 8vh;
+  left: 11.9%;
+  background-color: rgba($info, 0.5);
+}
+.shadow-right {
+  height: 9.5em;
+  width: 36em;
+  position: absolute;
+  z-index: 5;
+  top: 8vh;
+  right: 11.9%;
+
+  background-color: rgba($info, 0.5);
+}
+
+.card-3 {
+  font-size: 1.2em;
+  top: 3.5em;
+  min-width: 30vw;
+  height: 24vh;
+  z-index: 3;
+  color: rgba($light, 0.8);
+  background: rgba($primary, 1);
+}
+
+.row {
+  margin: 10em;
+}
+
 .title-text {
   z-index: 10;
   // color: darken($primary, 10);
 }
 
-.debbie {
-  z-index: 11;
-  position: relative;
-  display: flex;
-  justify-content: center;
-}
-
-.debbie::after {
-  content: "";
-  z-index: -1;
-  position: absolute;
-  left: 2.5%;
-  right: 0;
-  bottom: 9%;
-  height: 20%;
-  width: 95%;
-  background: #fbe557cc;
-  border-radius: 10px;
+.img-holder {
+  z-index: 5;
 }
 
 .head-img {
   z-index: 3;
-  height: 60vh;
-  margin-left: 18%;
-  border-radius: 10%;
   position: absolute;
-  bottom: -40vh;
-}
-.color-splash {
-  border-top: 0.5em transparent solid;
-  border-bottom: 0.5em transparent solid;
+  height: 55vh;
+  top: -2em;
+  padding-left: 1em;
 }
 
-.bio-text {
-  top: 62vh;
-  margin-left: 5em;
-  z-index: 10;
-  position: absolute;
-  color: white;
-}
-
-.bck-txt {
-  z-index: 0;
-
-  margin-right: 5em;
-}
-.angle-bottom {
-  z-index: 100;
-  width: 100vw;
-  top: 90vh;
-  border-bottom: 15vh transparent solid;
-  border-right: 100vw rgba($primary, 1) solid;
-  border-top: 30vh transparent solid;
-  position: absolute;
-}
-.angle-front {
-  z-index: 5;
-  width: 100vw;
-  top: 45vh;
-  border-bottom: 15vh transparent solid;
-  border-left: 120vw rgba($primary, 1) solid;
-  border-top: 30vh transparent solid;
-  position: absolute;
-}
-
-.backsplash-angle {
-  z-index: 2;
-  top: 0;
-  border-bottom: 60vh transparent solid;
-  border-left: 150vw rgba($secondary, 0.5) solid;
+.review-angle-top {
   border-top: 0vh transparent solid;
+  border-bottom: 5vh transparent solid;
+  border-left: 60vh rgba($light, 1) solid;
   position: absolute;
+  z-index: 4;
+  top: -2em;
 }
-
-.angle-back {
-  z-index: 1;
-  width: 100vw;
-  min-height: 20vh;
-  top: 45vh;
-  border-bottom: 15vh transparent solid;
-  border-left: 120vw rgba($primary, 0.7) solid;
-  border-top: 25vh transparent solid;
+.review-angle-bottom {
+  border-top: 5vh transparent solid;
+  border-bottom: 0vh transparent solid;
+  border-left: 60vh rgba($light, 1) solid;
   position: absolute;
+  z-index: 5;
+  bottom: -32vh;
 }
 
 .no-parallax {
   min-height: 75vh;
 }
 
-.angle {
-  z-index: 3;
-  width: 60vw;
-  top: 0;
-  border-top: 30vh solid rgba(#4cb2bd, 1);
-  border-left: 60vw transparent solid;
+.trap-shape {
+  border-bottom: 40vw solid rgba($light, 1);
+  border-left: 2.5vh transparent solid;
+  border-right: 2.5vh transparent solid;
+  width: 90vh;
+  rotate: -90deg;
+  right: 40vw;
+  top: 10%;
   position: absolute;
+  z-index: 2;
 }
-.angle-2 {
-  z-index: 4;
-  width: 60vw;
-  top: 0;
-  border-top: 25vh solid rgba($primary, 1);
-  border-left: 60vw transparent solid;
+.trap-shape-2 {
+  border-bottom: 40vw solid rgba($light, 1);
+  border-left: 2.5vh transparent solid;
+  border-right: 2.5vh transparent solid;
+  width: 90vh;
+  rotate: 90deg;
+  left: 40vw;
+  top: 10%;
   position: absolute;
-}
-
-.background-text {
-  bottom: 1em;
-  z-index: 0;
-  font-size: 2em;
-  rotate: -6deg;
-  margin-left: 5em;
-  width: 75vw;
-  overflow-x: scroll;
-  white-space: nowrap;
+  z-index: 2;
 }
 </style>
