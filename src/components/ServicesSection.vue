@@ -166,7 +166,7 @@ export default {
 }
 
 .card {
-  height: 70%;
+  height: 80%;
   max-width: 35vw;
   z-index: 5;
   padding: 1em;
