@@ -89,8 +89,9 @@ export default {
 @import "src/assets/scss/_variables.scss";
 
 .navbar {
+  min-height: 60px;
   background-color: #5d0149;
-  transform: translate3d(0, -100%, 0);
+  transform: translate3d(0, -110%, 0);
   transition: transform 0.2s ease-out, background-color 0.4s ease-out 0.15s;
 }
 
@@ -123,7 +124,10 @@ export default {
 
 .debbie {
   h2 {
+    margin-top: 0.5rem;
     font-family: "nycd";
+    font-size: 3rem;
+    color: white;
   }
   // text-decoration: none;
   @media (max-width: 576px) {
