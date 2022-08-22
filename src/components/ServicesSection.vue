@@ -104,10 +104,8 @@
         </div>
       </div>
 
-      <div class="review-angle-right"></div>
-      <div class="review-angle-left"></div>
-      <div class="angle-front"></div>
-      <div class="angle-back"></div>
+      <div class="services-angle-right"></div>
+      <div class="services-angle-left"></div>
     </div>
   </div>
 </template>
@@ -151,8 +149,8 @@ export default {
 }
 
 .card {
-  height: 100%;
-  max-width: 40vw;
+  height: 70%;
+  max-width: 35vw;
   z-index: 5;
   padding: 1em;
   outline: none;
@@ -178,108 +176,30 @@ h6 {
   box-shadow: 1em 1em 0em rgba($info, 0.6);
 }
 
-.review-angle-right {
-  width: 48vw;
-  height: 100%;
-  background: rgba($light, 1);
-  position: absolute;
-  z-index: 2;
-  bottom: 0;
-  right: 0em;
-}
-
-.review-angle-left {
-  width: 48vw;
-  height: 100%;
-  background: rgba($light, 1);
-  position: absolute;
-  z-index: 2;
-  bottom: 0;
-  left: 0em;
-}
-
-.angle-front {
-  z-index: 3;
-  top: -10vh;
-  border-bottom: 10vh transparent solid;
-  border-right: 48vw rgba($light, 1) solid;
-
-  border-top: 10vh transparent solid;
-  position: absolute;
-}
-
-.angle-front {
-  z-index: 3;
-  top: -10vh;
-
-  border-bottom: 10vh transparent solid;
-  border-left: 48vw rgba($light, 1) solid;
-  border-top: 10vh transparent solid;
-  position: absolute;
-}
-.angle-back {
-  z-index: 3;
-
-  bottom: -10vh;
-  border-bottom: 10vh transparent solid;
-  border-left: 48vw rgba($light, 1) solid;
-  border-top: 10vh transparent solid;
-  position: absolute;
-}
-
-.angle-back {
-  z-index: 3;
-
-  bottom: -10vh;
-  border-bottom: 10vh transparent solid;
-  border-right: 48vw rgba($light, 1) solid;
-  border-top: 10vh transparent solid;
-  position: absolute;
-}
-
-.angle-card {
-  z-index: 3;
-  width: 100vw;
-  top: -11vh;
-  left: -1em;
-  border-bottom: 10vh transparent solid;
-  border-left: 30vw rgba($light, 1) solid;
-  border-top: 10vh transparent solid;
-  position: absolute;
-}
-
-.angle-card-2 {
-  z-index: 2;
-  width: 100vw;
-  bottom: -10vh;
-  left: -0.04em;
-  border-bottom: 10vh transparent solid;
-  border-left: 15vw rgba($light, 1) solid;
-  border-top: 10vh transparent solid;
-  position: absolute;
-}
-
-.angle-card-other {
-  z-index: 3;
-  width: 100vw;
-  top: -11vh;
+.services-angle-right {
+  border-bottom: 57vw solid rgba($light, 1);
+  border-left: 2.5vh transparent solid;
+  border-right: 2.5vh transparent solid;
+  width: 80vh;
+  rotate: -90deg;
   right: -1em;
-  border-bottom: 10vh transparent solid;
-  border-right: 30vw rgba($light, 1) solid;
-  border-top: 10vh transparent solid;
+  top: -16vh;
   position: absolute;
+  z-index: 3;
 }
 
-.angle-card-2-other {
-  z-index: 2;
-  width: 100vw;
-  bottom: -10vh;
-  right: -0.04em;
-  border-bottom: 10vh transparent solid;
-  border-right: 15vw rgba($light, 1) solid;
-  border-top: 10vh transparent solid;
+.services-angle-left {
+  border-bottom: 57vw solid rgba($light, 1);
+  border-left: 2.5vh transparent solid;
+  border-right: 2.5vh transparent solid;
+  width: 80vh;
+  rotate: 90deg;
+  left: -1em;
+  top: -16vh;
   position: absolute;
+  z-index: 3;
 }
+
 h6,
 h2,
 .card,

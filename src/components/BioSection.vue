@@ -28,8 +28,14 @@
       <div class="review-angle-bottom"></div>
     </div>
     <div class="col-6 d-flex position-relative justify-content-center">
-      <div class="card-1 px-5 py-4">
-        <p class="fs-5">
+      <div class="card-1 px-4 pt-2">
+        <p class="px-5 big-bio-text">
+          I believe my background in mortgage lending has given me an advantage
+          to understand the full process of what takes place from contract to
+          closing on all levels.
+        </p>
+        <div class="orange-text"></div>
+        <p class="fs-5 px-5">
           In the past I was a realtor and realized that my giftings were in
           taking care of all the details of the transaction. An opportunity
           arose for me to become an underwriting assistant for a wholesale
@@ -37,17 +43,9 @@
           learned what an underwriter was looking for in a loan file. After
           about 6 months, I transitioned into a loan processor and within a
           couple of years my manager asked me to be a back-up
-          underwriter/processor/closer.
-        </p>
-        <b class="fs-4 text-secondary">
-          I believe my background in mortgage lending has given me an advantage
-          to understand the full process of what takes place from contract to
-          closing on all levels.
-        </b>
-        <p class="fs-5 py-4">
-          On a personal level, I like to golf, play cards with friends and
-          family and just recently started doing watercolor painting with my
-          grandchildren.
+          underwriter/processor/closer. One of my specialties was in FHA 203 k
+          rehab loans. Most of my colleagues avoided those types of loans, but I
+          have always enjoyed a challenge.
         </p>
       </div>
     </div>
@@ -75,9 +73,21 @@ export default {
   }
 }
 
+.orange-text {
+  border-bottom: 0.4em solid rgba($dark, 0.8);
+  margin: 2em;
+  margin-left: 4em;
+  margin-right: 4em;
+}
+
 .text-bio-start {
   z-index: 5;
   font-size: 1.2em;
+}
+.big-bio-text {
+  font-weight: 700;
+  font-size: 1.4em;
+  font-family: sans-serif;
 }
 
 .card {
@@ -92,15 +102,13 @@ export default {
 }
 
 .card-1 {
-  border-radius: 0px;
+  border-radius: 2.5px;
   position: absolute;
   z-index: 5;
-
   outline: none;
-  width: 40vw;
+  top: -5em;
+  width: 70vh;
   font-size: 1em;
-  color: rgba($info, 1);
-  height: 10vh;
 }
 
 h2 {
@@ -165,26 +173,26 @@ h2 {
 .head-img {
   z-index: 3;
   position: absolute;
-  height: 55vh;
-  top: -2em;
-  padding-left: 1em;
+  height: 525px;
+  top: -4em;
+  padding-left: 5em;
 }
 
 .review-angle-top {
   border-top: 0vh transparent solid;
-  border-bottom: 5vh transparent solid;
+  border-bottom: 1.5vh transparent solid;
   border-left: 60vh rgba($light, 1) solid;
   position: absolute;
   z-index: 4;
-  top: -2em;
+  top: -4em;
 }
 .review-angle-bottom {
-  border-top: 5vh transparent solid;
+  border-top: 1.5vh transparent solid;
   border-bottom: 0vh transparent solid;
   border-left: 60vh rgba($light, 1) solid;
   position: absolute;
   z-index: 5;
-  bottom: -32vh;
+  bottom: -28vh;
 }
 
 .no-parallax {
