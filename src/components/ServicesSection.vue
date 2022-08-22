@@ -7,7 +7,7 @@
         <h1 class="text-center mt-5" v-scrollanimation>
           transaction coordination
         </h1>
-        <p v-scrollanimation class="px-5 my-3">
+        <p v-scrollanimation class="p-5 my-3">
           The job of a real estate agent is a lot like the two sides of a coin.
           There is the customer service aspect of the career, and then there is
           the transaction side. Both are as different as night and day but are
@@ -23,28 +23,28 @@
           coordinator handles the behind-the-scenes tasks.
         </p>
       </div>
-      <div class="col-10 d-flex align-items-center px-5">
-        <div class="selling-point p-4">
+      <div class="col-10 d-flex align-items-center px-5 mt-5">
+        <div class="selling-point">
           <h2 class="text-primary text-center p-4 fs-1 fw-bolder">
             Grow Your Buisness
           </h2>
-          <b class="">
+          <p class="">
             Most agents hire a transaction coordinator in order to help them get
             more contracts signed. Agents view a transaction coordinator as an
             investment to grow their business
-          </b>
+          </p>
         </div>
-        <div class="selling-point p-4">
+        <div class="selling-point">
           <h2 class="text-primary text-center p-4 fs-1 fw-bolder">
             More Time Closing Deals
           </h2>
-          <b>
+          <p>
             If you dislike the paperwork and attention to detail necessary for
             the closing process you will love having a TC. However, agents also
             want to use TC’s in order to “save themselves” from
             paperwork/administrative tasks and to ensure they can deliver
             fantastic service to clients
-          </b>
+          </p>
         </div>
       </div>
       <div class="spacer-10" v-if="!mobile"></div>
@@ -134,6 +134,7 @@ export default {
 
 .selling-point {
   position: relative;
+  padding: 3rem;
   min-height: 25vh;
   width: 50vw;
   bottom: 0em;
