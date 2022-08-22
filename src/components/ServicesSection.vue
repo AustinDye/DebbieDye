@@ -2,8 +2,8 @@
   <div class="parallax bg container-fluid">
     <div class="spacer-20"></div>
 
-    <div class="row d-flex bg-light">
-      <div class="col-md-12 col-sm-12">
+    <div class="row d-flex bg-light justify-content-center">
+      <div class="col-10">
         <h1 class="text-center mt-5" v-scrollanimation>
           transaction coordination
         </h1>
@@ -23,7 +23,7 @@
           coordinator handles the behind-the-scenes tasks.
         </p>
       </div>
-      <div class="col-md-12 d-flex align-items-center px-5">
+      <div class="col-10 d-flex align-items-center px-5">
         <div class="selling-point p-4">
           <h2 class="text-primary text-center p-4 fs-1 fw-bolder">
             Grow Your Buisness
@@ -137,13 +137,15 @@ export default {
   min-height: 25vh;
   width: 50vw;
   bottom: 0em;
-  border-radius: 0;
+  margin: 1rem;
+  background: white;
+  border-radius: 10px;
   z-index: 5;
 }
 .col-md-6 {
   min-height: 85vh;
-  @media (min-width: 1500px) {
-    min-height: 60vh;
+  @media (min-height: 1100px) {
+    min-height: 70vh;
   }
 }
 
@@ -158,7 +160,7 @@ export default {
   @media (orientation: portrait) {
     max-width: 100vw;
   }
-  @media (min-width: 1500px) {
+  @media (min-height: 1100px) {
     height: 75%;
   }
 }
