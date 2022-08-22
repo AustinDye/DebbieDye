@@ -8,7 +8,7 @@
           <h1 class="text-center mt-5" v-scrollanimation>
             transaction coordination
           </h1>
-          <p v-scrollanimation class="my-3">
+          <p v-scrollanimation class="">
             The job of a real estate agent is a lot like the two sides of a
             coin. There is the customer service aspect of the career, and then
             there is the transaction side. Both are as different as night and
@@ -61,7 +61,7 @@
       >
         <div class="card card-1">
           <div>
-            <b v-scrollanimation class="fs-1">contract to close</b>
+            <h5 v-scrollanimation class="fs-1">contract to close</h5>
             <p v-scrollanimation class="text-body-mobile mt-3">
               Contract to Close is all about what happens once your contract has
               been accepted until the day of closing. Our goal is to ensure that
@@ -87,7 +87,7 @@
       >
         <div class="card card-2">
           <div>
-            <b v-scrollanimation class="fs-1">From pre-listing until close</b>
+            <h5 v-scrollanimation class="fs-1">From pre-listing until close</h5>
             <p v-scrollanimation class="text-body-mobile mt-3">
               Instead of simply working through the closing and escrow services,
               we can help work from the very beginning of the pre-listing
@@ -142,7 +142,7 @@ export default {
 .selling-point {
   position: relative;
   padding: 1rem;
-  min-height: 45vh;
+  min-height: 40vh;
   width: 50vw;
   bottom: 0em;
   margin: 1rem;
@@ -150,14 +150,14 @@ export default {
   border-radius: 10px;
   z-index: 5;
   h2 {
-    margin-top: 2rem;
+    margin-top: 1.5rem;
   }
   p {
     padding: 3rem;
     padding-top: 0;
     padding-bottom: 0;
     margin-top: 3rem;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
   }
 }
 .col-md-6 {

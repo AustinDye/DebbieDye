@@ -7,7 +7,12 @@
 @font-face {
   font-family: "nycd";
   font-display: auto;
-  src: url("../fonts/NothingYouCouldDo-Regular.ttf") format("truetype");
+  src: url("./assets/fonts/NothingYouCouldDo-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "quicksand";
+  font-display: auto;
+  src: url("./assets/fonts/Quicksand-VariableFont_wght.ttf") format("truetype");
 }
 
 body {
@@ -24,6 +29,10 @@ main {
   display: flex;
   flex-direction: column;
   scroll-behavior: smooth;
+}
+
+p, span, b {
+  font-family: "quicksand"
 }
 
 .no-parallax {
