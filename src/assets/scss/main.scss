@@ -4,8 +4,10 @@
 @import "./utilities.scss";
 @import "./loaders.scss";
 
-html{
-  scroll-behavior: smooth;
+@font-face {
+  font-family: "nycd";
+  font-display: auto;
+  src: url("../fonts/NothingYouCouldDo-Regular.ttf") format("truetype");
 }
 
 body {
@@ -25,7 +27,7 @@ main {
 }
 
 .no-parallax {
-  position: relative;
+  // position: relative;
   z-index: 2;
   transform-style: preserve-3d;
 }
@@ -87,7 +89,7 @@ main {
 
 .enter {
   opacity: 1;
-  transition-delay: 0.08s;
+  transition-delay: 0.1s;
   transform: translateY(0);
 }
 

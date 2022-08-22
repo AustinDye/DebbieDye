@@ -122,7 +122,10 @@ export default {
 }
 
 .debbie {
-  text-decoration: none;
+  h2 {
+    font-family: "nycd";
+  }
+  // text-decoration: none;
   @media (max-width: 576px) {
     color: black;
   }
