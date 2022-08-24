@@ -16,7 +16,13 @@
       </div>
 
       <div
-        class="col-md-12 col-lg-6 d-flex position-relative justify-content-center align-items-center"
+        class="
+          col-md-12 col-lg-6
+          d-flex
+          position-relative
+          justify-content-center
+          align-items-center
+        "
       >
         <div class="review-angle-top"></div>
         <img
@@ -28,7 +34,13 @@
         <div class="trap-shape"></div>
       </div>
       <div
-        class="col-md-12 col-lg-6 d-flex position-relative justify-content-center align-items-center"
+        class="
+          col-md-12 col-lg-6
+          d-flex
+          position-relative
+          justify-content-center
+          align-items-center
+        "
       >
         <div class="card-1 p-4">
           <p class="big-bio-text">
@@ -172,10 +184,6 @@ h2 {
   box-shadow: 1em 1em 0em rgba($info, 0.6);
   @media (max-width: 1000px) {
   }
-}
-
-.no-parallax {
-  min-height: 100vh;
 }
 
 .trap-shape {

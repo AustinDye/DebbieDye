@@ -36,15 +36,20 @@ p, span, b {
 }
 
 .no-parallax {
-  // position: relative;
   z-index: 2;
   transform-style: preserve-3d;
+  @media (max-width: 576px){
+    min-height: 200vh;
+  }
 }
 
 .parallax {
   position: relative;
   min-height: 100vh;
   transform-style: preserve-3d;
+  @media (max-width: 576px){
+    min-height: 200vh;
+  }
 }
 
 .parallax::after {
