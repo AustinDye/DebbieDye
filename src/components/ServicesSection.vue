@@ -1,7 +1,5 @@
 <template>
   <div class="parallax bg container-fluid">
-    <div class="spacer-20"></div>
-
     <div class="row d-flex bg-light justify-content-center">
       <div class="col-10">
         <div class="title-item">
@@ -70,10 +68,7 @@
               with all of the daily details of your contracts once they have
               been executed. We ensure that all parties involved are updated
               with what is going on during the transactions, in addition to
-              making sure deadline are being met and that we close on time. We
-              are your assistants while you are out of the office doing what you
-              do best—opening doors and selling homes! Let us take care of the
-              paperwork.
+              making sure deadline are being met and that we close on time.
             </p>
           </div>
           <h6 class="fs-2">
@@ -95,9 +90,6 @@
               handles the face-to-face customer service part of the job with the
               sellers, buyers, and others, the transaction coordinator keeps an
               eye on the seller’s transactions, initial contract to the
-              finalization of the agreement, and assists the real estate agent
-              with preparing all materials such as pre-listing presentations,
-              seller’s disclosures, listing agreement.
             </p>
           </div>
           <h6 class="fs-2">
@@ -168,7 +160,7 @@ export default {
 }
 
 .card {
-  height: 80%;
+  min-height: 50%;
   max-width: 35vw;
   z-index: 5;
   padding: 1em;
@@ -179,7 +171,7 @@ export default {
     max-width: 100vw;
   }
   @media (min-height: 1100px) {
-    height: 75%;
+    height: 100%;
   }
 }
 

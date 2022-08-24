@@ -1,10 +1,10 @@
 <template>
   <div class="parallax bg">
     <div class="word-wrapper text-info">
-      <h1>Hello World</h1>
+      <h1>Debbie Dye TC Services</h1>
       <span class="d-flex"
         ><div class="mdi mdi-format-quote-open"></div>
-        <h5>sub header text be a ray of sunshine</h5>
+        <h5>Be a ray of sunshine in someones life to make it a brighter day</h5>
         <div class="mdi mdi-format-quote-close pt-1"></div
       ></span>
     </div>
@@ -22,6 +22,10 @@ export default {
 <style lang="scss" scoped>
 .bg::after {
   transform: translateZ(-1px) scale(1.8);
+}
+
+.parallax {
+  min-height: 150vh;
 }
 
 .word-wrapper {
