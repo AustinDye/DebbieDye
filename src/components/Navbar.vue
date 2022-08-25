@@ -48,18 +48,48 @@
 
 
 <script>
-import { onMounted, ref, watch, watchEffect } from "@vue/runtime-core";
+import { onMounted, ref, watchEffect } from "@vue/runtime-core";
 export default {
   setup() {
     const collapse = ref(null);
-    const goOpaque = ref(false);
+    const menuShowing = ref(false);
+    const navShowing = ref(false);
+    const fadeOut = ref("");
+
+    function toggleStyle() {
+      menuShowing.value = !menuShowing.value;
+      let items = document.querySelectorAll(".nav-link");
+      if (!items[items.length - 1].classList.contains("opaque")) {
+        for (let i = 0; i < items.length; i++) {
+          const item = items[i];
+          setTimeout(() => {
+            item.classList.add("opaque");
+          }, 75 * i);
+        }
+      } else {
+        for (let i = 0; i < items.length; i++) {
+          const item = items[i];
+          item.classList.remove("opaque");
+        }
+      }
+    }
+
     watchEffect(() => {
-      if (collapse.value) {
-        if (collapse.value.classList.contains("show")) {
-          goOpaque.value = false;
+      let nav = document.querySelector(".navbar");
+      navShowing.value;
+      menuShowing.value;
+      if (nav) {
+        if (navShowing.value && !menuShowing.value) {
+          fadeOut.value = setTimeout(() => {
+            nav.classList.remove("opaque");
+          }, 4000);
+        }
+        if (navShowing.value && menuShowing.value) {
+          clearTimeout(fadeOut.value);
         }
       }
     });
+
     onMounted(() => {
       let main = document.querySelector("main");
       let prevScrollpos = main.scrollTop;
@@ -68,40 +98,21 @@ export default {
         let currentScrollPos = main.scrollTop;
         if (prevScrollpos > currentScrollPos) {
           // @ts-ignore
-          goOpaque.value = true;
           nav.classList.add("navbar_show");
           nav.classList.add("opaque");
-          if (goOpaque.value) {
-            setTimeout(() => {
-              nav.classList.remove("opaque");
-            }, 5000);
-          }
+          navShowing.value = true;
         } else {
           // @ts-ignore
           nav.classList.remove("navbar_show");
           nav.classList.remove("opaque");
+          navShowing.value = false;
         }
         prevScrollpos = currentScrollPos;
       };
     });
     return {
       collapse,
-      toggleStyle() {
-        let items = document.querySelectorAll(".nav-link");
-        if (!items[items.length - 1].classList.contains("opaque")) {
-          for (let i = 0; i < items.length; i++) {
-            const item = items[i];
-            setTimeout(() => {
-              item.classList.add("opaque");
-            }, 75 * i);
-          }
-        } else {
-          for (let i = 0; i < items.length; i++) {
-            const item = items[i];
-            item.classList.remove("opaque");
-          }
-        }
-      },
+      toggleStyle,
     };
   },
 };
