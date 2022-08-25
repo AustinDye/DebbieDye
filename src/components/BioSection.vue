@@ -1,5 +1,5 @@
 <template>
-  <div class="container-fluid no-parallax mb-5">
+  <div class="container-fluid no-parallax">
     <div class="row">
       <div class="col-md-12 d-flex position-relative justify-content-center">
         <div class="card section-head text-center">
@@ -16,28 +16,24 @@
       </div>
 
       <div
-        class="col-md-12 col-lg-6 d-flex position-relative justify-content-center align-items-center"
+        class="col-md-6 col-lg-6 d-flex position-relative justify-content-center"
       >
-        <div class="review-angle-top"></div>
         <img
-          src="src/assets/img/istockphoto-500161061-1024x1024.jpeg"
+          src="src/assets/img/stock-photo-remove-bg.png"
           alt=""
           class="head-img"
         />
-        <div class="review-angle-bottom"></div>
-        <div class="trap-shape"></div>
-      </div>
-      <div
-        class="col-md-12 col-lg-6 d-flex position-relative justify-content-center align-items-center"
-      >
-        <div class="card-1 p-4">
+        <div class="card-1 p-4 pb-3">
           <p class="big-bio-text">
             I believe my background in mortgage lending has given me an
             advantage to understand the full process of what takes place from
             contract to closing on all levels.
           </p>
-          <div class="orange-text"></div>
         </div>
+
+        <div class="trap-shape"></div>
+      </div>
+      <div class="col-6 d-flex position-relative justify-content-center">
         <div class="card-2 p-4">
           <p class="">
             In the past I was a realtor and realized that my giftings were in
@@ -49,9 +45,12 @@
             within a couple of years my manager asked me to be a back-up
             underwriter/processor/closer. One of my specialties was in FHA 203 k
             rehab loans. Most of my colleagues avoided those types of loans, but
-            I have always enjoyed a challenge.
+            I have always enjoyed a challenge. On a personal level, I like to
+            golf, play cards with friends and family and just recently started
+            doing watercolor painting with my grandchildren.
           </p>
         </div>
+
         <div class="trap-shape-2"></div>
       </div>
     </div>
@@ -70,6 +69,12 @@ export default {
 <style lang="scss" scoped>
 @import "src/assets/scss/_variables.scss";
 
+.no-parallax {
+  min-height: 100vh;
+  @media (max-width: 600px) {
+    min-height: 130vh;
+  }
+}
 .orange-text {
   border-bottom: 0.4em solid rgba($dark, 0.8);
   margin: 2em;
@@ -93,40 +98,66 @@ export default {
   outline: none;
   background: rgba($light, 1);
   border: 0em black solid;
-  @media (orientation: portrait) {
-    max-width: 100vw;
-  }
 }
 
+.head-img {
+  z-index: 10;
+  position: absolute;
+  height: 33vh;
+  right: 14vw;
+  top: -42vh;
+  bottom: -13.5vh;
+  @media (max-width: 1180px) {
+    right: 3vw;
+    z-index: 3;
+    top: -30vh;
+  }
+}
 .card-1 {
   border-radius: 2.5px;
   position: absolute;
-
-  top: -25vh;
+  margin-top: 10vh;
+  background: rgba($light, 1);
+  right: -60vh;
   z-index: 5;
+  top: -40vh;
   outline: none;
   border: 0.2em black solid;
-  box-shadow: 1em 1em 0em rgba($info, 0.6);
-
-  width: 80vh;
-  font-size: 1em;
-  @media (max-width: 1000px) {
-    top: 30em;
+  box-shadow: -25vw -5em 0em rgba($info, 0.6);
+  width: 40vw;
+  font-size: 1.1em;
+  @media (max-width: 1180px) {
+    margin-top: 0vh;
+    top: -18vh;
+    right: -38vw;
+    width: 50vw;
+    box-shadow: 1vw 1vw 0em rgba($info, 0.6);
+  }
+  @media (max-width: 600px) {
+    top: -10vh;
+    right: 5vw;
+    width: 90vw;
   }
 }
 
 .card-2 {
   border-radius: 2.5px;
   position: absolute;
-
+  left: -28em;
   top: 10vh;
   z-index: 5;
   outline: none;
-
-  width: 80vh;
+  width: 60vw;
   font-size: 1em;
-  @media (max-width: 1000px) {
-    top: 30em;
+  @media (max-width: 1180px) {
+    top: 13em;
+    left: -35vw;
+    width: 80vw;
+  }
+  @media (max-width: 600px) {
+    top: 30vh;
+    left: 1em;
+    width: 90vw;
   }
 }
 h2 {
@@ -136,13 +167,18 @@ h2 {
 }
 
 .section-head {
+  padding: 2em;
   min-width: 70vw;
   max-height: 20vh;
+  top: -60vh;
   z-index: 6;
-  top: -35vh;
   padding-bottom: 1em;
   background: none;
   color: rgba($info, 1);
+  @media (max-width: 600px) {
+    top: -70vh;
+    width: 160vh;
+  }
 }
 
 .card-3 {
@@ -155,51 +191,40 @@ h2 {
   background: rgba($primary, 1);
 }
 
-.title-text {
-  z-index: 10;
-  // color: darken($primary, 10);
-}
-
-.img-holder {
-  z-index: 5;
-}
-
-.head-img {
-  z-index: 3;
-  position: absolute;
-  height: 60vh;
-  top: -25vh;
-  box-shadow: 1em 1em 0em rgba($info, 0.6);
-  @media (max-width: 1000px) {
-  }
-}
-
-.no-parallax {
-  min-height: 100vh;
-}
-
 .trap-shape {
   border-bottom: 50vw solid rgba($light, 1);
   border-left: 2.5vh transparent solid;
   border-right: 2.5vh transparent solid;
-  width: 120vh;
+  width: 140vh;
+  top: -60vh;
   rotate: -90deg;
   position: absolute;
   z-index: 2;
-  @media (max-width: 1100px) {
-    right: 8vw;
+  @media (max-width: 900px) {
+    top: -30vh;
+  }
+  @media (max-width: 600px) {
+    top: -5vh;
+    width: 190vh;
+    margin-right: 50vw;
   }
 }
 .trap-shape-2 {
   border-bottom: 50vw solid rgba($light, 1);
   border-left: 2.5vh transparent solid;
   border-right: 2.5vh transparent solid;
-  width: 120vh;
+  width: 140vh;
+  top: -60vh;
   rotate: 90deg;
   position: absolute;
   z-index: 2;
-  @media (max-width: 1100px) {
-    left: 8vw;
+  @media (max-width: 900px) {
+    top: -30vh;
+  }
+  @media (max-width: 600px) {
+    top: -5vh;
+    width: 190vh;
+    margin-left: 100vw;
   }
 }
 </style>
