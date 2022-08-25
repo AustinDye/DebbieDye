@@ -16,14 +16,20 @@
       </div>
 
       <div
-        class="col-md-6 col-lg-6 d-flex position-relative justify-content-center"
+        class="col-md-12 col-lg-6 d-flex position-relative justify-content-center align-items-center"
       >
         <img
           src="src/assets/img/stock-photo-remove-bg.png"
           alt=""
           class="head-img"
         />
-        <div class="card-1 p-4 pb-3">
+        <div class="review-angle-bottom"></div>
+        <div class="trap-shape"></div>
+      </div>
+      <div
+        class="col-md-12 col-lg-6 d-flex position-relative justify-content-center align-items-center"
+      >
+        <div class="card-1 p-4">
           <p class="big-bio-text">
             I believe my background in mortgage lending has given me an
             advantage to understand the full process of what takes place from
@@ -189,6 +195,29 @@ h2 {
   z-index: 3;
   color: rgba($light, 0.8);
   background: rgba($primary, 1);
+}
+
+.title-text {
+  z-index: 10;
+  // color: darken($primary, 10);
+}
+
+.img-holder {
+  z-index: 5;
+}
+
+.head-img {
+  z-index: 3;
+  position: absolute;
+  height: 60vh;
+  top: -25vh;
+  box-shadow: 1em 1em 0em rgba($info, 0.6);
+  @media (max-width: 1000px) {
+  }
+}
+
+.no-parallax {
+  min-height: 100vh;
 }
 
 .trap-shape {
