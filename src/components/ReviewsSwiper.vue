@@ -3,7 +3,7 @@
     <div class="spacer-10"></div>
     <div class="row d-flex justify-content-center">
       <h1 class="text-center mb-md-4">Reviews</h1>
-      <div class="col-md-10 col-sm-12">
+      <div class="col-10">
         <div class="swiper-container">
           <swiper
             :modules="modules"
@@ -93,7 +93,6 @@
       </div>
     </div>
   </div>
-  <!-- <div class="spacer-20"></div> -->
 </template>
 
 
@@ -124,11 +123,12 @@ export default {
 <style lang="scss" scoped>
 @import "src/assets/scss/_variables.scss";
 .no-parallax {
-  @media (min-width: 576px) {
-    min-height: 60vh;
-  }
+  min-height: 60vh;
+}
+.parallax {
+  min-height: 50vh;
   @media (max-width: 576px) {
-    min-height: 120vh;
+    min-height: 80vh;
   }
 }
 
@@ -146,24 +146,21 @@ export default {
   position: absolute;
 }
 
+.mySwiper {
+  height: 25vh;
+  z-index: 5;
+  text-align: center;
+  @media (max-width: 576px) {
+    min-height: 55vh;
+  }
+}
+
 .swiper-container {
   padding: 1rem;
   background: white;
   border-radius: 3px;
   @media (max-width: 576px) {
-    padding: 0.5rem;
-    margin-left: 0.5rem;
-    margin-right: 0.5rem;
-    margin-top: 1rem;
-  }
-}
-
-.mySwiper {
-  min-height: 25vh;
-  z-index: 5;
-  text-align: center;
-  @media (max-width: 576px) {
-    min-height: 75vh;
+    padding: 1.5rem;
   }
 }
 
@@ -179,9 +176,6 @@ export default {
   height: 80%;
   width: 90%;
   box-shadow: -1em 1em 0em rgba($info, 0.6);
-  @media (max-width: 576px) {
-    box-shadow: -0.75em 0.75em 0em rgba($info, 0.6);
-  }
 }
 
 .mySwiper {

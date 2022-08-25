@@ -25,9 +25,7 @@ export default {
 }
 
 .parallax {
-  @media (max-width: 576px) {
-    min-height: 100vh;
-  }
+  min-height: 150vh;
 }
 
 .word-wrapper {
@@ -37,11 +35,6 @@ export default {
   padding: 2em;
   width: 50vw;
   top: 30%;
-  left: 0%;
-  @media (max-width: 576px) {
-    top: 10%;
-    left: 0;
-    width: auto;
-  }
+  left: 10%;
 }
 </style>
