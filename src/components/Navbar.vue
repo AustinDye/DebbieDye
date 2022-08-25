@@ -19,6 +19,7 @@
         >
       </div>
       <div
+        ref="collapse"
         class="collapse navbar-collapse justify-content-md-around"
         id="myNavbar"
       >
@@ -47,10 +48,18 @@
 
 
 <script>
-import { onMounted, ref, watchEffect } from "@vue/runtime-core";
+import { onMounted, ref, watch, watchEffect } from "@vue/runtime-core";
 export default {
   setup() {
-    const nav = ref(null);
+    const collapse = ref(null);
+    const goOpaque = ref(false);
+    watchEffect(() => {
+      if (collapse.value) {
+        if (collapse.value.classList.contains("show")) {
+          goOpaque.value = false;
+        }
+      }
+    });
     onMounted(() => {
       let main = document.querySelector("main");
       let prevScrollpos = main.scrollTop;
@@ -59,25 +68,38 @@ export default {
         let currentScrollPos = main.scrollTop;
         if (prevScrollpos > currentScrollPos) {
           // @ts-ignore
+          goOpaque.value = true;
           nav.classList.add("navbar_show");
+          nav.classList.add("opaque");
+          if (goOpaque.value) {
+            setTimeout(() => {
+              nav.classList.remove("opaque");
+            }, 5000);
+          }
         } else {
           // @ts-ignore
           nav.classList.remove("navbar_show");
+          nav.classList.remove("opaque");
         }
         prevScrollpos = currentScrollPos;
       };
     });
     return {
-      // nav,
+      collapse,
       toggleStyle() {
-        let nav = document.querySelector(".navbar");
-        console.log(nav);
-        if (nav.classList.contains("opaque")) {
-          console.log(nav.classList.contains("opaque"), "removing");
-          nav.classList.remove("opaque");
+        let items = document.querySelectorAll(".nav-link");
+        if (!items[items.length - 1].classList.contains("opaque")) {
+          for (let i = 0; i < items.length; i++) {
+            const item = items[i];
+            setTimeout(() => {
+              item.classList.add("opaque");
+            }, 75 * i);
+          }
         } else {
-          console.log(nav.classList.contains("opaque"), "adding");
-          nav.classList.add("opaque");
+          for (let i = 0; i < items.length; i++) {
+            const item = items[i];
+            item.classList.remove("opaque");
+          }
         }
       },
     };
@@ -93,6 +115,9 @@ export default {
   background-color: #5d0149;
   transform: translate3d(0, -110%, 0);
   transition: transform 0.2s ease-out, background-color 0.4s ease-out 0.15s;
+  @media (max-width: 576px) {
+    min-height: 5rem;
+  }
 }
 
 .opaque {
@@ -128,12 +153,10 @@ export default {
     font-family: "nycd";
     font-size: 3rem;
     color: white;
+    @media (max-width: 576px) {
+      color: black;
+    }
   }
-  // text-decoration: none;
-  @media (max-width: 576px) {
-    color: black;
-  }
-  color: white;
 }
 
 ul {
@@ -146,21 +169,13 @@ a:hover {
 
 @media (max-width: 576px) {
   .navbar {
-    // background: rgb(0, 0, 0);
-    // background: linear-gradient(
-    //   90deg,
-    //   rgba(0, 0, 0, 0.3981967787114846) 0%,
-    //   rgba(0, 0, 0, 0.20211834733893552) 50%,
-    //   rgba(0, 0, 0, 0) 100%
-    // );
     background: transparent;
   }
   .navbar-collapse {
     position: absolute;
-    top: 120%;
     left: 0;
+    top: 4.5rem;
     z-index: 100;
-    background-color: rgba(255, 255, 255, 0.171);
   }
   .float {
     position: static;
@@ -172,9 +187,7 @@ a:hover {
     padding-left: 0.5rem;
     padding-right: 45vw;
   }
-  // .float {
-  //   position: relative;
-  // }
+
   .debbie {
     padding-left: 1rem;
   }
