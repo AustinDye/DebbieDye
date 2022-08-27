@@ -3,7 +3,7 @@
     <div class="spacer-10"></div>
     <div class="row d-flex justify-content-center">
       <h1 class="text-center mb-md-4">Reviews</h1>
-      <div class="col-10">
+      <div class="col-md-10 col-sm-12">
         <div class="swiper-container">
           <swiper
             :modules="modules"

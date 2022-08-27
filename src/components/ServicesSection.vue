@@ -1,7 +1,7 @@
 <template>
   <div class="parallax bg container-fluid">
     <div class="row d-flex bg-light justify-content-center">
-      <div class="col-10">
+      <div class="col-md-10 col-sm-12">
         <div class="title-item">
           <h1 class="text-center mt-5" v-scrollanimation>
             transaction coordination
@@ -23,28 +23,31 @@
           </p>
         </div>
       </div>
-      <div class="col-10 d-flex align-items-center px-5 mt-3">
-        <div class="selling-point">
-          <h2 class="text-secondary text-center fs-1 fw-bolder">
-            Grow Your Buisness
-          </h2>
-          <p class="">
-            Most agents hire a transaction coordinator in order to help them get
-            more contracts signed. Agents view a transaction coordinator as an
-            investment to grow their business
-          </p>
-        </div>
-        <div class="selling-point">
-          <h2 class="text-secondary text-center fs-1 fw-bolder">
-            More Time Closing Deals
-          </h2>
-          <p>
-            If you dislike the paperwork and attention to detail necessary for
-            the closing process you will love having a TC. However, agents also
-            want to use TC’s in order to “save themselves” from
-            paperwork/administrative tasks and to ensure they can deliver
-            fantastic service to clients
-          </p>
+      <div class="col-md-10 col-sm-12">
+        <div class="selling-point-container">
+          <div class="selling-point">
+            <h2 class="text-secondary text-center fs-1 fw-bolder">
+              Grow Your Buisness
+            </h2>
+            <p class="">
+              Most agents hire a transaction coordinator in order to help them
+              get more contracts signed. Agents view a transaction coordinator
+              as an investment to grow their business
+            </p>
+          </div>
+
+          <div class="selling-point">
+            <h2 class="text-secondary text-center fs-1 fw-bolder">
+              More Time Closing Deals
+            </h2>
+            <p>
+              If you dislike the paperwork and attention to detail necessary for
+              the closing process you will love having a TC. However, agents
+              also want to use TC’s in order to “save themselves” from
+              paperwork/administrative tasks and to ensure they can deliver
+              fantastic service to clients
+            </p>
+          </div>
         </div>
       </div>
       <div class="spacer-10" v-if="!mobile"></div>
@@ -55,7 +58,7 @@
       <div class="col-12 d-flex justify-content-center"></div>
 
       <div class="col-md-6">
-        <div class="card-container">
+        <div class="card-container-left">
           <div class="card card-1">
             <div>
               <h5 v-scrollanimation class="fs-1">contract to close</h5>
@@ -79,7 +82,7 @@
       </div>
 
       <div class="col-md-6">
-        <div class="card-container">
+        <div class="card-container-right">
           <div class="card card-2">
             <div>
               <h5 v-scrollanimation class="fs-1">
@@ -140,6 +143,22 @@ export default {
     padding-left: 1rem;
     padding-right: 1rem;
   }
+  @media (max-width: 768px) {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  @media (max-width: 992px) {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  @media (max-width: 1200px) {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  @media (max-width: 1400px) {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
 }
 
 .title-item h1 {
@@ -151,9 +170,27 @@ export default {
 .selling-point-container {
   display: flex;
   align-items: center;
+  justify-content: center;
   padding-left: 3rem;
   padding-right: 3rem;
   margin-top: 1rem;
+  @media (max-width: 1400px) {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  @media (max-width: 1200px) {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  @media (max-width: 992px) {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  @media (max-width: 768px) {
+    flex-direction: column;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
   @media (max-width: 576px) {
     flex-direction: column;
     padding-left: 1rem;
@@ -184,12 +221,32 @@ export default {
       padding: 1rem;
     }
   }
+  @media (max-width: 1400px) {
+    width: 50%;
+    min-height: 40vh;
+  }
+  @media (max-width: 1200px) {
+    width: 50%;
+    min-height: 60vh;
+  }
+  @media (max-width: 992px) {
+    width: 50%;
+    min-height: 60vh;
+  }
+  @media (max-width: 768px) {
+    width: auto;
+    min-height: 30vh;
+  }
   @media (max-width: 576px) {
     width: auto;
+    min-height: 40vh;
   }
 }
 
-.card-container {
+.card-container-left,
+.card-container-right {
+  z-index: 2;
+  position: relative;
   padding: 3rem;
   display: flex;
   justify-content: center;
@@ -236,34 +293,32 @@ h6 {
   box-shadow: 1em 1em 0em rgba($info, 0.6);
 }
 
-.services-angle-right {
-  border-bottom: 57vw solid rgba($light, 1);
+.card-container-left::after,
+.card-container-right::after {
+  content: "";
+  border-bottom: 50.1vw solid rgba($light, 1);
   border-left: 2.5vh transparent solid;
   border-right: 2.5vh transparent solid;
   width: 80vh;
   rotate: -90deg;
-  right: -1em;
-  top: -16vh;
   position: absolute;
-  z-index: 3;
+  z-index: -1;
+  @media (max-width: 1400px) {
+  }
+  @media (max-width: 1200px) {
+  }
+  @media (max-width: 992px) {
+  }
+  @media (max-width: 768px) {
+  }
   @media (max-width: 576px) {
-    display: none;
+    border-bottom: 100vw solid rgba($light, 1);
   }
 }
 
-.services-angle-left {
-  border-bottom: 57vw solid rgba($light, 1);
-  border-left: 2.5vh transparent solid;
-  border-right: 2.5vh transparent solid;
-  width: 80vh;
+.card-container-right::after {
+  content: "";
   rotate: 90deg;
-  left: -1em;
-  top: -16vh;
-  position: absolute;
-  z-index: 3;
-  @media (max-width: 576px) {
-    display: none;
-  }
 }
 
 h6,
