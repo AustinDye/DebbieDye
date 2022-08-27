@@ -24,10 +24,6 @@ export default {
   transform: translateZ(-1px) scale(1.8);
 }
 
-.parallax {
-  min-height: 120vh;
-}
-
 .word-wrapper {
   position: absolute;
   z-index: 2;

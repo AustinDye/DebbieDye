@@ -1,5 +1,6 @@
 <template>
   <div class="parallax bg container-fluid">
+    <div class="spacer-20"></div>
     <div class="row d-flex bg-light justify-content-center">
       <div class="col-md-10 col-sm-12">
         <div class="title-item">
@@ -59,7 +60,7 @@
     </div>
     <div class="spacer-20" v-if="!mobile"></div>
     <div class="row position-relative">
-      <div class="col-md-6">
+      <div class="col-lg-6">
         <div class="card-container-left">
           <div class="card card-1">
             <div>
@@ -83,7 +84,7 @@
         </div>
       </div>
 
-      <div class="col-md-6">
+      <div class="col-lg-6">
         <div class="card-container-right">
           <div class="card card-2">
             <div>
@@ -130,9 +131,30 @@ export default {
 @import "src/assets/scss/_variables.scss";
 
 .parallax {
-  min-height: 260vh;
-  @media (max-width: 576px) {
-    min-height: 450vh !important;
+  @media (min-width: 2000px) {
+    min-height: 200vh;
+  }
+  @media (min-width: 1600px) {
+    min-height: 250vh;
+  }
+  @media (min-width: 1400px) {
+    min-height: 250vh;
+  }
+
+  @media (max-width: 1400px) {
+    min-height: 275vh;
+  }
+  @media (max-width: 1200px) {
+    min-height: 280vh;
+  }
+  @media (max-width: 992px) {
+    min-height: 350vh;
+  }
+  @media (max-width: 768px) {
+    min-height: 300vh;
+  }
+  @media (max-width: 578px) {
+    min-height: 425vh;
   }
 }
 
@@ -251,9 +273,8 @@ export default {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-
   @media (min-height: 1100px) {
-    min-height: 70vh;
+    // min-height: 70vh;
   }
   @media (max-width: 576px) {
     padding-bottom: 1rem;
@@ -263,13 +284,18 @@ export default {
       padding-top: 1rem;
     }
   }
+  @media (orientation: portrait) {
+    min-width: 80vw;
+  }
 }
 
 .card-1,
 .card-2 {
   display: flex;
+  flex: 1 1 auto;
   flex-direction: column;
-  word-wrap: break-word;
+  // word-wrap: break-word;
+  min-height: 40vh;
   background-color: #fff;
   max-width: 35vw;
   z-index: 5;
@@ -278,10 +304,13 @@ export default {
   border: 0.2em black solid;
   justify-content: space-between;
   @media (orientation: portrait) {
-    max-width: 100vw;
+    min-width: 80vw;
   }
   @media (min-height: 1100px) {
-    height: 100%;
+    // height: 100%;
+  }
+  @media (max-height: 500px) and (orientation: landscape) {
+    max-width: none;
   }
 }
 
@@ -307,8 +336,6 @@ h6 {
   rotate: -90deg;
   position: absolute;
   z-index: -1;
-  @media only screen and (orientation: portrait) and (max-width: 1400px) {
-  }
   @media (max-width: 1200px) {
   }
   @media (max-width: 992px) {
@@ -317,6 +344,10 @@ h6 {
   }
   @media (max-width: 576px) {
     border-bottom: 100vw solid rgba($light, 1);
+  }
+  @media (max-height: 500px) and (orientation: landscape) {
+    border-bottom: 102.1vw solid rgba($light, 1);
+    width: 130vh;
   }
 }
 
@@ -338,9 +369,6 @@ h2,
 }
 
 @media (max-width: 576px) {
-  .parallax {
-    min-height: 200vh;
-  }
   .text-body-mobile {
     display: -webkit-box;
     line-clamp: 6;

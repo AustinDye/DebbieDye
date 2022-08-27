@@ -45,13 +45,19 @@ p, span, b {
     min-height: 130vh;
   }
   @media (max-width: 992px) {
-    min-height: 130vh;
+    min-height: 150vh;
   }
   @media (max-width: 1200px) {
     min-height: 130vh;
   }
   @media (max-width: 1400px) {
-    min-height: 130vh;
+    min-height: 100vh;
+  }
+  @media (min-width: 1400px) {
+    min-height: 100vh;
+  }
+  @media (max-height: 500px) and (orientation: landscape){
+    min-height: 500vh;
   }
 }
 
@@ -73,6 +79,12 @@ p, span, b {
   }
   @media (max-width: 1400px) {
     min-height: 130vh;
+  }
+  @media (min-width: 1400px) {
+    min-height: 100vh;
+  }
+  @media (max-height: 500px) and (orientation: landscape){
+    min-height: 500vh;
   }
 }
 
