@@ -57,9 +57,11 @@
         <div class="trap-shape-2"></div>
       </div>-->
 
-      <div class="col-12 justify-content-center position-absolute section-head">
+      <div
+        class="col-12 d-flex justify-content-center align-items-center position-absolute section-head"
+      >
         <div class="text-center">
-          <h2>
+          <h2 class="">
             Over 14 yrs experience as a Real Estate Transaction Coordinator
           </h2>
 
@@ -160,10 +162,6 @@ export default {
   border: 0em black solid;
 }
 
-.main-row {
-  min-height: 120vh;
-}
-
 .head-img {
   z-index: 10;
   padding-right: 2em;
@@ -189,16 +187,16 @@ export default {
 }
 
 .bio-holder {
-  top: 75vh;
+  top: 80vh;
   position: absolute;
   z-index: 5;
-  padding-left: 15em;
-  padding-right: 15em;
+  padding-left: 20em;
+  padding-right: 20em;
 
   @media (max-width: 900px) {
-    top: 35vh;
-    padding-left: 0;
-    padding-right: 0;
+    top: 40vh;
+    padding-left: 6em;
+    padding-right: 6em;
   }
   @media (max-width: 600px) {
     top: 135vh;
@@ -208,28 +206,6 @@ export default {
   }
 }
 
-.card-2 {
-  border: 0.2em black solid;
-  box-shadow: -20vw -5em 0em rgba($info, 0.6);
-  border-radius: 2.5px;
-  position: absolute;
-  left: -28em;
-  top: 10vh;
-  z-index: 5;
-  outline: none;
-  width: 60vw;
-  font-size: 1em;
-  @media (max-width: 1180px) {
-    top: 13em;
-    left: -35vw;
-    width: 80vw;
-  }
-  @media (max-width: 600px) {
-    top: 30vh;
-    left: 1em;
-    width: 90vw;
-  }
-}
 h2 {
   margin-top: 1em;
   font-size: 2.5em;
@@ -237,7 +213,7 @@ h2 {
 }
 
 .section-head {
-  top: 0vh;
+  top: -5vh;
   z-index: 5;
   @media (max-width: 900px) {
     top: -30vh;
@@ -248,22 +224,13 @@ h2 {
   }
 }
 
-.card-3 {
-  font-size: 1.2em;
-  min-width: 30vw;
-  height: 24vh;
-  z-index: 3;
-  color: rgba($light, 0.8);
-  background: rgba($primary, 1);
-}
-
 .trap-shape {
   border-bottom: 52vw solid rgba($light, 1);
   border-left: 2.5vh transparent solid;
   border-right: 2.5vh transparent solid;
   position: absolute;
-  width: 110vh;
-  left: -3vw;
+  width: 120vh;
+  left: -6vw;
   rotate: -90deg;
   z-index: 2;
 
@@ -276,8 +243,8 @@ h2 {
   border-left: 2.5vh transparent solid;
   border-right: 2.5vh transparent solid;
   position: absolute;
-  width: 110vh;
-  right: -3vw;
+  width: 120vh;
+  right: -6vw;
   rotate: 90deg;
   z-index: 2;
   @media (max-width: 900px) {
