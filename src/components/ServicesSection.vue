@@ -24,29 +24,33 @@
         </div>
       </div>
       <div class="col-md-10 col-sm-12">
-        <div class="selling-point-container">
-          <div class="selling-point">
-            <h2 class="text-secondary text-center fs-1 fw-bolder">
-              Grow Your Buisness
-            </h2>
-            <p class="">
-              Most agents hire a transaction coordinator in order to help them
-              get more contracts signed. Agents view a transaction coordinator
-              as an investment to grow their business
-            </p>
+        <div class="row selling-point-container">
+          <div class="col-md-6">
+            <div class="selling-point">
+              <h2 class="text-secondary text-center fs-1 fw-bolder">
+                Grow Your Buisness
+              </h2>
+              <p class="">
+                Most agents hire a transaction coordinator in order to help them
+                get more contracts signed. Agents view a transaction coordinator
+                as an investment to grow their business
+              </p>
+            </div>
           </div>
 
-          <div class="selling-point">
-            <h2 class="text-secondary text-center fs-1 fw-bolder">
-              More Time Closing Deals
-            </h2>
-            <p>
-              If you dislike the paperwork and attention to detail necessary for
-              the closing process you will love having a TC. However, agents
-              also want to use TC’s in order to “save themselves” from
-              paperwork/administrative tasks and to ensure they can deliver
-              fantastic service to clients
-            </p>
+          <div class="col-md-6">
+            <div class="selling-point">
+              <h2 class="text-secondary text-center fs-1 fw-bolder">
+                More Time Closing Deals
+              </h2>
+              <p class="">
+                If you dislike the paperwork and attention to detail necessary
+                for the closing process you will love having a TC. However,
+                agents also want to use TC’s in order to “save themselves” from
+                paperwork/administrative tasks and to ensure they can deliver
+                fantastic service to clients
+              </p>
+            </div>
           </div>
         </div>
       </div>
@@ -55,8 +59,6 @@
     </div>
     <div class="spacer-20" v-if="!mobile"></div>
     <div class="row position-relative">
-      <div class="col-12 d-flex justify-content-center"></div>
-
       <div class="col-md-6">
         <div class="card-container-left">
           <div class="card card-1">
@@ -168,79 +170,76 @@ export default {
 }
 
 .selling-point-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding-left: 3rem;
-  padding-right: 3rem;
-  margin-top: 1rem;
-  @media (max-width: 1400px) {
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
-  @media (max-width: 1200px) {
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
-  @media (max-width: 992px) {
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
-  @media (max-width: 768px) {
-    flex-direction: column;
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
-  @media (max-width: 576px) {
-    flex-direction: column;
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
+  // display: flex;
+  // align-items: center;
+  // justify-content: center;
+  // padding-left: 3rem;
+  // padding-right: 3rem;
+  // margin-top: 1rem;
+  // @media (max-width: 1400px) {
+  //   padding-left: 1rem;
+  //   padding-right: 1rem;
+  // }
+  // @media (max-width: 1200px) {
+  //   padding-left: 1rem;
+  //   padding-right: 1rem;
+  // }
+  // @media (max-width: 992px) {
+  //   padding-left: 1rem;
+  //   padding-right: 1rem;
+  // }
+  // @media (max-width: 768px) {
+  //   flex-direction: column;
+  //   padding-left: 1rem;
+  //   padding-right: 1rem;
+  // }
+  // @media (max-width: 576px) {
+  //   flex-direction: column;
+  //   padding-left: 1rem;
+  //   padding-right: 1rem;
+  // }
 }
 
 .selling-point {
   position: relative;
   padding: 1rem;
-  min-height: 40vh;
-  width: 50vw;
-  bottom: 0em;
   margin: 1rem;
   background: white;
   border-radius: 10px;
-  z-index: 5;
-  h2 {
-    margin-top: 1.5rem;
-  }
-  p {
-    padding: 3rem;
-    padding-top: 0;
-    padding-bottom: 0;
-    margin-top: 3rem;
-    margin-bottom: 2rem;
-    @media (min-height: 576px) {
-      padding: 1rem;
-    }
-  }
-  @media (max-width: 1400px) {
-    width: 50%;
-    min-height: 40vh;
-  }
-  @media (max-width: 1200px) {
-    width: 50%;
-    min-height: 60vh;
-  }
-  @media (max-width: 992px) {
-    width: 50%;
-    min-height: 60vh;
-  }
-  @media (max-width: 768px) {
-    width: auto;
-    min-height: 30vh;
-  }
-  @media (max-width: 576px) {
-    width: auto;
-    min-height: 40vh;
-  }
+  // z-index: 5;
+  // h2 {
+  //   margin-top: 1.5rem;
+  // }
+  // p {
+  //   padding: 3rem;
+  //   padding-top: 0;
+  //   padding-bottom: 0;
+  //   margin-top: 3rem;
+  //   margin-bottom: 2rem;
+  //   @media (min-height: 576px) {
+  //     padding: 1rem;
+  //   }
+  // }
+  // @media (max-width: 1400px) {
+  //   width: 50%;
+  //   min-height: 40vh;
+  // }
+  // @media (max-width: 1200px) {
+  //   width: 50%;
+  //   min-height: 60vh;
+  // }
+  // @media (max-width: 992px) {
+  //   width: 50%;
+  //   min-height: 60vh;
+  // }
+  // @media (max-width: 768px) {
+  //   width: auto;
+  //   min-height: 30vh;
+  // }
+  // @media (max-width: 576px) {
+  //   width: auto;
+  //   min-height: 40vh;
+  // }
 }
 
 .card-container-left,
@@ -251,7 +250,8 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 85vh;
+  min-height: 100vh;
+
   @media (min-height: 1100px) {
     min-height: 70vh;
   }
@@ -265,8 +265,12 @@ export default {
   }
 }
 
-.card {
-  min-height: 50%;
+.card-1,
+.card-2 {
+  display: flex;
+  flex-direction: column;
+  word-wrap: break-word;
+  background-color: #fff;
   max-width: 35vw;
   z-index: 5;
   padding: 1em;
@@ -303,7 +307,7 @@ h6 {
   rotate: -90deg;
   position: absolute;
   z-index: -1;
-  @media (max-width: 1400px) {
+  @media only screen and (orientation: portrait) and (max-width: 1400px) {
   }
   @media (max-width: 1200px) {
   }
