@@ -54,47 +54,51 @@
     <div class="row position-relative">
       <div class="col-12 d-flex justify-content-center"></div>
 
-      <div
-        class="col-md-6 p-5 d-flex justify-content-center align-items-center"
-      >
-        <div class="card card-1">
-          <div>
-            <h5 v-scrollanimation class="fs-1">contract to close</h5>
-            <p v-scrollanimation class="text-body-mobile mt-3">
-              Contract to Close is all about what happens once your contract has
-              been accepted until the day of closing. Our goal is to ensure that
-              you and your clients have a smooth transaction from executed
-              contract to the closing table. We achieve this by assisting you
-              with all of the daily details of your contracts once they have
-              been executed. We ensure that all parties involved are updated
-              with what is going on during the transactions, in addition to
-              making sure deadline are being met and that we close on time.
-            </p>
+      <div class="col-md-6">
+        <div class="card-container">
+          <div class="card card-1">
+            <div>
+              <h5 v-scrollanimation class="fs-1">contract to close</h5>
+              <p v-scrollanimation class="text-body-mobile mt-3">
+                Contract to Close is all about what happens once your contract
+                has been accepted until the day of closing. Our goal is to
+                ensure that you and your clients have a smooth transaction from
+                executed contract to the closing table. We achieve this by
+                assisting you with all of the daily details of your contracts
+                once they have been executed. We ensure that all parties
+                involved are updated with what is going on during the
+                transactions, in addition to making sure deadline are being met
+                and that we close on time.
+              </p>
+            </div>
+            <h6 class="fs-2">
+              Price per file : <span class="bubble">$250</span>
+            </h6>
           </div>
-          <h6 class="fs-2">
-            Price per file : <span class="bubble">$250</span>
-          </h6>
         </div>
       </div>
 
-      <div
-        class="col-md-6 p-5 d-flex justify-content-center align-items-center"
-      >
-        <div class="card card-2">
-          <div>
-            <h5 v-scrollanimation class="fs-1">From pre-listing until close</h5>
-            <p v-scrollanimation class="text-body-mobile mt-3">
-              Instead of simply working through the closing and escrow services,
-              we can help work from the very beginning of the pre-listing
-              process and all the way until the home is sold. While the agent
-              handles the face-to-face customer service part of the job with the
-              sellers, buyers, and others, the transaction coordinator keeps an
-              eye on the seller’s transactions, initial contract to the
-            </p>
+      <div class="col-md-6">
+        <div class="card-container">
+          <div class="card card-2">
+            <div>
+              <h5 v-scrollanimation class="fs-1">
+                From pre-listing until close
+              </h5>
+              <p v-scrollanimation class="text-body-mobile mt-3">
+                Instead of simply working through the closing and escrow
+                services, we can help work from the very beginning of the
+                pre-listing process and all the way until the home is sold.
+                While the agent handles the face-to-face customer service part
+                of the job with the sellers, buyers, and others, the transaction
+                coordinator keeps an eye on the seller’s transactions, initial
+                contract to the
+              </p>
+            </div>
+            <h6 class="fs-2">
+              Price per file : <span class="bubble">$250</span>
+            </h6>
           </div>
-          <h6 class="fs-2">
-            Price per file : <span class="bubble">$250</span>
-          </h6>
         </div>
       </div>
 
@@ -122,6 +126,9 @@ export default {
 
 .parallax {
   min-height: 260vh;
+  @media (max-width: 576px) {
+    min-height: 450vh !important;
+  }
 }
 
 .title-item p {
@@ -129,6 +136,29 @@ export default {
   padding-right: 6rem;
   padding-top: 3rem;
   padding-bottom: 3rem;
+  @media (max-width: 576px) {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+.title-item h1 {
+  @media (max-width: 576px) {
+    font-size: 4rem;
+  }
+}
+
+.selling-point-container {
+  display: flex;
+  align-items: center;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  margin-top: 1rem;
+  @media (max-width: 576px) {
+    flex-direction: column;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
 }
 
 .selling-point {
@@ -150,12 +180,31 @@ export default {
     padding-bottom: 0;
     margin-top: 3rem;
     margin-bottom: 2rem;
+    @media (min-height: 576px) {
+      padding: 1rem;
+    }
+  }
+  @media (max-width: 576px) {
+    width: auto;
   }
 }
-.col-md-6 {
+
+.card-container {
+  padding: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   min-height: 85vh;
   @media (min-height: 1100px) {
     min-height: 70vh;
+  }
+  @media (max-width: 576px) {
+    padding-bottom: 1rem;
+  }
+  :nth-child(2) {
+    @media (max-width: 576px) {
+      padding-top: 1rem;
+    }
   }
 }
 
@@ -197,6 +246,9 @@ h6 {
   top: -16vh;
   position: absolute;
   z-index: 3;
+  @media (max-width: 576px) {
+    display: none;
+  }
 }
 
 .services-angle-left {
@@ -209,6 +261,9 @@ h6 {
   top: -16vh;
   position: absolute;
   z-index: 3;
+  @media (max-width: 576px) {
+    display: none;
+  }
 }
 
 h6,

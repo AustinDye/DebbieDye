@@ -36,5 +36,10 @@ export default {
   width: 50vw;
   top: 30%;
   left: 10%;
+  @media (max-width: 576px) {
+    top: 10%;
+    left: 0;
+    width: auto;
+  }
 }
 </style>

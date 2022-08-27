@@ -124,14 +124,13 @@ export default {
 @import "src/assets/scss/_variables.scss";
 .no-parallax {
   min-height: 60vh;
-}
-.parallax {
-  min-height: 50vh;
+  @media (min-width: 576px) {
+    min-height: 60vh;
+  }
   @media (max-width: 576px) {
-    min-height: 80vh;
+    min-height: 120vh;
   }
 }
-
 .spacer-10 {
   position: relative;
 }
@@ -145,22 +144,24 @@ export default {
   left: 0;
   position: absolute;
 }
-
-.mySwiper {
-  height: 25vh;
-  z-index: 5;
-  text-align: center;
-  @media (max-width: 576px) {
-    min-height: 55vh;
-  }
-}
-
 .swiper-container {
   padding: 1rem;
   background: white;
   border-radius: 3px;
   @media (max-width: 576px) {
-    padding: 1.5rem;
+    padding: 0.5rem;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    margin-top: 1rem;
+  }
+}
+
+.mySwiper {
+  min-height: 25vh;
+  z-index: 5;
+  text-align: center;
+  @media (max-width: 576px) {
+    min-height: 75vh;
   }
 }
 
@@ -176,6 +177,9 @@ export default {
   height: 80%;
   width: 90%;
   box-shadow: -1em 1em 0em rgba($info, 0.6);
+  @media (max-width: 576px) {
+    box-shadow: -0.75em 0.75em 0em rgba($info, 0.6);
+  }
 }
 
 .mySwiper {
