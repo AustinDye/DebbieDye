@@ -156,6 +156,9 @@ export default {
   @media (max-width: 578px) {
     min-height: 425vh;
   }
+  @media (max-height: 500px) and (orientation: landscape) {
+    min-height: 500vh;
+  }
 }
 
 .title-item p {

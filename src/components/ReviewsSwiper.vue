@@ -123,12 +123,30 @@ export default {
 <style lang="scss" scoped>
 @import "src/assets/scss/_variables.scss";
 .no-parallax {
-  min-height: 60vh;
-  @media (min-width: 576px) {
+  position: relative;
+  z-index: 2;
+  min-height: 100vh;
+  transform-style: preserve-3d;
+  @media (min-width: 1400px) {
+    min-height: 30vh;
+  }
+  @media (max-width: 1400px) {
+    min-height: 40vh;
+  }
+  @media (max-width: 1200px) {
     min-height: 60vh;
   }
-  @media (max-width: 576px) {
-    min-height: 120vh;
+  @media (max-width: 992px) {
+    min-height: 40vh;
+  }
+  @media (max-width: 768px) {
+    min-height: 70vh;
+  }
+  @media (max-width: 578px) {
+    min-height: 100vh;
+  }
+  @media (max-height: 500px) and (orientation: landscape) {
+    min-height: 50vh;
   }
 }
 .spacer-10 {

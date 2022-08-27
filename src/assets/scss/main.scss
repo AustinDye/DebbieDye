@@ -35,58 +35,34 @@ p, span, b {
   font-family: "quicksand"
 }
 
-.no-parallax {
-  z-index: 2;
-  transform-style: preserve-3d;
-  @media (max-width: 578px){
-    min-height: 200vh;
-  }
-  @media (max-width: 768px) {
-    min-height: 130vh;
-  }
-  @media (max-width: 992px) {
-    min-height: 150vh;
-  }
-  @media (max-width: 1200px) {
-    min-height: 130vh;
-  }
-  @media (max-width: 1400px) {
-    min-height: 100vh;
-  }
-  @media (min-width: 1400px) {
-    min-height: 100vh;
-  }
-  @media (max-height: 500px) and (orientation: landscape){
-    min-height: 500vh;
-  }
-}
 
-.parallax {
-  position: relative;
-  min-height: 100vh;
-  transform-style: preserve-3d;
-  @media (max-width: 578px){
-    min-height: 200vh;
-  }
-  @media (max-width: 768px) {
-    min-height: 150vh;
-  }
-  @media (max-width: 992px) {
-    min-height: 130vh;
-  }
-  @media (max-width: 1200px) {
-    min-height: 130vh;
-  }
-  @media (max-width: 1400px) {
-    min-height: 130vh;
-  }
-  @media (min-width: 1400px) {
-    min-height: 100vh;
-  }
-  @media (max-height: 500px) and (orientation: landscape){
-    min-height: 500vh;
-  }
-}
+// TODO make parallax local
+
+// .no-parallax {
+//   z-index: 2;
+//   transform-style: preserve-3d;
+//   @media (min-width: 1400px) {
+//     min-height: 100vh;
+//   }
+//   @media (max-width: 1400px) {
+//     min-height: 100vh;
+//   }
+//   @media (max-width: 1200px) {
+//     min-height: 130vh;
+//   }
+//   @media (max-width: 992px) {
+//     min-height: 150vh;
+//   }
+//   @media (max-width: 768px) {
+//     min-height: 130vh;
+//   }
+//   @media (max-width: 578px){
+//     min-height: 200vh;
+//   }
+//     @media (max-height: 500px) and (orientation: landscape){
+//       min-height: 500vh;
+//     }
+// }
 
 .parallax::after {
   content: " ";
