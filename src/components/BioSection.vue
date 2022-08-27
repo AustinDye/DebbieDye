@@ -1,6 +1,11 @@
 <template>
   <div class="container-fluid no-parallax">
-    <div class="row">
+    <div class="row main-row">
+      <div class="trap-shape"></div>
+      <div class="trap-shape-2"></div>
+      <div class="back-square"></div>
+
+      <!--
       <div class="col-md-12 d-flex position-relative justify-content-center">
         <div class="card section-head text-center">
           <div class="text-bio-start">
@@ -50,6 +55,51 @@
         </div>
 
         <div class="trap-shape-2"></div>
+      </div>-->
+
+      <div class="col-12 justify-content-center position-absolute section-head">
+        <div class="text-center">
+          <h2>
+            Over 14 yrs experience as a Real Estate Transaction Coordinator
+          </h2>
+
+          <b class="fs-4 text-secondary">
+            I enjoy assisting agents with the details of their transactions, so
+            they can be out doing what they love.
+          </b>
+        </div>
+      </div>
+      <div
+        class="col-12 d-flex justify-content-center align-items-center position-absolute image-holder"
+      >
+        <img
+          src="src/assets/img/stock-photo-remove-bg.png"
+          alt=""
+          class="head-img"
+        />
+        <div class="card card-1">
+          <p class="p-4 fs-4">
+            I believe my background in mortgage lending has given me an
+            advantage to understand the full process of what takes place from
+            contract to closing on all levels.
+          </p>
+        </div>
+      </div>
+      <div class="col-12 justify-content-center bio-holder">
+        <p class="">
+          In the past I was a realtor and realized that my giftings were in
+          taking care of all the details of the transaction. An opportunity
+          arose for me to become an underwriting assistant for a wholesale
+          lender. With that position, I leaned in, asked a lot of questions and
+          learned what an underwriter was looking for in a loan file. After
+          about 6 months, I transitioned into a loan processor and within a
+          couple of years my manager asked me to be a back-up
+          underwriter/processor/closer. One of my specialties was in FHA 203 k
+          rehab loans. Most of my colleagues avoided those types of loans, but I
+          have always enjoyed a challenge. On a personal level, I like to golf,
+          play cards with friends and family and just recently started doing
+          watercolor painting with my grandchildren.
+        </p>
       </div>
     </div>
   </div>
@@ -68,26 +118,38 @@ export default {
 @import "src/assets/scss/_variables.scss";
 
 .no-parallax {
-  min-height: 100vh;
+  min-height: 120vh;
   @media (max-width: 600px) {
-    min-height: 130vh;
+    min-height: 250vh;
   }
 }
-.orange-text {
-  border-bottom: 0.4em solid rgba($dark, 0.8);
-  margin: 2em;
-  margin-left: 4em;
-  margin-right: 4em;
+
+.back-square {
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  background: rgba($light, 1);
+  @media (max-width: 900px) {
+    top: -30vh;
+    right: 0;
+  }
+  @media (max-width: 600px) {
+    position: absolute;
+    top: 0vh;
+    height: 230vh;
+  }
 }
 
-.text-bio-start {
+.image-holder {
   z-index: 5;
-  font-size: 1.2em;
-}
-.big-bio-text {
-  font-weight: 700;
-  font-size: 1.4em;
-  font-family: sans-serif;
+  top: 20vh;
+  @media (max-width: 900px) {
+    top: -5vh;
+  }
+  @media (max-width: 600px) {
+    position: absolute;
+    top: 5vh;
+  }
 }
 
 .card {
@@ -98,47 +160,57 @@ export default {
   border: 0em black solid;
 }
 
+.main-row {
+  min-height: 120vh;
+}
+
 .head-img {
   z-index: 10;
-  position: absolute;
-  height: 33vh;
-  right: 14vw;
-  top: -42vh;
-  bottom: -13.5vh;
-  @media (max-width: 1180px) {
-    right: 3vw;
+  padding-right: 2em;
+  @media (max-width: 600px) {
     z-index: 3;
-    top: -30vh;
+    position: absolute;
+    top: 50vh;
   }
 }
 .card-1 {
   border-radius: 2.5px;
-  position: absolute;
-  margin-top: 10vh;
   background: rgba($light, 1);
-  right: -60vh;
   z-index: 5;
-  top: -40vh;
-  outline: none;
-  border: 0.2em black solid;
-  box-shadow: -25vw -5em 0em rgba($info, 0.6);
+  border-right: 0.1em rgba(0, 0, 0, 0.528) solid;
+  border-top: 0.1em rgba(0, 0, 0, 0.587) solid;
+  box-shadow: -20vw 2em 0em rgba($info, 0.6);
   width: 40vw;
   font-size: 1.1em;
-  @media (max-width: 1180px) {
-    margin-top: 0vh;
-    top: -18vh;
-    right: -38vw;
-    width: 50vw;
-    box-shadow: 1vw 1vw 0em rgba($info, 0.6);
+  @media (max-width: 600px) {
+    width: 85vw;
+    top: 80vh;
+  }
+}
+
+.bio-holder {
+  top: 75vh;
+  position: absolute;
+  z-index: 5;
+  padding-left: 15em;
+  padding-right: 15em;
+
+  @media (max-width: 900px) {
+    top: 35vh;
+    padding-left: 0;
+    padding-right: 0;
   }
   @media (max-width: 600px) {
-    top: -10vh;
-    right: 5vw;
-    width: 90vw;
+    top: 135vh;
+    margin-top: 2em;
+    padding-left: 2em;
+    padding-right: 2em;
   }
 }
 
 .card-2 {
+  border: 0.2em black solid;
+  box-shadow: -20vw -5em 0em rgba($info, 0.6);
   border-radius: 2.5px;
   position: absolute;
   left: -28em;
@@ -165,23 +237,19 @@ h2 {
 }
 
 .section-head {
-  padding: 2em;
-  min-width: 70vw;
-  max-height: 20vh;
-  top: -60vh;
-  z-index: 6;
-  padding-bottom: 1em;
-  background: none;
-  color: rgba($info, 1);
+  top: 0vh;
+  z-index: 5;
+  @media (max-width: 900px) {
+    top: -30vh;
+  }
   @media (max-width: 600px) {
-    top: -70vh;
-    width: 160vh;
+    top: 0vh;
+    position: absolute;
   }
 }
 
 .card-3 {
   font-size: 1.2em;
-
   min-width: 30vw;
   height: 24vh;
   z-index: 3;
@@ -190,39 +258,32 @@ h2 {
 }
 
 .trap-shape {
-  border-bottom: 50vw solid rgba($light, 1);
+  border-bottom: 52vw solid rgba($light, 1);
   border-left: 2.5vh transparent solid;
   border-right: 2.5vh transparent solid;
-  width: 140vh;
-  top: -60vh;
-  rotate: -90deg;
   position: absolute;
+  width: 110vh;
+  left: -3vw;
+  rotate: -90deg;
   z-index: 2;
+
   @media (max-width: 900px) {
-    top: -30vh;
-  }
-  @media (max-width: 600px) {
-    top: -5vh;
-    width: 190vh;
-    margin-right: 50vw;
+    display: none;
   }
 }
 .trap-shape-2 {
-  border-bottom: 50vw solid rgba($light, 1);
+  border-bottom: 52vw solid rgba($light, 1);
   border-left: 2.5vh transparent solid;
   border-right: 2.5vh transparent solid;
-  width: 140vh;
-  top: -60vh;
-  rotate: 90deg;
   position: absolute;
+  width: 110vh;
+  right: -3vw;
+  rotate: 90deg;
   z-index: 2;
   @media (max-width: 900px) {
-    top: -30vh;
+    display: none;
   }
   @media (max-width: 600px) {
-    top: -5vh;
-    width: 190vh;
-    margin-left: 100vw;
   }
 }
 </style>
