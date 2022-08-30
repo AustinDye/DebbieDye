@@ -25,22 +25,22 @@ export default {
   transform-style: preserve-3d;
   z-index: 2;
   @media (min-width: 1400px) {
-    min-height: 90vh;
+    min-height: 95vh;
   }
   @media (max-width: 1400px) {
-    min-height: 90vh;
+    min-height: 95vh;
   }
   @media (max-width: 1200px) {
-    min-height: 90vh;
+    min-height: 95vh;
   }
   @media (max-width: 992px) {
-    min-height: 90vh;
+    min-height: 95vh;
   }
   @media (max-width: 768px) {
-    min-height: 90vh;
+    min-height: 95vh;
   }
   @media (max-width: 578px) {
-    min-height: 90vh;
+    min-height: 95vh;
   }
   @media (max-height: 500px) and (orientation: landscape) {
     min-height: 100vh;

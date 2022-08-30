@@ -1,97 +1,91 @@
 <template>
   <div class="no-parallax container-fluid bg-light">
-    <div class="spacer-10"></div>
+    <div class="spacer-10 orange"></div>
     <div class="row d-flex justify-content-center">
       <h1 class="text-center mb-md-4">Reviews</h1>
-      <div class="col-md-10 col-sm-12">
-        <div class="swiper-container">
-          <swiper
-            :modules="modules"
-            :pagination="true"
-            :slides-per-view="1"
-            @swiper="onSwiper"
-            @slideChange="onSlideChange"
-            class="mySwiper"
-          >
-            <swiper-slide
-              ><div class="swiper-box">
-                <p>
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Consequatur nostrum dolorem eum inventore? Maiores molestiae
-                  nisi iure assumenda alias, facere architecto esse quasi
-                  similique? Magni molestiae repellat sunt pariatur et! Lorem
-                  ipsum dolor sit amet consectetur adipisicing elit. Quia cumque
-                  deserunt necessitatibus minima porro molestias, enim
-                  provident, praesentium sequi voluptatibus voluptatem culpa
-                  quisquam adipisci ipsam. Voluptates quibusdam veniam et
-                  laborum?
-                </p>
-              </div>
-            </swiper-slide>
-            <swiper-slide
-              ><div class="swiper-box">
-                <p>
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Consequatur nostrum dolorem eum inventore? Maiores molestiae
-                  nisi iure assumenda alias, facere architecto esse quasi
-                  similique? Magni molestiae repellat sunt pariatur et! Lorem
-                  ipsum dolor sit amet consectetur adipisicing elit. Quia cumque
-                  deserunt necessitatibus minima porro molestias, enim
-                  provident, praesentium sequi voluptatibus voluptatem culpa
-                  quisquam adipisci ipsam. Voluptates quibusdam veniam et
-                  laborum?
-                </p>
-              </div>
-            </swiper-slide>
-            <swiper-slide
-              ><div class="swiper-box">
-                <p>
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Consequatur nostrum dolorem eum inventore? Maiores molestiae
-                  nisi iure assumenda alias, facere architecto esse quasi
-                  similique? Magni molestiae repellat sunt pariatur et! Lorem
-                  ipsum dolor sit amet consectetur adipisicing elit. Quia cumque
-                  deserunt necessitatibus minima porro molestias, enim
-                  provident, praesentium sequi voluptatibus voluptatem culpa
-                  quisquam adipisci ipsam. Voluptates quibusdam veniam et
-                  laborum?
-                </p>
-              </div>
-            </swiper-slide>
-            <swiper-slide
-              ><div class="swiper-box">
-                <p>
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Consequatur nostrum dolorem eum inventore? Maiores molestiae
-                  nisi iure assumenda alias, facere architecto esse quasi
-                  similique? Magni molestiae repellat sunt pariatur et! Lorem
-                  ipsum dolor sit amet consectetur adipisicing elit. Quia cumque
-                  deserunt necessitatibus minima porro molestias, enim
-                  provident, praesentium sequi voluptatibus voluptatem culpa
-                  quisquam adipisci ipsam. Voluptates quibusdam veniam et
-                  laborum?
-                </p>
-              </div>
-            </swiper-slide>
-            <swiper-slide
-              ><div class="swiper-box">
-                <p>
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Consequatur nostrum dolorem eum inventore? Maiores molestiae
-                  nisi iure assumenda alias, facere architecto esse quasi
-                  similique? Magni molestiae repellat sunt pariatur et! Lorem
-                  ipsum dolor sit amet consectetur adipisicing elit. Quia cumque
-                  deserunt necessitatibus minima porro molestias, enim
-                  provident, praesentium sequi voluptatibus voluptatem culpa
-                  quisquam adipisci ipsam. Voluptates quibusdam veniam et
-                  laborum?
-                </p>
-              </div>
-            </swiper-slide>
-          </swiper>
-        </div>
+      <div class="col-md-10 col-sm-12 swiper-container">
+        <swiper
+          :modules="modules"
+          :pagination="true"
+          :slides-per-view="1"
+          @swiper="onSwiper"
+          @slideChange="onSlideChange"
+          class="mySwiper"
+        >
+          <swiper-slide
+            ><div class="swiper-box">
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Consequatur nostrum dolorem eum inventore? Maiores molestiae
+                nisi iure assumenda alias, facere architecto esse quasi
+                similique? Magni molestiae repellat sunt pariatur et! Lorem
+                ipsum dolor sit amet consectetur adipisicing elit. Quia cumque
+                deserunt necessitatibus minima porro molestias, enim provident,
+                praesentium sequi voluptatibus voluptatem culpa quisquam
+                adipisci ipsam. Voluptates quibusdam veniam et laborum?
+              </p>
+            </div>
+          </swiper-slide>
+          <swiper-slide
+            ><div class="swiper-box">
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Consequatur nostrum dolorem eum inventore? Maiores molestiae
+                nisi iure assumenda alias, facere architecto esse quasi
+                similique? Magni molestiae repellat sunt pariatur et! Lorem
+                ipsum dolor sit amet consectetur adipisicing elit. Quia cumque
+                deserunt necessitatibus minima porro molestias, enim provident,
+                praesentium sequi voluptatibus voluptatem culpa quisquam
+                adipisci ipsam. Voluptates quibusdam veniam et laborum?
+              </p>
+            </div>
+          </swiper-slide>
+          <swiper-slide
+            ><div class="swiper-box">
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Consequatur nostrum dolorem eum inventore? Maiores molestiae
+                nisi iure assumenda alias, facere architecto esse quasi
+                similique? Magni molestiae repellat sunt pariatur et! Lorem
+                ipsum dolor sit amet consectetur adipisicing elit. Quia cumque
+                deserunt necessitatibus minima porro molestias, enim provident,
+                praesentium sequi voluptatibus voluptatem culpa quisquam
+                adipisci ipsam. Voluptates quibusdam veniam et laborum?
+              </p>
+            </div>
+          </swiper-slide>
+          <swiper-slide
+            ><div class="swiper-box">
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Consequatur nostrum dolorem eum inventore? Maiores molestiae
+                nisi iure assumenda alias, facere architecto esse quasi
+                similique? Magni molestiae repellat sunt pariatur et! Lorem
+                ipsum dolor sit amet consectetur adipisicing elit. Quia cumque
+                deserunt necessitatibus minima porro molestias, enim provident,
+                praesentium sequi voluptatibus voluptatem culpa quisquam
+                adipisci ipsam. Voluptates quibusdam veniam et laborum?
+              </p>
+            </div>
+          </swiper-slide>
+          <swiper-slide
+            ><div class="swiper-box">
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Consequatur nostrum dolorem eum inventore? Maiores molestiae
+                nisi iure assumenda alias, facere architecto esse quasi
+                similique? Magni molestiae repellat sunt pariatur et! Lorem
+                ipsum dolor sit amet consectetur adipisicing elit. Quia cumque
+                deserunt necessitatibus minima porro molestias, enim provident,
+                praesentium sequi voluptatibus voluptatem culpa quisquam
+                adipisci ipsam. Voluptates quibusdam veniam et laborum?
+              </p>
+            </div>
+          </swiper-slide>
+        </swiper>
       </div>
     </div>
+    <div class="spacer-10 bg-light"></div>
   </div>
 </template>
 
@@ -125,49 +119,59 @@ export default {
 .no-parallax {
   position: relative;
   z-index: 2;
-  min-height: 100vh;
+  min-height: fit-content;
+  // min-height: 100vh;
   transform-style: preserve-3d;
-  @media (min-width: 1400px) {
-    min-height: 30vh;
-  }
-  @media (max-width: 1400px) {
-    min-height: 40vh;
-  }
-  @media (max-width: 1200px) {
-    min-height: 60vh;
-  }
-  @media (max-width: 992px) {
-    min-height: 40vh;
-  }
-  @media (max-width: 768px) {
-    min-height: 70vh;
-  }
-  @media (max-width: 578px) {
-    min-height: 100vh;
-  }
-  @media (max-height: 500px) and (orientation: landscape) {
-    min-height: 50vh;
-  }
+  // @media (orientation: landscape) and (min-width: 1400px) {
+  //   min-height: 70vh;
+  // }
+  // @media (orientation: landscape) and (max-width: 1400px) {
+  //   min-height: 60vh;
+  // }
+  // @media (orientation: landscape) and (max-width: 1200px) {
+  //   min-height: 80vh;
+  // }
+  // @media (orientation: portrait) and (max-width: 1200px) {
+  //   min-height: 50vh;
+  // }
+  // @media (orientation: landscape) and (max-width: 992px) {
+  //   min-height: 40vh;
+  // }
+  // @media (orientation: landscape) and (max-width: 768px) {
+  //   min-height: 70vh;
+  // }
+  // @media (orientation: portrait) and (max-width: 1200px) {
+  //   min-height: 50vh;
+  // }
+  // @media (orientation: landscape) and (max-width: 578px) {
+  //   min-height: 120vh;
+  // }
+  // @media (max-height: 500px) and (orientation: landscape) {
+  //   min-height: 140vh;
+  // }
 }
 .spacer-10 {
   position: relative;
 }
 
-.spacer-10::after {
+.orange::after {
   content: "";
   background: $secondary;
   height: 50%;
   width: 90%;
   top: 0;
-  left: 0;
+  left: -5vw;
   position: absolute;
 }
 .swiper-container {
   padding: 1rem;
+  display: flex;
+  flex-basis: 90%;
   background: white;
   border-radius: 3px;
   @media (max-width: 576px) {
     padding: 0.5rem;
+    padding-bottom: 2rem;
     margin-left: 0.5rem;
     margin-right: 0.5rem;
     margin-top: 1rem;
@@ -175,11 +179,14 @@ export default {
 }
 
 .mySwiper {
-  min-height: 25vh;
+  margin-bottom: 1rem;
   z-index: 5;
   text-align: center;
   @media (max-width: 576px) {
-    min-height: 75vh;
+    // min-height: 75vh;
+  }
+  @media (orientation: landscape) and (min-width: 1400px) {
+    margin-bottom: 2rem;
   }
 }
 
@@ -192,23 +199,13 @@ export default {
   padding: 1rem;
   outline: none;
   border: 0.2em black solid;
-  height: 80%;
+  margin-bottom: 1rem;
+  // height: 95%;
+  height: fit-content;
   width: 90%;
   box-shadow: -1em 1em 0em rgba($info, 0.6);
   @media (max-width: 576px) {
     box-shadow: -0.75em 0.75em 0em rgba($info, 0.6);
-  }
-}
-
-.mySwiper {
-  .swiper-horizontal > .swiper-pagination-bullets,
-  .swiper-pagination-bullets.swiper-pagination-horizontal,
-  .swiper-pagination-custom,
-  .swiper-pagination-fraction {
-    bottom: 0;
-  }
-  .swiper-pagination-bullet-active {
-    background: orange;
   }
 }
 </style>

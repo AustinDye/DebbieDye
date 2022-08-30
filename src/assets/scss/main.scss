@@ -19,6 +19,7 @@ body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-size: calc(16px + (20 - 16) * ((100vw - 300px) / (1600 - 300)));
 }
 
 main {
@@ -35,34 +36,6 @@ p, span, b {
   font-family: "quicksand"
 }
 
-
-// TODO make parallax local
-
-// .no-parallax {
-//   z-index: 2;
-//   transform-style: preserve-3d;
-//   @media (min-width: 1400px) {
-//     min-height: 100vh;
-//   }
-//   @media (max-width: 1400px) {
-//     min-height: 100vh;
-//   }
-//   @media (max-width: 1200px) {
-//     min-height: 130vh;
-//   }
-//   @media (max-width: 992px) {
-//     min-height: 150vh;
-//   }
-//   @media (max-width: 768px) {
-//     min-height: 130vh;
-//   }
-//   @media (max-width: 578px){
-//     min-height: 200vh;
-//   }
-//     @media (max-height: 500px) and (orientation: landscape){
-//       min-height: 500vh;
-//     }
-// }
 
 .parallax::after {
   content: " ";
@@ -159,7 +132,8 @@ form:invalid button[type="submit"] {
   .swiper-pagination-bullets.swiper-pagination-horizontal,
   .swiper-pagination-custom,
   .swiper-pagination-fraction {
-    bottom: 0;
+    bottom:auto;
+    position: fixed;
   }
   .swiper-pagination-bullet-active {
     background: orange;

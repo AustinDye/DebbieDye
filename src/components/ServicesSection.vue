@@ -48,8 +48,8 @@
                 If you dislike the paperwork and attention to detail necessary
                 for the closing process you will love having a TC. However,
                 agents also want to use TC’s in order to “save themselves” from
-                paperwork/administrative tasks and to ensure they can deliver
-                fantastic service to clients
+                paperwork or administrative tasks and to ensure they can deliver
+                fantastic service to clients.
               </p>
             </div>
           </div>
@@ -59,7 +59,8 @@
       <!-- <div class="spacer-20"></div> -->
     </div>
     <div class="spacer-20" v-if="!mobile"></div>
-    <div class="row position-relative">
+    <div class="spacer-10" v-if="mobile"></div>
+    <div class="row position-relative h-sm-50">
       <div class="col-lg-6">
         <div class="card-container-left">
           <div class="card card-1">
@@ -107,10 +108,8 @@
           </div>
         </div>
       </div>
-
-      <div class="services-angle-right"></div>
-      <div class="services-angle-left"></div>
     </div>
+    <div class="spacer-20"></div>
   </div>
 </template>
 
@@ -131,6 +130,9 @@ export default {
 @import "src/assets/scss/_variables.scss";
 
 .parallax {
+  position: relative;
+  transform-style: preserve-3d;
+  // min-height: fit-content;
   @media (min-width: 2000px) {
     min-height: 200vh;
   }
@@ -141,20 +143,30 @@ export default {
     min-height: 250vh;
   }
 
-  @media (max-width: 1400px) {
+  @media (orientation: portrait) and (max-width: 1400px) {
     min-height: 275vh;
   }
-  @media (max-width: 1200px) {
+  @media (orientation: landscape) and (max-width: 1400px) {
+    min-height: 230vh;
+  }
+  @media (orientation: portrait) and (max-width: 1200px) {
     min-height: 280vh;
   }
-  @media (max-width: 992px) {
-    min-height: 350vh;
+  @media (orientation: landscape) and (max-width: 1400px) {
+    min-height: 360vh;
   }
-  @media (max-width: 768px) {
+  @media (orientation: portrait) and (max-width: 1200px) {
+    min-height: 220vh;
+  }
+  @media (orientation: portrait) and (max-width: 992px) {
+    min-height: 300vh;
+    // min-height: fit-content;
+  }
+  @media (orientation: portrait) and (max-width: 767px) {
     min-height: 300vh;
   }
-  @media (max-width: 578px) {
-    min-height: 425vh;
+  @media (orientation: portrait) and (max-width: 578px) {
+    min-height: 470vh;
   }
   @media (max-height: 500px) and (orientation: landscape) {
     min-height: 500vh;
@@ -166,7 +178,7 @@ export default {
   padding-right: 6rem;
   padding-top: 3rem;
   padding-bottom: 3rem;
-  @media (max-width: 576px) {
+  @media (orientation: portrait) and (max-width: 576px) {
     padding-left: 1rem;
     padding-right: 1rem;
   }
@@ -194,78 +206,20 @@ export default {
   }
 }
 
-.selling-point-container {
-  // display: flex;
-  // align-items: center;
-  // justify-content: center;
-  // padding-left: 3rem;
-  // padding-right: 3rem;
-  // margin-top: 1rem;
-  // @media (max-width: 1400px) {
-  //   padding-left: 1rem;
-  //   padding-right: 1rem;
-  // }
-  // @media (max-width: 1200px) {
-  //   padding-left: 1rem;
-  //   padding-right: 1rem;
-  // }
-  // @media (max-width: 992px) {
-  //   padding-left: 1rem;
-  //   padding-right: 1rem;
-  // }
-  // @media (max-width: 768px) {
-  //   flex-direction: column;
-  //   padding-left: 1rem;
-  //   padding-right: 1rem;
-  // }
-  // @media (max-width: 576px) {
-  //   flex-direction: column;
-  //   padding-left: 1rem;
-  //   padding-right: 1rem;
-  // }
-}
-
 .selling-point {
   position: relative;
   padding: 1rem;
   margin: 1rem;
   background: white;
   border-radius: 10px;
-  // z-index: 5;
-  // h2 {
-  //   margin-top: 1.5rem;
-  // }
-  // p {
-  //   padding: 3rem;
-  //   padding-top: 0;
-  //   padding-bottom: 0;
-  //   margin-top: 3rem;
-  //   margin-bottom: 2rem;
-  //   @media (min-height: 576px) {
-  //     padding: 1rem;
-  //   }
-  // }
-  // @media (max-width: 1400px) {
-  //   width: 50%;
-  //   min-height: 40vh;
-  // }
-  // @media (max-width: 1200px) {
-  //   width: 50%;
-  //   min-height: 60vh;
-  // }
-  // @media (max-width: 992px) {
-  //   width: 50%;
-  //   min-height: 60vh;
-  // }
-  // @media (max-width: 768px) {
-  //   width: auto;
-  //   min-height: 30vh;
-  // }
-  // @media (max-width: 576px) {
-  //   width: auto;
-  //   min-height: 40vh;
-  // }
 }
+
+// .parallax .row:nth-child(2) {
+//   @media (min-width: 110px) {
+//     display: flex;
+//     flex-direction: column;
+//   }
+// }
 
 .card-container-left,
 .card-container-right {
@@ -275,9 +229,8 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
-  @media (min-height: 1100px) {
-    // min-height: 70vh;
+  min-height: 100%;
+  @media (min-width: 110px) {
   }
   @media (max-width: 576px) {
     padding-bottom: 1rem;
@@ -287,9 +240,6 @@ export default {
       padding-top: 1rem;
     }
   }
-  @media (orientation: portrait) {
-    min-width: 80vw;
-  }
 }
 
 .card-1,
@@ -297,22 +247,18 @@ export default {
   display: flex;
   flex: 1 1 auto;
   flex-direction: column;
-  // word-wrap: break-word;
   min-height: 40vh;
   background-color: #fff;
-  max-width: 35vw;
+  // max-width: 35vw;
   z-index: 5;
   padding: 1em;
   outline: none;
   border: 0.2em black solid;
   justify-content: space-between;
-  @media (orientation: portrait) {
-    min-width: 80vw;
-  }
-  @media (min-height: 1100px) {
-    // height: 100%;
-  }
   @media (max-height: 500px) and (orientation: landscape) {
+    max-width: none;
+  }
+  @media (orientation: portrait) and (max-width: 578px) {
     max-width: none;
   }
 }
@@ -342,8 +288,10 @@ h6 {
   @media (max-width: 1200px) {
   }
   @media (max-width: 992px) {
+    border-bottom: 100vw solid rgba($light, 1);
   }
   @media (max-width: 768px) {
+    border-bottom: 100vw solid rgba($light, 1);
   }
   @media (max-width: 576px) {
     border-bottom: 100vw solid rgba($light, 1);
