@@ -26,7 +26,7 @@ export default {
   transform-style: preserve-3d;
   z-index: 2;
   @media (min-width: 1400px) {
-    min-height: 95vh;
+    min-height: 93vh;
   }
   @media (max-width: 1400px) {
     min-height: 95vh;

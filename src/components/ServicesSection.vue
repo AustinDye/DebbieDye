@@ -106,8 +106,8 @@
           </div>
         </div>
       </div>
+      <div class="spacer-20"></div>
     </div>
-    <div class="spacer-20"></div>
   </div>
 </template>
 
@@ -131,14 +131,14 @@ export default {
   position: relative;
   transform-style: preserve-3d;
   // min-height: fit-content;
-  @media (min-width: 2000px) {
-    min-height: 200vh;
-  }
-  @media (min-width: 1600px) {
-    min-height: 250vh;
-  }
   @media (min-width: 1400px) {
     min-height: 250vh;
+  }
+  @media (min-width: 1600px) and (max-height: 900px) {
+    min-height: 275vh;
+  }
+  @media (min-width: 2000px) {
+    min-height: 200vh;
   }
 
   @media (orientation: portrait) and (max-width: 1400px) {
