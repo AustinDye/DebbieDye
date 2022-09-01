@@ -62,7 +62,12 @@
     </div>
     <div class="spacer-20" v-if="!mobile"></div>
     <div class="spacer-10" v-if="mobile"></div>
-    <div class="row position-relative h-sm-50">
+    <div class="contracts position-relative row h-sm-50">
+      <div class="modalContainer p-5" v-show="showModal">
+        <div class="modalContent"></div>
+        <div @click.stop="toggleModal" id="modal-1" class="modalDialog"></div>
+      </div>
+
       <div class="col-lg-6">
         <div class="card-container-left">
           <div class="card card-1">
@@ -80,9 +85,14 @@
                 and that we close on time.
               </p>
             </div>
-            <h6 class="fs-2">
-              Price per file : <span class="bubble">$350</span>
-            </h6>
+            <div class="d-flex justify-content-between">
+              <h6 class="fs-2">
+                Price per file : <span class="bubble">$350</span>
+              </h6>
+              <div class="d-flex align-items-end">
+                <button @click.stop="toggleModal">See More</button>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -103,9 +113,14 @@
                 contract to the
               </p>
             </div>
-            <h6 class="fs-2">
-              Price per file : <span class="bubble">$350</span>
-            </h6>
+            <div class="d-flex justify-content-between">
+              <h6 class="fs-2">
+                Price per file : <span class="bubble">$350</span>
+              </h6>
+              <div class="d-flex align-items-end">
+                <button @click.stop="toggleModal">See More</button>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -118,7 +133,27 @@
 import { computed, ref } from "@vue/reactivity";
 export default {
   setup() {
+    const showModal = ref(false);
+    function toggleModal() {
+      showModal.value = !showModal.value;
+      // const main = document.querySelector("main");
+      // const parent = document.querySelector(".contracts");
+      // const modal = document.querySelector(".modalContainer");
+      // console.log(modal);
+      // let pos = parent.getBoundingClientRect().top;
+      // console.log(pos);
+      // let top = main.scrollTop - pos;
+      // console.log(top);
+      // modal.style.top = pos;
+      if (showModal.value) {
+        // main.style.overflowY = "hidden";
+      } else {
+        // main.style.overflowY = "auto";
+      }
+    }
     return {
+      showModal,
+      toggleModal,
       mobile: computed(() => {
         return window.screen.width <= 578;
       }),
@@ -129,6 +164,43 @@ export default {
 
 <style lang="scss" scoped>
 @import "src/assets/scss/_variables.scss";
+
+.modalFade-enter-active,
+.modalFade-leave-active {
+  transition: z-index 0s step-end, opacity 0.25s ease-in-out;
+}
+
+.modalFade-enter-from,
+.modalFade-leave-to {
+  opacity: 0;
+  z-index: auto;
+}
+
+.modalContainer {
+  position: absolute;
+  top: 0;
+}
+
+.modalDialog {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 20;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.466);
+  width: 110vw;
+  height: 200vh;
+}
+.modalContent {
+  position: absolute;
+  background: white;
+  border-radius: 3px;
+  width: 95vw;
+  height: 90vh;
+  z-index: 21;
+}
 
 .parallax {
   position: relative;
@@ -225,13 +297,6 @@ export default {
   max-width: 100%;
 }
 
-// .parallax .row:nth-child(2) {
-//   @media (min-width: 110px) {
-//     display: flex;
-//     flex-direction: column;
-//   }
-// }
-
 .card-container-left,
 .card-container-right {
   z-index: 2;
@@ -261,7 +326,6 @@ export default {
   flex-direction: column;
   max-width: 100%;
   background-color: #fff;
-
   z-index: 5;
   padding: 1em;
   outline: none;
