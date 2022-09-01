@@ -1,6 +1,5 @@
 <template>
   <div class="no-parallax container-fluid bg-light">
-    <div class="spacer-10 orange"></div>
     <div class="row d-flex justify-content-center">
       <h1 class="text-center mb-md-4">Reviews</h1>
       <div class="col-md-10 col-sm-12 swiper-container">
@@ -89,7 +88,6 @@
   </div>
 </template>
 
-
 <script>
 import { Swiper, SwiperSlide } from "swiper/vue";
 import { Pagination } from "swiper";
@@ -112,7 +110,6 @@ export default {
   },
 };
 </script>
-
 
 <style lang="scss" scoped>
 @import "src/assets/scss/_variables.scss";
