@@ -1,6 +1,6 @@
 <template>
   <div class="parallax bg container-fluid">
-    <div class="spacer-20"></div>
+    <div class="spacer-10"></div>
     <div class="row d-flex bg-light justify-content-center">
       <div class="col-md-10 col-sm-12">
         <div class="title-item">
@@ -65,7 +65,7 @@
         <div class="card-container-left">
           <div class="card card-1">
             <div>
-              <h5 v-scrollanimation class="fs-1">contract to close</h5>
+              <h5 v-scrollanimation class="fs-1">Contract to Close</h5>
               <p v-scrollanimation class="text-body-mobile mt-3">
                 Contract to Close is all about what happens once your contract
                 has been accepted until the day of closing. Our goal is to
@@ -79,7 +79,7 @@
               </p>
             </div>
             <h6 class="fs-2">
-              Price per file : <span class="bubble">$250</span>
+              Price per file : <span class="bubble">$350</span>
             </h6>
           </div>
         </div>
@@ -89,9 +89,7 @@
         <div class="card-container-right">
           <div class="card card-2">
             <div>
-              <h5 v-scrollanimation class="fs-1">
-                From pre-listing until close
-              </h5>
+              <h5 v-scrollanimation class="fs-1">Pre-listing to Close</h5>
               <p v-scrollanimation class="text-body-mobile mt-3">
                 Instead of simply working through the closing and escrow
                 services, we can help work from the very beginning of the
@@ -103,7 +101,7 @@
               </p>
             </div>
             <h6 class="fs-2">
-              Price per file : <span class="bubble">$250</span>
+              Price per file : <span class="bubble">$350</span>
             </h6>
           </div>
         </div>
@@ -247,7 +245,7 @@ export default {
   display: flex;
   flex: 1 1 auto;
   flex-direction: column;
-  min-height: 40vh;
+  min-height: 80vh;
   background-color: #fff;
   // max-width: 35vw;
   z-index: 5;
@@ -281,7 +279,7 @@ h6 {
   border-bottom: 50.1vw solid rgba($light, 1);
   border-left: 2.5vh transparent solid;
   border-right: 2.5vh transparent solid;
-  width: 80vh;
+  width: 90vh;
   rotate: -90deg;
   position: absolute;
   z-index: -1;

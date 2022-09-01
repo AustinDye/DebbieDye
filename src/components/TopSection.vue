@@ -1,7 +1,8 @@
 <template>
   <div class="parallax bg">
     <div class="word-wrapper text-info">
-      <h1>Debbie Dye TC Services</h1>
+      <h1>Debbie Dye</h1>
+      <h2 class="fw-bold">Real Estate Transaction Coordinating Services</h2>
       <span class="d-flex"
         ><div class="mdi mdi-format-quote-open"></div>
         <h5>Be a ray of sunshine in someones life to make it a brighter day</h5>
@@ -56,9 +57,10 @@ export default {
   z-index: 2;
   color: white;
   padding: 2em;
-  width: 50vw;
+  width: 70vw;
   top: 30%;
   left: 10%;
+
   @media (max-width: 576px) {
     top: 10%;
     left: 0;
