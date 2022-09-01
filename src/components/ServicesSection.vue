@@ -36,6 +36,7 @@
                 get more contracts signed. Agents view a transaction coordinator
                 as an investment to grow their business
               </p>
+              <div></div>
             </div>
           </div>
 
@@ -51,6 +52,7 @@
                 paperwork or administrative tasks and to ensure they can deliver
                 fantastic service to clients.
               </p>
+              <div></div>
             </div>
           </div>
         </div>
@@ -84,6 +86,7 @@
           </div>
         </div>
       </div>
+      <div class="spacer-20 d-lg-none"></div>
 
       <div class="col-lg-6">
         <div class="card-container-right">
@@ -150,9 +153,9 @@ export default {
   @media (orientation: portrait) and (max-width: 1200px) {
     min-height: 280vh;
   }
-  @media (orientation: landscape) and (max-width: 1400px) {
-    min-height: 360vh;
-  }
+  // @media (orientation: landscape) and (max-width: 1400px) {
+  //   min-height: 360vh;
+  // }
   @media (orientation: portrait) and (max-width: 1200px) {
     min-height: 220vh;
   }
@@ -204,12 +207,22 @@ export default {
   }
 }
 
+.selling-point-container .col-md-6 {
+  display: flex;
+  flex-direction: column;
+}
+
 .selling-point {
+  justify-content: space-between;
   position: relative;
   padding: 1rem;
   margin: 1rem;
   background: white;
   border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  flex: 1 0 auto;
+  max-width: 100%;
 }
 
 // .parallax .row:nth-child(2) {
@@ -225,6 +238,7 @@ export default {
   position: relative;
   padding: 3rem;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   min-height: 100%;
@@ -243,11 +257,11 @@ export default {
 .card-1,
 .card-2 {
   display: flex;
-  flex: 1 1 auto;
+  flex: 1 0 auto;
   flex-direction: column;
-  min-height: 80vh;
+  max-width: 100%;
   background-color: #fff;
-  // max-width: 35vw;
+
   z-index: 5;
   padding: 1em;
   outline: none;
@@ -283,10 +297,10 @@ h6 {
 .card-container-left::after,
 .card-container-right::after {
   content: "";
-  border-bottom: 50.1vw solid rgba($light, 1);
+  border-bottom: 50.2vw solid rgba($light, 1);
   border-left: 2.5vh transparent solid;
   border-right: 2.5vh transparent solid;
-  width: 90vh;
+  width: 110%;
   rotate: -90deg;
   position: absolute;
   z-index: -1;

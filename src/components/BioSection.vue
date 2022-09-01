@@ -146,6 +146,12 @@ export default {
 .section-header {
   z-index: 2;
 }
+.section-header div {
+  @media (min-width: 992px) {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+}
 
 .image-holder {
   display: flex;
