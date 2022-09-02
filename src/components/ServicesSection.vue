@@ -58,16 +58,18 @@
         </div>
       </div>
       <div class="spacer-10" v-if="!mobile"></div>
-      <!-- <div class="spacer-20"></div> -->
     </div>
-    <div class="spacer-20" v-if="!mobile"></div>
-    <div class="spacer-10" v-if="mobile"></div>
-    <div class="contracts position-relative row h-sm-50">
-      <div class="modalContainer p-5" v-show="showModal">
+    <Transition name="modalFade">
+      <div class="modalContainer" v-if="showModal">
         <div class="modalContent"></div>
         <div @click.stop="toggleModal" id="modal-1" class="modalDialog"></div>
       </div>
+    </Transition>
 
+    <div class="spacer-20" v-if="!mobile"></div>
+    <div class="spacer-10 d-xl-block"></div>
+    <div class="spacer-10" v-if="mobile"></div>
+    <div class="contracts position-relative row h-sm-50">
       <div class="col-lg-6">
         <div class="card-container-left">
           <div class="card card-1">
@@ -131,25 +133,12 @@
 
 <script>
 import { computed, ref } from "@vue/reactivity";
+import { watchEffect } from "@vue/runtime-core";
 export default {
   setup() {
     const showModal = ref(false);
     function toggleModal() {
       showModal.value = !showModal.value;
-      // const main = document.querySelector("main");
-      // const parent = document.querySelector(".contracts");
-      // const modal = document.querySelector(".modalContainer");
-      // console.log(modal);
-      // let pos = parent.getBoundingClientRect().top;
-      // console.log(pos);
-      // let top = main.scrollTop - pos;
-      // console.log(top);
-      // modal.style.top = pos;
-      if (showModal.value) {
-        // main.style.overflowY = "hidden";
-      } else {
-        // main.style.overflowY = "auto";
-      }
     }
     return {
       showModal,
@@ -165,41 +154,47 @@ export default {
 <style lang="scss" scoped>
 @import "src/assets/scss/_variables.scss";
 
-.modalFade-enter-active,
-.modalFade-leave-active {
-  transition: z-index 0s step-end, opacity 0.25s ease-in-out;
-}
-
-.modalFade-enter-from,
-.modalFade-leave-to {
-  opacity: 0;
-  z-index: auto;
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .modalContainer {
   position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 19;
+  height: 100%;
+  width: 100%;
   top: 0;
+  left: 0;
+  animation: fadeIn 0.4s;
 }
 
 .modalDialog {
   position: absolute;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   z-index: 20;
   top: 0;
   left: 0;
+  height: 100%;
+  width: 100%;
   background: rgba(0, 0, 0, 0.466);
-  width: 110vw;
-  height: 200vh;
 }
+
 .modalContent {
   position: absolute;
   background: white;
   border-radius: 3px;
-  width: 95vw;
-  height: 90vh;
+  top: 50%;
+  width: 90%;
+  height: 40%;
   z-index: 21;
+  overflow-y: auto;
 }
 
 .parallax {
@@ -207,7 +202,7 @@ export default {
   transform-style: preserve-3d;
   // min-height: fit-content;
   @media (min-width: 1400px) {
-    min-height: 250vh;
+    min-height: 200vh;
   }
   @media (min-width: 1600px) and (max-height: 900px) {
     min-height: 275vh;
