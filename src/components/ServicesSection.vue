@@ -61,7 +61,9 @@
     </div>
     <Transition name="modalFade">
       <div class="modalContainer" v-if="showModal">
-        <div class="modalContent"></div>
+        <div class="modalContent">
+          <ModalContent1 />
+        </div>
         <div @click.stop="toggleModal" id="modal-1" class="modalDialog"></div>
       </div>
     </Transition>
@@ -190,9 +192,9 @@ export default {
   position: absolute;
   background: white;
   border-radius: 3px;
-  top: 50%;
+  top: 60%;
   width: 90%;
-  height: 40%;
+  height: 32%;
   z-index: 21;
   overflow-y: auto;
 }
@@ -202,7 +204,7 @@ export default {
   transform-style: preserve-3d;
   // min-height: fit-content;
   @media (min-width: 1400px) {
-    min-height: 200vh;
+    min-height: 270vh;
   }
   @media (min-width: 1600px) and (max-height: 900px) {
     min-height: 275vh;

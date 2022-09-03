@@ -3,13 +3,7 @@
     <div class="row main-row">
       <div class="back-square"></div>
       <div
-        class="
-          col-12
-          d-flex
-          justify-content-center
-          align-items-center
-          section-header
-        "
+        class="col-12 d-flex justify-content-center align-items-center section-header"
       >
         <div class="text-center">
           <h2 class="">
@@ -24,7 +18,7 @@
       </div>
       <div class="col-12 image-holder">
         <img
-          src="src/assets/img/stock-photo-remove-bg.png"
+          src="src/assets/img/debbie-removebg-preview (2).png"
           alt=""
           class="head-img"
         />
@@ -180,9 +174,15 @@ export default {
   z-index: 5;
   position: relative;
   padding-right: 2em;
-  width: auto;
+  width: 20vw;
+  @media (max-width: 900px) {
+    z-index: 3;
+    width: 30vw;
+    // position: absolute;
+  }
   @media (max-width: 600px) {
     z-index: 3;
+    width: 65vw;
     // position: absolute;
   }
 }
