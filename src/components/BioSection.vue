@@ -3,7 +3,13 @@
     <div class="row main-row">
       <div class="back-square"></div>
       <div
-        class="col-12 d-flex justify-content-center align-items-center section-header"
+        class="
+          col-12
+          d-flex
+          justify-content-center
+          align-items-center
+          section-header
+        "
       >
         <div class="text-center">
           <h2 class="">
@@ -44,9 +50,8 @@
             more transaction responsibilities, such as
             <strong>underwriting, proccesses, and closing</strong>. One of my
             specialties was in FHA 203k rehab loans, an ugly process that most
-            of my colleagues avoided — but I took them on. <br /><strong
-              >I always enjoy a challenge.</strong
-            >
+            of my colleagues avoided — but I took them on.
+            <strong>I always enjoy a challenge.</strong>
             <br />
             <br />
             In my free time, I like to golf, play cards with my friends and
@@ -152,18 +157,20 @@ export default {
   align-items: center;
   justify-content: center;
   position: relative;
-  margin-bottom: 30vh;
+  // height: 30%;
+  margin-bottom: 10em;
+  @media (max-width: 600px) {
+    margin-bottom: 10em;
+  }
 }
 
 .image-holder::after {
   content: "";
   position: absolute;
   z-index: 1;
-  // inset: 0;
   align-self: center;
   top: 20%;
   right: 5%;
-  // left: 0;
   background: darken($light, 10);
   border-radius: 10px;
   height: 105%;
@@ -178,12 +185,10 @@ export default {
   @media (max-width: 900px) {
     z-index: 3;
     width: 30vw;
-    // position: absolute;
   }
   @media (max-width: 600px) {
     z-index: 3;
     width: 65vw;
-    // position: absolute;
   }
 }
 
@@ -213,23 +218,25 @@ export default {
 
 .bio-holder {
   z-index: 5;
-  // padding-left: 20em;
-  // padding-right: 20em;
-  // padding-bottom: 2em;
   margin-bottom: 2em;
-  margin-top: 2em;
+  p {
+    padding: 5rem;
+  }
+  @media (max-width: 1400px) {
+    margin-top: 5em;
+  }
+  @media (max-width: 1200px) {
+    margin-top: 5em;
+  }
   @media (max-width: 900px) {
     margin-top: 5em;
-    // top: 40vh;
-    // padding-left: 6em;
-    // padding-right: 6em;
   }
   @media (max-width: 600px) {
-    // top: 135vh;
     margin-bottom: 2em;
-    // padding-left: 2em;
-    // padding-right: 2em;
-    margin-top: 5em;
+    margin-top: 10em;
+    p {
+      padding: 0;
+    }
   }
   @media (orientation: landscape) {
   }
