@@ -197,6 +197,7 @@ export default {
   height: 32%;
   z-index: 21;
   overflow-y: auto;
+  overflow-x: hidden;
 }
 
 .parallax {
