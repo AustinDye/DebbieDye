@@ -168,11 +168,9 @@ export default {
   content: "";
   position: absolute;
   z-index: 1;
-  // inset: 0;
   align-self: center;
   top: 20%;
   right: 5%;
-  // left: 0;
   background: darken($light, 10);
   border-radius: 10px;
   height: 105%;
@@ -187,12 +185,10 @@ export default {
   @media (max-width: 900px) {
     z-index: 3;
     width: 30vw;
-    // position: absolute;
   }
   @media (max-width: 600px) {
     z-index: 3;
     width: 65vw;
-    // position: absolute;
   }
 }
 
