@@ -194,7 +194,7 @@ export default {
   border-radius: 3px;
   top: 60%;
   width: 90%;
-  height: 32%;
+  height: 30%;
   z-index: 21;
   overflow-y: auto;
   overflow-x: hidden;

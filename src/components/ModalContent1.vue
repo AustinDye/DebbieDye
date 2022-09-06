@@ -2,7 +2,7 @@
   <div class="container">
     <div class="row p-5">
       <div class="hold-2">
-        <h2 class="p-2 modal-section-picker-2">BUYER-CONTRACT TO CLOSE</h2>
+        <h2 class="p-2">BUYER-CONTRACT TO CLOSE</h2>
       </div>
       <div class="col-md-5">
         <ul>
@@ -61,10 +61,9 @@
       </div>
       <div class="col-2 holderr">
         <div class="hold">
-          <h2 class="text-center modal-section-picker">
-            SELLER-CONTRACT TO CLOSE
-          </h2>
-          <div class="row p-5 other-text">
+          <h2 class="modal-section-picker">SELLER-CONTRACT TO CLOSE</h2>
+          <h2 class="modal-section-picker-2">BUYER-CONTRACT TO CLOSE</h2>
+          <div class="row other-text">
             <div class="col-md-5">
               <ul>
                 <li>Verify MLS commission/year built, MLS#</li>
@@ -146,40 +145,68 @@ export default {
 .modal-section-picker {
   padding: 1em;
   border-bottom: 5px rgba($secondary, 01) solid;
-  border-right: 5px rgba($secondary, 01) solid;
+  text-align: center;
 }
 .modal-section-picker-2 {
-}
-
-.hold {
   position: absolute;
   width: 100%;
+  top: 40%;
+  right: 52%;
+  height: 20%;
+  rotate: 90deg;
+  background-color: white;
+  padding: 2em;
+  opacity: 0;
+}
+
+ul {
+  font-size: 0.8em;
+}
+.hold {
+  position: absolute;
+  width: 50%;
   top: 40%;
   height: 20%;
   rotate: 90deg;
   transition: all 0.7s;
-  left: 40%;
+  left: 65%;
   background-color: rgba($light, 1);
 }
 
 .other-text {
   opacity: 0;
-  transition: all 0.7s;
-  transition-delay: 0.7s;
+  transition: all 0.1s;
+  transition-delay: 0.1s;
   transform: translateY(-10%);
+  padding-left: 3em;
 }
 
 .holderr:hover {
   .hold {
     rotate: 0deg;
     top: 0;
-    left: 0;
-    height: 110%;
+    left: 12%;
+    height: 100%;
+    transition: all 0.7s;
+    padding: 2em;
+    width: 100%;
   }
 
   .other-text {
     opacity: 1;
+    transition: all 0.7s;
     transform: translateY(0);
+  }
+  .modal-section-picker {
+    border-bottom: 5px transparent solid;
+    text-align: start;
+  }
+  .modal-section-picker-2 {
+    border-top: 5px rgba($secondary, 01) solid;
+    opacity: 1;
+    left: -30%;
+    width: 50%;
+    text-align: center;
   }
 }
 </style>
