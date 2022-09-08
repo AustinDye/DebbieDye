@@ -192,12 +192,11 @@ export default {
   position: absolute;
   background: white;
   border-radius: 3px;
-  top: 60%;
+  top: 40%;
   width: 90%;
-  height: 30%;
+  // height: 30%;
   z-index: 21;
-  overflow-y: auto;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 .parallax {
