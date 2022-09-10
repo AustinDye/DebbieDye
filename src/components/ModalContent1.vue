@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <div class="row">
+    <!-- <div class="row">
       <div class="col-2 holderr">
         <div class="hold">
           <h2 class="modal-section-picker">SELLER-CONTRACT TO CLOSE</h2>
@@ -70,7 +70,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
     <div class="row backsplash">
       <div class="hold-2 mb-5">
         <h2 class="p-2">BUYER-CONTRACT TO CLOSE</h2>
@@ -92,8 +92,11 @@
             <span>4.</span>All requisite documents are uploaded to the
             transaction management system.
           </p>
-          <div class="arrow-line-1">
+          <!-- <div class="arrow-line-1">
             <div class="arrow"></div>
+          </div> -->
+          <div class="svgCanvas svg-0">
+            <svg id="svg-0" xmlns="http://www.w3.org/2000/svg"></svg>
           </div>
         </div>
       </div>
@@ -113,8 +116,11 @@
             <span>7.</span>Information about utilites and preliminary buying
             agreements are sent to the buyer.
           </p>
-          <div class="arrow-line-2">
+          <!-- <div class="arrow-line-2">
             <div class="arrow"></div>
+          </div> -->
+          <div class="svgCanvas svg-1">
+            <svg id="svg-1" xmlns="http://www.w3.org/2000/svg"></svg>
           </div>
         </div>
       </div>
@@ -134,8 +140,8 @@
             <span>10.</span>Status of repairs is checked, and compliance is
             again assessed of the parties involved.
           </p>
-          <div class="arrow-line-3">
-            <div class="arrow"></div>
+          <div class="svgCanvas svg-2">
+            <svg id="svg-2" xmlns="http://www.w3.org/2000/svg"></svg>
           </div>
         </div>
       </div>
@@ -153,6 +159,9 @@
           <p>
             <span>13.</span>In OTC, the transaction status is changed to closed.
           </p>
+          <div class="svgCanvas svg-3">
+            <svg id="svg-3" xmlns="http://www.w3.org/2000/svg"></svg>
+          </div>
         </div>
       </div>
       <div class="spacer-20"></div>
@@ -164,6 +173,95 @@
 import { onMounted } from "@vue/runtime-core";
 export default {
   setup() {
+    onMounted(() => {
+      const sections = document.querySelectorAll(".section");
+
+      let pointList = [];
+      for (let i = 0; i < sections.length; i++) {
+        const s = sections[i];
+        const rect = s.getBoundingClientRect();
+        let top;
+        switch (i) {
+          case 0:
+            top = 0;
+            break;
+          case 1:
+            top = rect.height * 0.25;
+            break;
+          case 2:
+            top = rect.height * 0.15;
+            break;
+          case 3:
+            top = rect.height * 0.35;
+            break;
+        }
+        s.style.top = top + "px";
+        const point = { x: 0, y: 0 };
+        if (
+          s.className.includes("section-2") ||
+          s.className.includes("section-4")
+        ) {
+          point.x = rect.left;
+        } else {
+          point.x = rect.right;
+        }
+        point.y = s.offsetTop + top + rect.height / 2;
+        pointList.push(point);
+      }
+
+      for (let i = 0; i < pointList.length - 1; i++) {
+        const point = pointList[i];
+        console.log(pointList[i]);
+
+        let svgElem = document.getElementById("svg-" + i);
+        console.log(svgElem);
+        let side1 = Math.abs(pointList[i].y - pointList[i + 1].y);
+        let side2 = Math.abs(pointList[i].x - pointList[i + 1].x) - 20;
+        let hypoteneus = Math.sqrt(Math.pow(side1, 2) + Math.pow(side2, 2));
+        let angle = Math.sin(side1 / side2) * (180 / Math.PI);
+
+        svgElem.style.position = "absolute";
+        svgElem.style.top = 50 + "%";
+
+        if (i == 1 || i == 3) {
+          svgElem.style.left = 0;
+          svgElem.style.transform = `rotate(${angle}deg)`;
+        } else {
+          svgElem.style.right = 0;
+          svgElem.style.transform = `rotate(-${angle}deg)`;
+        }
+        svgElem.style.transformOrigin = "top";
+        svgElem.setAttribute("height", hypoteneus);
+        svgElem.setAttribute("className", "svgCanvas");
+        svgElem.setAttribute("width", "4px");
+        svgElem.setAttribute("id", `svg-${i}`);
+
+        let newLine = document.createElementNS(
+          "http://www.w3.org/2000/svg",
+          "line"
+        );
+        newLine.setAttribute("stroke", "#d66e00");
+        newLine.setAttribute("id", "svgLine-" + i);
+        newLine.setAttribute("stroke-width", "4");
+        newLine.setAttribute("x1", "0");
+        newLine.setAttribute("y1", "0");
+        newLine.setAttribute("x2", "100%");
+        newLine.setAttribute("y2", "100%");
+
+        svgElem.appendChild(newLine);
+        setTimeout(() => {
+          newLine.classList.add("dashAnimation");
+        }, 1000 * i);
+      }
+
+      function printMousePos(event) {
+        console.log(
+          "clientX: " + event.clientX + " - clientY: " + event.clientY
+        );
+      }
+
+      document.addEventListener("click", printMousePos);
+    });
     return {};
   },
 };
@@ -224,7 +322,6 @@ export default {
 .backsplash .col-md-5 {
   display: flex;
   flex-direction: column;
-  // position: relative;
 }
 
 .section {
@@ -240,18 +337,12 @@ export default {
   margin: 0.5rem;
   padding: 1rem;
   border-radius: 8px;
-  // border: 0.2rem black solid;
 }
 
-.section-2 {
-  top: 25%;
-}
-
-.section-3 {
-  top: 15%;
-}
-.section-4 {
-  top: 35%;
+.svgCanvas {
+  z-index: -1;
+  position: absolute;
+  inset: 0;
 }
 
 .arrow-line-1,
@@ -266,6 +357,36 @@ export default {
   @media (max-width: 767px) {
     display: none;
   }
+}
+
+.arrow-line-1,
+.arrow-line-3 {
+  top: 50%;
+  right: 0;
+  -webkit-animation: slideright 2s forwards;
+  -moz-animation: slideright 2s forwards;
+  -o-animation: slideright 2s forwards;
+  animation: slideright 2s forwards;
+  transform: translateX(100%) rotate(25deg) translateX(0);
+  -moz-transform: translateX(100%) rotate(25deg) translateX(0);
+  -webkit-transform: translateX(100%) rotate(25deg) translateX(0);
+  -webkit-transform-origin: 0 0;
+  -moz-transform-origin: 0 0;
+  transform-origin: 0 0;
+}
+
+.arrow-line-2 {
+  top: 50%;
+  -webkit-animation: slideleft 2s forwards;
+  -moz-animation: slideleft 2s forwards;
+  -o-animation: slideleft 2s forwards;
+  animation: slideleft 2s forwards;
+  -moz-transform: rotate(-245deg);
+  -webkit-transform: rotate(-245deg);
+  transform: rotate(-245deg);
+  -webkit-transform-origin: 0 0;
+  -moz-transform-origin: 0 0;
+  transform-origin: 0 0;
 }
 
 .arrow {
@@ -283,16 +404,15 @@ export default {
   left: 50%;
   top: -3px;
   background: $secondary;
-  // transform: rotate(0);
   transform-origin: 100% 100%;
 }
 
 .arrow::before {
-  animation: fold-out-right 0.5s ease-in 0.5s;
+  animation: fold-out-right 0.5s ease-in 0.5s forwards;
 }
 
 .arrow::after {
-  animation: fold-out-left 0.5s ease-in 0.5s;
+  animation: fold-out-left 0.5s ease-in 0.5s forwards;
 }
 
 @keyframes fold-out-right {
@@ -312,43 +432,13 @@ export default {
   }
 }
 
-.arrow-line-1,
-.arrow-line-3 {
-  top: 50%;
-  right: 0;
-  -webkit-animation: slideright 2s;
-  -moz-animation: slideright 2s;
-  -o-animation: slideright 2s;
-  animation: slideright 2s;
-  transform: translateX(100%) rotate(25deg) translateX(0);
-  -moz-transform: translateX(100%) rotate(25deg) translateX(0);
-  -webkit-transform: translateX(100%) rotate(25deg) translateX(0);
-  -webkit-transform-origin: 0 0;
-  -moz-transform-origin: 0 0;
-  transform-origin: 0 0;
-}
-
-.arrow-line-2 {
-  top: 50%;
-  -webkit-animation: slideleft 2s;
-  -moz-animation: slideleft 2s;
-  -o-animation: slideleft 2s;
-  animation: slideleft 2s;
-  -moz-transform: rotate(-245deg);
-  -webkit-transform: rotate(-245deg);
-  transform: rotate(-245deg);
-  -webkit-transform-origin: 0 0;
-  -moz-transform-origin: 0 0;
-  transform-origin: 0 0;
-}
-
 @keyframes slideleft {
   from {
     width: 0;
   }
 
   to {
-    width: 100%;
+    width: 30vmin;
   }
 }
 @keyframes slideright {
@@ -357,7 +447,7 @@ export default {
   }
 
   to {
-    width: 100%;
+    width: 12vmin;
   }
 }
 

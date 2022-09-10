@@ -3,7 +3,13 @@
     <div class="row main-row">
       <div class="back-square"></div>
       <div
-        class="col-12 d-flex justify-content-center align-items-center section-header"
+        class="
+          col-12
+          d-flex
+          justify-content-center
+          align-items-center
+          section-header
+        "
       >
         <div class="text-center">
           <h2 class="">
