@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <!-- <div class="row">
+    <div class="row">
       <div class="col-2 holderr">
         <div class="hold">
           <h2 class="modal-section-picker">SELLER-CONTRACT TO CLOSE</h2>
@@ -70,7 +70,7 @@
           </div>
         </div>
       </div>
-    </div> -->
+    </div>
     <div class="row backsplash">
       <div class="hold-2 mb-5">
         <h2 class="p-2">BUYER-CONTRACT TO CLOSE</h2>
@@ -253,14 +253,6 @@ export default {
           newLine.classList.add("dashAnimation");
         }, 1000 * i);
       }
-
-      function printMousePos(event) {
-        console.log(
-          "clientX: " + event.clientX + " - clientY: " + event.clientY
-        );
-      }
-
-      document.addEventListener("click", printMousePos);
     });
     return {};
   },
