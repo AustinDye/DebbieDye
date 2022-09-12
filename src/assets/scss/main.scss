@@ -22,23 +22,6 @@ body {
   font-size: calc(16px + (20 - 16) * ((100vw - 300px) / (1600 - 300)));
 }
 
-svg {
-  line {
-    stroke-dasharray: 1000;
-    stroke-dashoffset: 1000;
-  }
-}
-
-.dashAnimation{
-  animation: dash 1.5s ease-in forwards;
-}
-
-@keyframes dash {
-  to {
-    stroke-dashoffset: 0;
-  }
-}
-
 main {
   height: 100vh;
   overflow-y: auto;
@@ -143,6 +126,28 @@ form:invalid button[type="submit"] {
 
 
 /* NOTE Don't include this with imports */
+
+// targets for svg animations
+svg {
+  line {
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+  }
+  @media (max-width: 768px){
+    display: none;
+  }
+}
+
+.dashAnimation{
+  animation: dash 1.5s ease-in forwards;
+}
+
+@keyframes dash {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
 // styling for swiper elements
 .mySwiper {
   .swiper-horizontal > .swiper-pagination-bullets,

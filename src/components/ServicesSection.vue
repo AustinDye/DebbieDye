@@ -68,6 +68,7 @@
     <Transition name="modalFade">
       <div class="modalContainer" v-if="showModal">
         <div class="modalContent">
+          <div id="modalTop" ref="scrollMark"></div>
           <ModalContent1 />
         </div>
         <div @click.stop="toggleModal" id="modal-1" class="modalDialog"></div>
@@ -100,9 +101,17 @@
                 Price per file :
                 <span class="bubble" v-scrollanimation>$350</span>
               </h6>
-              <div class="d-flex align-items-end">
+              <div class="d-flex align-items-end mb-3" v-if="!mobile">
                 <button @click.stop="toggleModal">See More</button>
               </div>
+            </div>
+            <div
+              class="d-flex justify-content-end align-items-center"
+              v-if="mobile"
+            >
+              <p class="mb-0" @click.stop="toggleModal">
+                <em>details</em><i class="ms-2 mdi mdi-plus"></i>
+              </p>
             </div>
           </div>
         </div>
@@ -129,14 +138,21 @@
                 Price per file :
                 <span class="bubble" v-scrollanimation>$350</span>
               </h6>
-              <div class="d-flex align-items-end">
+              <div v-if="!mobile" class="d-flex align-items-end mb-3">
                 <button @click.stop="toggleModal">See More</button>
               </div>
+            </div>
+            <div
+              class="d-flex justify-content-end align-items-center"
+              v-if="mobile"
+            >
+              <p class="mb-0" @click.stop="toggleModal">
+                <em>details</em><i class="ms-2 mdi mdi-plus"></i>
+              </p>
             </div>
           </div>
         </div>
       </div>
-      <div class="spacer-20"></div>
     </div>
   </div>
 </template>
@@ -144,13 +160,22 @@
 <script>
 import { computed, ref } from "@vue/reactivity";
 import { watchEffect } from "@vue/runtime-core";
+import { AppState } from "../AppState";
 export default {
   setup() {
+    const scrollMark = ref();
     const showModal = ref(false);
+    watchEffect(() => {
+      if (scrollMark.value) {
+        scrollMark.value.scrollIntoView();
+        console.log(scrollMark.value);
+      }
+    });
     function toggleModal() {
       showModal.value = !showModal.value;
     }
     return {
+      scrollMark,
       showModal,
       toggleModal,
       mobile: computed(() => {
@@ -200,14 +225,21 @@ export default {
   position: absolute;
   background: white;
   border-radius: 3px;
-  top: 40%;
   @media (max-width: 768px) {
     top: 10%;
   }
+  @media (min-width: 768px) and (max-width: 1400px) {
+    top: 20%;
+  }
+  @media (min-width: 1400px) {
+    top: 25%;
+  }
   width: 90%;
-  // height: 30%;
   z-index: 21;
   overflow: hidden;
+}
+
+#modalTop {
 }
 
 .parallax {
@@ -215,7 +247,7 @@ export default {
   transform-style: preserve-3d;
   // min-height: fit-content;
   @media (min-width: 1400px) {
-    min-height: 270vh;
+    min-height: 290vh;
   }
   @media (min-width: 1600px) and (max-height: 900px) {
     min-height: 275vh;
@@ -252,6 +284,15 @@ export default {
   @media (max-height: 500px) and (orientation: landscape) {
     min-height: 500vh;
   }
+}
+
+.bg::after {
+  background: linear-gradient(
+      rgba(255, 255, 255, 0.108),
+      rgba(255, 255, 255, 0.314)
+    ),
+    url("src/assets/img/Ocean.jpeg");
+  background-size: cover;
 }
 
 .title-item p {
@@ -327,6 +368,38 @@ export default {
   }
 }
 
+.card-container-left::after,
+.card-container-right::after {
+  content: "";
+  border-bottom: 50.2vw solid rgba($light, 1);
+  border-left: 2.5vh transparent solid;
+  border-right: 2.5vh transparent solid;
+  width: 110%;
+  rotate: -90deg;
+  position: absolute;
+  z-index: -1;
+  @media (max-width: 1200px) {
+  }
+  @media (max-width: 992px) {
+    border-bottom: 100vw solid rgba($light, 1);
+  }
+  @media (max-width: 768px) {
+    border-bottom: 100vw solid rgba($light, 1);
+  }
+  @media (max-width: 576px) {
+    border-bottom: 100vw solid rgba($light, 1);
+  }
+  @media (max-height: 500px) and (orientation: landscape) {
+    border-bottom: 102.1vw solid rgba($light, 1);
+    width: 130vh;
+  }
+}
+
+.card-container-right::after {
+  content: "";
+  rotate: 90deg;
+}
+
 .card-1,
 .card-2 {
   display: flex;
@@ -366,36 +439,21 @@ h6 {
   box-shadow: 1em 1em 0em rgba($info, 0.6);
 }
 
-.card-container-left::after,
-.card-container-right::after {
-  content: "";
-  border-bottom: 50.2vw solid rgba($light, 1);
-  border-left: 2.5vh transparent solid;
-  border-right: 2.5vh transparent solid;
-  width: 110%;
-  rotate: -90deg;
-  position: absolute;
-  z-index: -1;
-  @media (max-width: 1200px) {
-  }
-  @media (max-width: 992px) {
-    border-bottom: 100vw solid rgba($light, 1);
-  }
-  @media (max-width: 768px) {
-    border-bottom: 100vw solid rgba($light, 1);
-  }
-  @media (max-width: 576px) {
-    border-bottom: 100vw solid rgba($light, 1);
-  }
-  @media (max-height: 500px) and (orientation: landscape) {
-    border-bottom: 102.1vw solid rgba($light, 1);
-    width: 130vh;
-  }
+button {
+  font-family: "quicksand";
+  border-radius: 5px;
+  background: transparent;
+  transition: all ease 0.15s;
+  outline: black solid 3px;
+  border: none;
 }
-
-.card-container-right::after {
-  content: "";
-  rotate: 90deg;
+button:hover {
+  box-shadow: 0px 12px 0px -2px $secondary;
+  transform: translateY(-0.25em);
+}
+button:focus {
+  box-shadow: 0px 30px 0px -12px $secondary;
+  transform: translateY(-0.25em);
 }
 
 h6,
