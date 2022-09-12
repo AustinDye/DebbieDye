@@ -73,7 +73,7 @@ p, span, b {
 }
 
 .bg::after {
-  background: url("src/assets/img/Ocean.jpeg");
+  background: linear-gradient(rgba(255, 255, 255, 0.108), rgba(255, 255, 255, 0.114)), url("src/assets/img/Ocean.jpeg");
   background-size: cover;
 }
 

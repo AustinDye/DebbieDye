@@ -12,14 +12,14 @@
         "
       >
         <div class="text-center">
-          <h2 class="">
+          <h2 class="" v-scrollanimation>
             Over 14 yrs experience as a Real Estate Transaction Coordinator
           </h2>
 
-          <b class="fs-4 text-secondary">
+          <p class="fs-4 text-secondary" v-scrollanimation>
             I enjoy assisting agents with the details of their transactions, so
             they can be out doing what they love.
-          </b>
+          </p>
         </div>
       </div>
       <div class="col-12 image-holder">
@@ -29,7 +29,7 @@
           class="head-img"
         />
         <div class="card card-1">
-          <p class="p-4 fs-4">
+          <p class="p-4 fs-4" v-scrollanimation>
             I believe my background in mortgage lending has given me an
             advantage to understand the full process of what takes place from
             contract to closing on all levels.

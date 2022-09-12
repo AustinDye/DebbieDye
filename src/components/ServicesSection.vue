@@ -28,10 +28,13 @@
         <div class="row selling-point-container">
           <div class="col-md-6">
             <div class="selling-point">
-              <h2 class="text-secondary text-center fs-1 fw-bolder">
+              <h2
+                v-scrollanimation
+                class="text-secondary text-center fs-1 fw-bolder"
+              >
                 Grow Your Buisness
               </h2>
-              <p class="">
+              <p class="" v-scrollanimation>
                 Most agents hire a transaction coordinator in order to help them
                 get more contracts signed. Agents view a transaction coordinator
                 as an investment to grow their business
@@ -42,10 +45,13 @@
 
           <div class="col-md-6">
             <div class="selling-point">
-              <h2 class="text-secondary text-center fs-1 fw-bolder">
+              <h2
+                v-scrollanimation
+                class="text-secondary text-center fs-1 fw-bolder"
+              >
                 More Time Closing Deals
               </h2>
-              <p class="">
+              <p class="" v-scrollanimation>
                 If you dislike the paperwork and attention to detail necessary
                 for the closing process you will love having a TC. However,
                 agents also want to use TC’s in order to “save themselves” from
@@ -91,7 +97,8 @@
             </div>
             <div class="d-flex justify-content-between">
               <h6 class="fs-2">
-                Price per file : <span class="bubble">$350</span>
+                Price per file :
+                <span class="bubble" v-scrollanimation>$350</span>
               </h6>
               <div class="d-flex align-items-end">
                 <button @click.stop="toggleModal">See More</button>
@@ -119,7 +126,8 @@
             </div>
             <div class="d-flex justify-content-between">
               <h6 class="fs-2">
-                Price per file : <span class="bubble">$350</span>
+                Price per file :
+                <span class="bubble" v-scrollanimation>$350</span>
               </h6>
               <div class="d-flex align-items-end">
                 <button @click.stop="toggleModal">See More</button>
@@ -193,6 +201,9 @@ export default {
   background: white;
   border-radius: 3px;
   top: 40%;
+  @media (max-width: 768px) {
+    top: 10%;
+  }
   width: 90%;
   // height: 30%;
   z-index: 21;

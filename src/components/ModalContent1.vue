@@ -211,12 +211,11 @@ export default {
 
       for (let i = 0; i < pointList.length - 1; i++) {
         const point = pointList[i];
-        console.log(pointList[i]);
 
         let svgElem = document.getElementById("svg-" + i);
         console.log(svgElem);
-        let side1 = Math.abs(pointList[i].y - pointList[i + 1].y);
-        let side2 = Math.abs(pointList[i].x - pointList[i + 1].x) - 20;
+        let side1 = Math.abs(point.y - pointList[i + 1].y);
+        let side2 = Math.abs(point.x - pointList[i + 1].x) - 20;
         let hypoteneus = Math.sqrt(Math.pow(side1, 2) + Math.pow(side2, 2));
         let angle = Math.sin(side1 / side2) * (180 / Math.PI);
 
