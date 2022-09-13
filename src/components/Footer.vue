@@ -1,26 +1,24 @@
 <template>
   <div class="no-parallax container">
     <div class="spacer-10"></div>
-    <footer class="py-3 mt-4">
-      <ul class="nav justify-content-center border-bottom pb-3 mb-3">
-        <li class="nav-item">
-          <a href="#" class="nav-link px-2 text-muted">Home</a>
-        </li>
-        <li class="nav-item">
-          <a href="#" class="nav-link px-2 text-muted">Features</a>
-        </li>
-        <li class="nav-item">
-          <a href="#" class="nav-link px-2 text-muted">Pricing</a>
-        </li>
-        <li class="nav-item">
-          <a href="#" class="nav-link px-2 text-muted">FAQs</a>
-        </li>
-        <li class="nav-item">
-          <a href="#" class="nav-link px-2 text-muted">About</a>
-        </li>
-      </ul>
-      <p class="text-center text-muted">© 2021 Company, Inc</p>
-    </footer>
+
+    <div class="row justify-content-center align-items-center">
+      <div class="col-6">
+        <p class="text-center text-muted">
+          Debbie Dye <br />
+          Transaction Coordination
+          <br />
+          ©2022
+        </p>
+      </div>
+      <div class="col-6">
+        <p class="text-center text-muted">
+          Website Developed by <br />
+          Pleiades ProjectWorks <br />
+          ©2022
+        </p>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -33,4 +31,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.no-parallax {
+  @media (max-width: 500px) {
+    padding-top: 13vh;
+    padding-right: 2em;
+  }
+}
 </style>
