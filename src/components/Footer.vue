@@ -2,7 +2,7 @@
   <div class="no-parallax container">
     <div class="spacer-10"></div>
 
-    <div class="row justify-content-center align-items-center">
+    <div class="row justify-content-center align-items-center pt-5">
       <div class="col-6">
         <p class="text-center text-muted">
           Debbie Dye <br />

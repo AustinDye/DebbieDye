@@ -1,90 +1,9 @@
 <template>
   <div class="container">
-    <div class="row">
-      <div class="col-2 holderr">
-        <div class="hold">
-          <h2 class="modal-section-picker">SELLER-CONTRACT TO CLOSE</h2>
-          <h2 class="modal-section-picker-2">BUYER-CONTRACT TO CLOSE</h2>
-          <div class="row other-text">
-            <div class="col-md-5">
-              <ul>
-                <li>Verify MLS commission/year built, MLS#</li>
-                <li>Check documents for compliance and errors</li>
-                <li>Set up file folder in Google Drive</li>
-                <li>Request loan commitment letter, if applicable</li>
-                <li>Intro Email to Title</li>
-                <li>Intro Email to Lender</li>
-                <li>Intro Email to Listing agent</li>
-                <li>Intro Email to Buyer with copies of signed documents</li>
-                <li>
-                  Enter transaction in broker’s management system and upload
-                  documents
-                </li>
-                <li>
-                  Request earnest money and receipt from title, builder or agent
-                </li>
-                <li>Email e.m. receipt to buyer, listing agent and lender</li>
-                <li>
-                  Upload e.m. check/receipt to transaction management system
-                </li>
-                <li>RE10 reminder to agent one day before due date</li>
-                <li>RE10 received and note repairs and credits</li>
-                <li>
-                  Send RE10 to lender and title if there is a credit or change
-                  in sale price
-                </li>
-                <li>Upload RE10 to transaction management system</li>
-              </ul>
-            </div>
-            <div class="col-md-5">
-              <ul>
-                <li>Follow up on any outstanding addendums</li>
-                <li>
-                  Prelim reviewed and sent to buyer for review (2 nd set of
-                  eyes)
-                </li>
-                <li>Appraisal received</li>
-                <li>Inquire about status of repairs and receipts</li>
-                <li>Check broker file for compliance</li>
-                <li>Send utility info to buyer one week in advance</li>
-                <li>Send funder instructions for agents and my deposit info</li>
-                <li>DA received and reviewed for accuracy</li>
-                <li>
-                  Obtain and review settlement statement for accuracy (2 nd set
-                  of eyes)
-                </li>
-                <li>
-                  Upload final, signed buyer/seller closing statements to
-                  transaction management system
-                </li>
-                <li>
-                  Upload commission checks to transaction management system
-                </li>
-                <li>
-                  Move property folder to closed contracts in Google Drive and
-                  archive for 1 year
-                </li>
-                <li>Change status to closed in OTC</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
     <div class="row backsplash">
       <div class="hold-2 mb-5">
-        <h2 class="p-2">BUYER-CONTRACT TO CLOSE</h2>
+        <h2 class="p-2">CONTRACT TO CLOSE CHECKLIST</h2>
       </div>
-      <p v-scrollanimation class="description">
-        Contract to Close is all about what happens once your contract has been
-        accepted until the day of closing. Our goal is to ensure that you and
-        your clients have a smooth transaction from executed contract to the
-        closing table. We achieve this by assisting you with all of the daily
-        details of your contracts once they have been executed. We ensure that
-        all parties involved are updated with what is going on during the
-        transactions, in addition to making sure deadline are being met and that
-        we close on time.
-      </p>
       <!-- <div class="buyer-cols col-md-5">
         <div class="row"> -->
       <div class="col-md-5">
@@ -97,11 +16,8 @@
             <span>2.</span>A digital folder is created in Google Drive to easily
             share files.
           </p>
-          <p><span>3.</span>The transaction is filed for the broker.</p>
-          <p>
-            <span>4.</span>All requisite documents are uploaded to the
-            transaction management system.
-          </p>
+          <p><span>3.</span>Introductions emails go out to all parties.</p>
+
           <!-- <div class="arrow-line-1">
             <div class="arrow"></div>
           </div> -->
@@ -113,18 +29,16 @@
       <div class="col-md-5">
         <div class="section section-2">
           <p>
-            <span>5.</span>Introductions are made; emails go out to lenders,
-            listing agents, title companies, and buyers with copies of all the
-            important documents.
+            <span>4.</span>All requisite documents are uploaded to the
+            transaction management system.
           </p>
           <p>
-            <span>6.</span>Earnest money and receipts are requested from the
-            relevant parties. This is uploaded and sent to all parties. The
-            funder receives instructions for deposits.
+            <span>5.</span>Earnest money and receipts are requested from the
+            relevant parties. This is uploaded and sent to all parties.
           </p>
           <p>
-            <span>7.</span>Information about utilites and preliminary buying
-            agreements are sent to the buyer.
+            <span>6.</span> Title Commitment is reviewed and sent to the buyer
+            for review.
           </p>
           <!-- <div class="arrow-line-2">
             <div class="arrow"></div>
@@ -139,17 +53,16 @@
           <p>
             <span>8.</span>
             The agent is reminded the day before the due date of the RE-10
-            Inspection Report, and its significance to the transaction is
-            considered and communicated.
+            Inspection Report.
           </p>
           <p>
             <span>9.</span>Repairs and credits are noted and the RE10 is sent to
             lender and title if the sale price changes.
           </p>
           <p>
-            <span>10.</span>Status of repairs is checked, and compliance is
-            again assessed of the parties involved.
+            <span>10.</span> Information about utilites are sent to the buyer.
           </p>
+
           <div class="svgCanvas svg-2">
             <svg id="svg-2" xmlns="http://www.w3.org/2000/svg"></svg>
           </div>
@@ -158,31 +71,28 @@
       <div class="col-md-5">
         <div class="section section-4">
           <p>
-            <span>11.</span>The settlement statement is reviewed for accuracy by
+            <span>10.</span>The settlement statement is reviewed for accuracy by
             two sets of eyes, and is signed and uploaded to the transaction
             management system.
           </p>
+
           <p>
             <span>12.</span>Commission checks are uploaded, the property folder
             in Drive is considered closed and is archived for 1 year.
           </p>
-          <p>
-            <span>13.</span>In OTC, the transaction status is changed to closed.
-          </p>
+
           <div class="svgCanvas svg-3">
             <svg id="svg-3" xmlns="http://www.w3.org/2000/svg"></svg>
           </div>
         </div>
       </div>
-      <div class="spacer-20" v-if="!mobile"></div>
-      <div class="spacer-10" v-if="mobile"></div>
+      <div class="spacer-20"></div>
     </div>
   </div>
 </template>
 
 <script>
-import { computed, onMounted } from "@vue/runtime-core";
-import { AppState } from "../AppState";
+import { onMounted } from "@vue/runtime-core";
 export default {
   setup() {
     onMounted(() => {
@@ -223,11 +133,12 @@ export default {
 
       for (let i = 0; i < pointList.length - 1; i++) {
         const point = pointList[i];
+        console.log(pointList[i]);
 
         let svgElem = document.getElementById("svg-" + i);
         console.log(svgElem);
-        let side1 = Math.abs(point.y - pointList[i + 1].y);
-        let side2 = Math.abs(point.x - pointList[i + 1].x) - 30;
+        let side1 = Math.abs(pointList[i].y - pointList[i + 1].y);
+        let side2 = Math.abs(pointList[i].x - pointList[i + 1].x) - 20;
         let hypoteneus = Math.sqrt(Math.pow(side1, 2) + Math.pow(side2, 2));
         let angle = Math.sin(side1 / side2) * (180 / Math.PI);
 
@@ -265,11 +176,7 @@ export default {
         }, 1000 * i);
       }
     });
-    return {
-      mobile: computed(() => {
-        return window.screen.width <= 578;
-      }),
-    };
+    return {};
   },
 };
 </script>
@@ -331,17 +238,6 @@ export default {
   flex-direction: column;
 }
 
-.description {
-  @media (min-width: 768px) {
-    display: none;
-  }
-  background: white;
-  border-top-right-radius: 8px;
-  border-top-left-radius: 8px;
-  padding: 1rem;
-  border-bottom: solid 3px $secondary;
-}
-
 .section {
   position: relative;
   @media (max-width: 768px) {
@@ -361,9 +257,50 @@ export default {
   z-index: -1;
   position: absolute;
   inset: 0;
-  @media (max-width: 768px) {
+}
+
+.arrow-line-1,
+.arrow-line-2,
+.arrow-line-3 {
+  border-top: 3px solid $secondary;
+  position: absolute;
+  height: 3px;
+  background: none 0px 0px transparent;
+  z-index: -1;
+  display: block;
+  @media (max-width: 767px) {
     display: none;
   }
+}
+
+.arrow-line-1,
+.arrow-line-3 {
+  top: 50%;
+  right: 0;
+  -webkit-animation: slideright 2s forwards;
+  -moz-animation: slideright 2s forwards;
+  -o-animation: slideright 2s forwards;
+  animation: slideright 2s forwards;
+  transform: translateX(100%) rotate(25deg) translateX(0);
+  -moz-transform: translateX(100%) rotate(25deg) translateX(0);
+  -webkit-transform: translateX(100%) rotate(25deg) translateX(0);
+  -webkit-transform-origin: 0 0;
+  -moz-transform-origin: 0 0;
+  transform-origin: 0 0;
+}
+
+.arrow-line-2 {
+  top: 50%;
+  -webkit-animation: slideleft 2s forwards;
+  -moz-animation: slideleft 2s forwards;
+  -o-animation: slideleft 2s forwards;
+  animation: slideleft 2s forwards;
+  -moz-transform: rotate(-245deg);
+  -webkit-transform: rotate(-245deg);
+  transform: rotate(-245deg);
+  -webkit-transform-origin: 0 0;
+  -moz-transform-origin: 0 0;
+  transform-origin: 0 0;
 }
 
 .arrow {

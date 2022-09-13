@@ -5,7 +5,7 @@
       <div class="col-md-10 col-sm-12">
         <div class="title-item">
           <h1 class="text-center mt-5" v-scrollanimation>
-            transaction coordination
+            Transaction Coordination
           </h1>
           <p v-scrollanimation class="">
             The job of a real estate agent is a lot like the two sides of a
