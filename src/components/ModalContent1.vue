@@ -75,6 +75,16 @@
       <div class="hold-2 mb-5">
         <h2 class="p-2">BUYER-CONTRACT TO CLOSE</h2>
       </div>
+      <p v-scrollanimation class="description">
+        Contract to Close is all about what happens once your contract has been
+        accepted until the day of closing. Our goal is to ensure that you and
+        your clients have a smooth transaction from executed contract to the
+        closing table. We achieve this by assisting you with all of the daily
+        details of your contracts once they have been executed. We ensure that
+        all parties involved are updated with what is going on during the
+        transactions, in addition to making sure deadline are being met and that
+        we close on time.
+      </p>
       <!-- <div class="buyer-cols col-md-5">
         <div class="row"> -->
       <div class="col-md-5">
@@ -164,13 +174,15 @@
           </div>
         </div>
       </div>
-      <div class="spacer-20"></div>
+      <div class="spacer-20" v-if="!mobile"></div>
+      <div class="spacer-10" v-if="mobile"></div>
     </div>
   </div>
 </template>
 
 <script>
-import { onMounted } from "@vue/runtime-core";
+import { computed, onMounted } from "@vue/runtime-core";
+import { AppState } from "../AppState";
 export default {
   setup() {
     onMounted(() => {
@@ -211,12 +223,11 @@ export default {
 
       for (let i = 0; i < pointList.length - 1; i++) {
         const point = pointList[i];
-        console.log(pointList[i]);
 
         let svgElem = document.getElementById("svg-" + i);
         console.log(svgElem);
-        let side1 = Math.abs(pointList[i].y - pointList[i + 1].y);
-        let side2 = Math.abs(pointList[i].x - pointList[i + 1].x) - 20;
+        let side1 = Math.abs(point.y - pointList[i + 1].y);
+        let side2 = Math.abs(point.x - pointList[i + 1].x) - 30;
         let hypoteneus = Math.sqrt(Math.pow(side1, 2) + Math.pow(side2, 2));
         let angle = Math.sin(side1 / side2) * (180 / Math.PI);
 
@@ -254,7 +265,11 @@ export default {
         }, 1000 * i);
       }
     });
-    return {};
+    return {
+      mobile: computed(() => {
+        return window.screen.width <= 578;
+      }),
+    };
   },
 };
 </script>
@@ -316,6 +331,17 @@ export default {
   flex-direction: column;
 }
 
+.description {
+  @media (min-width: 768px) {
+    display: none;
+  }
+  background: white;
+  border-top-right-radius: 8px;
+  border-top-left-radius: 8px;
+  padding: 1rem;
+  border-bottom: solid 3px $secondary;
+}
+
 .section {
   position: relative;
   @media (max-width: 768px) {
@@ -335,50 +361,9 @@ export default {
   z-index: -1;
   position: absolute;
   inset: 0;
-}
-
-.arrow-line-1,
-.arrow-line-2,
-.arrow-line-3 {
-  border-top: 3px solid $secondary;
-  position: absolute;
-  height: 3px;
-  background: none 0px 0px transparent;
-  z-index: -1;
-  display: block;
-  @media (max-width: 767px) {
+  @media (max-width: 768px) {
     display: none;
   }
-}
-
-.arrow-line-1,
-.arrow-line-3 {
-  top: 50%;
-  right: 0;
-  -webkit-animation: slideright 2s forwards;
-  -moz-animation: slideright 2s forwards;
-  -o-animation: slideright 2s forwards;
-  animation: slideright 2s forwards;
-  transform: translateX(100%) rotate(25deg) translateX(0);
-  -moz-transform: translateX(100%) rotate(25deg) translateX(0);
-  -webkit-transform: translateX(100%) rotate(25deg) translateX(0);
-  -webkit-transform-origin: 0 0;
-  -moz-transform-origin: 0 0;
-  transform-origin: 0 0;
-}
-
-.arrow-line-2 {
-  top: 50%;
-  -webkit-animation: slideleft 2s forwards;
-  -moz-animation: slideleft 2s forwards;
-  -o-animation: slideleft 2s forwards;
-  animation: slideleft 2s forwards;
-  -moz-transform: rotate(-245deg);
-  -webkit-transform: rotate(-245deg);
-  transform: rotate(-245deg);
-  -webkit-transform-origin: 0 0;
-  -moz-transform-origin: 0 0;
-  transform-origin: 0 0;
 }
 
 .arrow {

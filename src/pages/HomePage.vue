@@ -14,12 +14,6 @@
 </template>
 
 <script>
-import ServicesSection from "../components/ServicesSection.vue";
-import Footer from "../components/Footer.vue";
-import AboutPage from "./AboutPage.vue";
-import BioSection from "../components/BioSection.vue";
-import TopSection from "../components/TopSection.vue";
-import ReviewsSection from "../components/ReviewsSection.vue";
 export default {
   name: "Home",
   methods: {
@@ -30,14 +24,6 @@ export default {
         el.scrollIntoView({ behavior: "smooth" });
       }
     },
-  },
-  components: {
-    ServicesSection,
-    Footer,
-    AboutPage,
-    BioSection,
-    TopSection,
-    ReviewsSection,
   },
 };
 </script>

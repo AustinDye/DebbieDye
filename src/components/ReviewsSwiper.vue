@@ -13,7 +13,7 @@
         >
           <swiper-slide
             ><div class="swiper-box">
-              <p>
+              <p v-scrollanimation>
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                 Consequatur nostrum dolorem eum inventore? Maiores molestiae
                 nisi iure assumenda alias, facere architecto esse quasi
