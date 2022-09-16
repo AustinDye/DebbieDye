@@ -182,7 +182,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "src/assets/scss/_variables.scss";
+@import "src/public/assets/scss/_variables.scss";
 .container {
   overflow: hidden;
 }

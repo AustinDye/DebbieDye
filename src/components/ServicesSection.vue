@@ -187,7 +187,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "src/assets/scss/_variables.scss";
+@import "src/public/assets/scss/_variables.scss";
 
 @keyframes fadeIn {
   0% {
@@ -276,7 +276,7 @@ export default {
     min-height: 300vh;
   }
   @media (orientation: portrait) and (max-width: 578px) {
-    min-height: 470vh;
+    min-height: 400vh;
   }
   @media (max-height: 500px) and (orientation: landscape) {
     min-height: 500vh;
@@ -288,7 +288,7 @@ export default {
       rgba(255, 255, 255, 0.108),
       rgba(255, 255, 255, 0.314)
     ),
-    url("src/assets/img/Ocean.jpeg");
+    url("src/public/assets/img/Ocean.jpeg");
   background-size: cover;
 }
 

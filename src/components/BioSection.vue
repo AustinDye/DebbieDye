@@ -24,8 +24,8 @@
       </div>
       <div class="col-12 image-holder">
         <img
-          src="src/assets/img/debbie-removebg-preview (2).png"
-          alt=""
+          src="../public/assets/img/debbie-removebg-preview-2.png"
+          alt="debbie headshot image"
           class="head-img"
         />
         <div class="card card-1">
@@ -74,7 +74,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "src/assets/scss/_variables.scss";
+@import "src/public/assets/scss/_variables.scss";
 
 .no-parallax {
   z-index: 2;

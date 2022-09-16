@@ -4,15 +4,16 @@
 @import "./utilities.scss";
 @import "./loaders.scss";
 
+
 @font-face {
   font-family: "nycd";
   font-display: auto;
-  src: url("./assets/fonts/NothingYouCouldDo-Regular.ttf") format("truetype");
+  src: url("./public/assets/fonts/static/NothingYouCouldDo-Regular.ttf") format("truetype");
 }
 @font-face {
   font-family: "quicksand";
   font-display: auto;
-  src: url("./assets/fonts/Quicksand-VariableFont_wght.ttf") format("truetype");
+  src: url("./public/assets/fonts/static/Quicksand-VariableFont_wght.ttf") format("truetype");
 }
 
 body {
@@ -30,6 +31,7 @@ main {
   display: flex;
   flex-direction: column;
   scroll-behavior: smooth;
+  position: relative;
 }
 
 p, span, b {
@@ -56,7 +58,7 @@ p, span, b {
 }
 
 .bg::after {
-  background: linear-gradient(rgba(255, 255, 255, 0.108), rgba(255, 255, 255, 0.114)), url("src/assets/img/Ocean.jpeg");
+  background: linear-gradient(rgba(255, 255, 255, 0.108), rgba(255, 255, 255, 0.114)), url("src/public/assets/img/Ocean.jpeg");
   background-size: cover;
 }
 
