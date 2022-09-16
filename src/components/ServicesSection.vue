@@ -239,9 +239,6 @@ export default {
   overflow: hidden;
 }
 
-#modalTop {
-}
-
 .parallax {
   position: relative;
   transform-style: preserve-3d;
@@ -413,18 +410,13 @@ export default {
   border: 0.2em black solid;
   justify-content: space-between;
   transition: ease 0.25s;
+
   @media (max-height: 500px) and (orientation: landscape) {
     max-width: none;
   }
   @media (orientation: portrait) and (max-width: 578px) {
     max-width: none;
   }
-}
-
-.card-1:hover,
-.card-2:hover {
-  scale: (1.01);
-  cursor: pointer;
 }
 
 .card div,
@@ -442,6 +434,7 @@ h6 {
 button {
   font-family: "quicksand";
   border-radius: 5px;
+  padding: 1rem;
   background: transparent;
   transition: all ease 0.15s;
   outline: black solid 3px;
