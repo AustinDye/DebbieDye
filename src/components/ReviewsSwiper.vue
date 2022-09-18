@@ -14,71 +14,23 @@
           <swiper-slide
             ><div class="swiper-box">
               <p v-scrollanimation>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Consequatur nostrum dolorem eum inventore? Maiores molestiae
-                nisi iure assumenda alias, facere architecto esse quasi
-                similique? Magni molestiae repellat sunt pariatur et! Lorem
-                ipsum dolor sit amet consectetur adipisicing elit. Quia cumque
-                deserunt necessitatibus minima porro molestias, enim provident,
-                praesentium sequi voluptatibus voluptatem culpa quisquam
-                adipisci ipsam. Voluptates quibusdam veniam et laborum?
+                Debbie Dye is a seasoned veteran when it comes to managing real
+                estate transactions. When I see her name involved, I rest
+                assured knowing she is paying attention to all the fine details.
               </p>
+              <b
+                >- Melissa Bates, Senior Escrow Officer, Empire Title &
+                Escrow</b
+              >
             </div>
           </swiper-slide>
           <swiper-slide
             ><div class="swiper-box">
               <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Consequatur nostrum dolorem eum inventore? Maiores molestiae
-                nisi iure assumenda alias, facere architecto esse quasi
-                similique? Magni molestiae repellat sunt pariatur et! Lorem
-                ipsum dolor sit amet consectetur adipisicing elit. Quia cumque
-                deserunt necessitatibus minima porro molestias, enim provident,
-                praesentium sequi voluptatibus voluptatem culpa quisquam
-                adipisci ipsam. Voluptates quibusdam veniam et laborum?
+                Have you worked with me before? Writing me a review would mean
+                the world!
               </p>
-            </div>
-          </swiper-slide>
-          <swiper-slide
-            ><div class="swiper-box">
-              <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Consequatur nostrum dolorem eum inventore? Maiores molestiae
-                nisi iure assumenda alias, facere architecto esse quasi
-                similique? Magni molestiae repellat sunt pariatur et! Lorem
-                ipsum dolor sit amet consectetur adipisicing elit. Quia cumque
-                deserunt necessitatibus minima porro molestias, enim provident,
-                praesentium sequi voluptatibus voluptatem culpa quisquam
-                adipisci ipsam. Voluptates quibusdam veniam et laborum?
-              </p>
-            </div>
-          </swiper-slide>
-          <swiper-slide
-            ><div class="swiper-box">
-              <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Consequatur nostrum dolorem eum inventore? Maiores molestiae
-                nisi iure assumenda alias, facere architecto esse quasi
-                similique? Magni molestiae repellat sunt pariatur et! Lorem
-                ipsum dolor sit amet consectetur adipisicing elit. Quia cumque
-                deserunt necessitatibus minima porro molestias, enim provident,
-                praesentium sequi voluptatibus voluptatem culpa quisquam
-                adipisci ipsam. Voluptates quibusdam veniam et laborum?
-              </p>
-            </div>
-          </swiper-slide>
-          <swiper-slide
-            ><div class="swiper-box">
-              <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Consequatur nostrum dolorem eum inventore? Maiores molestiae
-                nisi iure assumenda alias, facere architecto esse quasi
-                similique? Magni molestiae repellat sunt pariatur et! Lorem
-                ipsum dolor sit amet consectetur adipisicing elit. Quia cumque
-                deserunt necessitatibus minima porro molestias, enim provident,
-                praesentium sequi voluptatibus voluptatem culpa quisquam
-                adipisci ipsam. Voluptates quibusdam veniam et laborum?
-              </p>
+              <b>Send your reviews to debbie@debdyetcservices.com</b>
             </div>
           </swiper-slide>
         </swiper>

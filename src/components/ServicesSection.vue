@@ -457,7 +457,7 @@ h2,
 }
 
 .bubble {
-  font-size: 6rem;
+  font-size: 4rem;
   color: rgba($secondary, 1);
 }
 
