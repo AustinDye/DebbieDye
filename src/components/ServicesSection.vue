@@ -8,19 +8,11 @@
             Transaction Coordination
           </h1>
           <p v-scrollanimation class="">
-            The job of a real estate agent is a lot like the two sides of a
-            coin. There is the customer service aspect of the career, and then
-            there is the transaction side. Both are as different as night and
-            day but are both necessary to be a successful real estate agent.
-            They are integral and must work together to close a successful deal
-            and ensure everyone is satisfied with the ultimate outcome. The
-            transaction coordinator works hard with the paperwork (both paper
-            and electronic), coordination, phone calls, and other tasks. The
-            agent handles the face-to-face customer service part of the job with
-            the sellers, buyers, and others. A successful agent depends on their
-            transaction coordinator and vice versa. The agent will show
-            properties and focus on all aspects of real estate marketing while
-            the transaction coordinator handles the behind-the-scenes tasks.
+            Many agents simply want a diligent TC who can ensure compliance
+            across the board while providing time savings and keeping your
+            transaction organized. A great TC will think ahead to spot potential
+            problems and take care of them early so your closings won’t be
+            delayed.
           </p>
         </div>
       </div>
@@ -37,7 +29,7 @@
               <p class="" v-scrollanimation>
                 Most agents hire a transaction coordinator in order to help them
                 get more contracts signed. Agents view a transaction coordinator
-                as an investment to grow their business
+                as an investment to grow their business.
               </p>
               <div></div>
             </div>
@@ -49,14 +41,14 @@
                 v-scrollanimation
                 class="text-secondary text-center fs-1 fw-bolder"
               >
-                More Time Closing Deals
+                Save Administrative Time
               </h2>
               <p class="" v-scrollanimation>
                 If you dislike the paperwork and attention to detail necessary
                 for the closing process you will love having a TC. However,
-                agents also want to use TC’s in order to “save themselves” from
-                paperwork or administrative tasks and to ensure they can deliver
-                fantastic service to clients.
+                agents also want to use TC’s in order to “save themselves”
+                administrative tasks and to ensure they can deliver fantastic
+                service to their clients.
               </p>
               <div></div>
             </div>
@@ -72,6 +64,15 @@
           <ModalContent1 />
         </div>
         <div @click.stop="toggleModal" id="modal-1" class="modalDialog"></div>
+      </div>
+    </Transition>
+    <Transition name="modalFade">
+      <div class="modalContainer" v-if="showModal2">
+        <div class="modalContent">
+          <div id="modalTop" ref="scrollMark"></div>
+          <ModalContent2 />
+        </div>
+        <div @click.stop="toggleModal2" id="modal-1" class="modalDialog"></div>
       </div>
     </Transition>
 
@@ -139,14 +140,14 @@
                 <span class="bubble" v-scrollanimation>$350</span>
               </h6>
               <div v-if="!mobile" class="d-flex align-items-end mb-3">
-                <button @click.stop="toggleModal">See More</button>
+                <button @click.stop="toggleModal2">See More</button>
               </div>
             </div>
             <div
               class="d-flex justify-content-end align-items-center"
               v-if="mobile"
             >
-              <p class="mb-0" @click.stop="toggleModal">
+              <p class="mb-0" @click.stop="toggleModal2">
                 <em>details</em><i class="ms-2 mdi mdi-plus"></i>
               </p>
             </div>
@@ -165,6 +166,7 @@ export default {
   setup() {
     const scrollMark = ref();
     const showModal = ref(false);
+    const showModal2 = ref(false);
     watchEffect(() => {
       if (scrollMark.value) {
         scrollMark.value.scrollIntoView();
@@ -174,10 +176,16 @@ export default {
     function toggleModal() {
       showModal.value = !showModal.value;
     }
+    function toggleModal2() {
+      showModal2.value = !showModal2.value;
+    }
+
     return {
       scrollMark,
       showModal,
+      showModal2,
       toggleModal,
+      toggleModal2,
       mobile: computed(() => {
         return window.screen.width <= 578;
       }),
@@ -288,7 +296,7 @@ export default {
       rgba(255, 255, 255, 0.108),
       rgba(255, 255, 255, 0.314)
     ),
-    url("src/public/assets/img/Ocean.jpeg");
+    url("../public/assets/img/Ocean.jpeg");
   background-size: cover;
 }
 

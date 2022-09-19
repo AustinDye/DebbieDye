@@ -4,16 +4,17 @@
 @import "./utilities.scss";
 @import "./loaders.scss";
 
-
 @font-face {
   font-family: "nycd";
   font-display: auto;
-  src: url("./public/assets/fonts/static/NothingYouCouldDo-Regular.ttf") format("truetype");
+  src: url("./public/assets/fonts/static/NothingYouCouldDo-Regular.ttf")
+    format("truetype");
 }
 @font-face {
   font-family: "quicksand";
   font-display: auto;
-  src: url("./public/assets/fonts/static/Quicksand-VariableFont_wght.ttf") format("truetype");
+  src: url("./public/assets/fonts/static/Quicksand-VariableFont_wght.ttf")
+    format("truetype");
 }
 
 body {
@@ -34,10 +35,11 @@ main {
   position: relative;
 }
 
-p, span, b {
-  font-family: "quicksand"
+p,
+span,
+b {
+  font-family: "quicksand";
 }
-
 
 .parallax::after {
   content: " ";
@@ -51,14 +53,18 @@ p, span, b {
   z-index: -1;
 }
 
-@media(max-width: 768px){
-  .parallax::after{
+@media (max-width: 768px) {
+  .parallax::after {
     transform: translateZ(-1px) scale(1.5);
   }
 }
 
 .bg::after {
-  background: linear-gradient(rgba(255, 255, 255, 0.108), rgba(255, 255, 255, 0.114)), url("src/public/assets/img/Ocean.jpeg");
+  background: linear-gradient(
+      rgba(255, 255, 255, 0.108),
+      rgba(255, 255, 255, 0.114)
+    ),
+    url("public/assets/img/Ocean.jpeg");
   background-size: cover;
 }
 
@@ -126,7 +132,6 @@ form:invalid button[type="submit"] {
   pointer-events: none;
 }
 
-
 /* NOTE Don't include this with imports */
 
 // targets for svg animations
@@ -135,12 +140,12 @@ svg {
     stroke-dasharray: 1000;
     stroke-dashoffset: 1000;
   }
-  @media (max-width: 768px){
+  @media (max-width: 768px) {
     display: none;
   }
 }
 
-.dashAnimation{
+.dashAnimation {
   animation: dash 1.5s ease-in forwards;
 }
 
@@ -156,7 +161,7 @@ svg {
   .swiper-pagination-bullets.swiper-pagination-horizontal,
   .swiper-pagination-custom,
   .swiper-pagination-fraction {
-    bottom:auto;
+    bottom: auto;
     position: fixed;
   }
   .swiper-pagination-bullet-active {

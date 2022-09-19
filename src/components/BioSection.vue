@@ -3,19 +3,12 @@
     <div class="row main-row">
       <div class="back-square"></div>
       <div
-        class="
-          col-12
-          d-flex
-          justify-content-center
-          align-items-center
-          section-header
-        "
+        class="col-12 d-flex justify-content-center align-items-center section-header"
       >
         <div class="text-center">
           <h2 class="" v-scrollanimation>
             Over 14 yrs experience as a Real Estate Transaction Coordinator
           </h2>
-
           <p class="fs-4 text-secondary" v-scrollanimation>
             I enjoy assisting agents with the details of their transactions, so
             they can be out doing what they love.
@@ -40,23 +33,21 @@
       <div class="col-12 bio-holder">
         <div class="container">
           <p class="">
-            I was a realtor when I realized that my gifts lay in taking care of
-            all the details of the transaction. I was working with an agency
-            when an opportunity arose for me to become an underwriting assistant
-            for a wholesale lender, and I leaned in. I asked a lot of questions
-            and learned what an underwriters and agents needed behind the
-            scenes. After about 6 months, I transitioned into a loan processor
-            and within a couple of years my manager asked me to pick up more and
-            more transaction responsibilities, such as
-            <strong>underwriting, proccesses, and closing</strong>. One of my
-            specialties was in FHA 203k rehab loans, an ugly process that most
-            of my colleagues avoided — but I took them on.
-            <strong>I always enjoy a challenge.</strong>
+            As a realtor, I realized that my strengths are in taking care of all
+            the details of the transaction. An opportunity arose for me to
+            become an underwriting assistant for a wholesale lender. I leaned
+            in, asked a lot of questions and learned what underwriters were
+            looking for to complete and approve a loan. After about 6 months, I
+            transitioned into a loan processor and within a couple of years, my
+            manager asked me to become his back-up underwriter. One of my
+            specialties was in FHA 203k rehab loans, which required some
+            diligence, which most of my colleagues avoided — but I took them on.
+            <strong> I always enjoy a challenge. </strong>
             <br />
             <br />
-            In my free time, I like to golf, play cards with my friends and
-            family, and I even just recently started doing watercolor painting
-            with my grandchildren!
+            On a personal level, I like to golf, enjoy the lakes, beaches,
+            sunsets and just recently started doing watercolor painting with my
+            grandchildren.
           </p>
         </div>
       </div>

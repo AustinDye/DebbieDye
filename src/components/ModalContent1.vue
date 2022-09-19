@@ -12,11 +12,13 @@
             <span>1.</span>First, all documents and MLS information for the
             property are verified.
           </p>
+
+          <p><span>2.</span>Introductions emails go out to all parties.</p>
+
           <p>
-            <span>2.</span>A digital folder is created in Google Drive to easily
-            share files.
+            <span>3.</span>All required documents are uploaded to the
+            transaction management system.
           </p>
-          <p><span>3.</span>Introductions emails go out to all parties.</p>
 
           <!-- <div class="arrow-line-1">
             <div class="arrow"></div>
@@ -29,16 +31,17 @@
       <div class="col-md-5">
         <div class="section section-2">
           <p>
-            <span>4.</span>All requisite documents are uploaded to the
-            transaction management system.
-          </p>
-          <p>
-            <span>5.</span>Earnest money and receipts are requested from the
+            <span>4.</span>Earnest money and receipts are requested from the
             relevant parties. This is uploaded and sent to all parties.
           </p>
           <p>
-            <span>6.</span> Title Commitment is reviewed and sent to the buyer
+            <span>5.</span> Title Commitment is reviewed and sent to the buyer
             for review.
+          </p>
+          <p>
+            <span>6.</span>
+            The agent is reminded the day before the due date of the RE-10
+            Inspection Contingency.
           </p>
           <!-- <div class="arrow-line-2">
             <div class="arrow"></div>
@@ -51,18 +54,17 @@
       <div class="col-md-5">
         <div class="section section-3">
           <p>
-            <span>8.</span>
-            The agent is reminded the day before the due date of the RE-10
-            Inspection Report.
-          </p>
-          <p>
-            <span>9.</span>Repairs and credits are noted and the RE10 is sent to
+            <span>7.</span>Repairs and credits are noted and the RE10 is sent to
             lender and title if the sale price changes.
           </p>
           <p>
-            <span>10.</span> Information about utilites are sent to the buyer.
+            <span>8.</span> Information about utilites are sent to the buyer.
           </p>
-
+          <p>
+            <span>9.</span>The settlement statement is reviewed for accuracy by
+            extra set of eyes, and is signed and uploaded to the transaction
+            management system.
+          </p>
           <div class="svgCanvas svg-2">
             <svg id="svg-2" xmlns="http://www.w3.org/2000/svg"></svg>
           </div>
@@ -71,14 +73,15 @@
       <div class="col-md-5">
         <div class="section section-4">
           <p>
-            <span>10.</span>The settlement statement is reviewed for accuracy by
-            two sets of eyes, and is signed and uploaded to the transaction
+            <span>10.</span>The settlement statement is reviewed by an extra set
+            of eyes and once recorded the final signed documents, including
+            copies of commission checks are uploaded to the transaction
             management system.
           </p>
 
           <p>
-            <span>12.</span>Commission checks are uploaded, the property folder
-            in Drive is considered closed and is archived for 1 year.
+            <span>11.</span>Property folder in Google Drive is closed and
+            archived for 1 year.
           </p>
 
           <div class="svgCanvas svg-3">
