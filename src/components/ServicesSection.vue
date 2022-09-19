@@ -128,10 +128,9 @@
                 Instead of simply working through the closing and escrow
                 services, we can help work from the very beginning of the
                 pre-listing process and all the way until the home is sold.
-                While the agent handles the face-to-face customer service part
-                of the job with the sellers, buyers, and others, the transaction
-                coordinator keeps an eye on the seller’s transactions, initial
-                contract to the
+                While the agent handles the face-to-face customer service with
+                the sellers and buyers, the transaction coordinator keeps an eye
+                on the behind the scene details and due dates.
               </p>
             </div>
             <div class="d-flex justify-content-between">
