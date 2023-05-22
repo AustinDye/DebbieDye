@@ -8,9 +8,10 @@ import { bart } from './utils/ScrollAnimate'
 import { router } from './router'
 
 const root = createApp(App)
-registerGlobalComponents(root)
 
 root.directive('scrollanimation', bart)
+registerGlobalComponents(root)
+
 
 root
   .use(router)

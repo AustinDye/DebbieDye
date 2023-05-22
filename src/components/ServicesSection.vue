@@ -103,16 +103,16 @@
                 <span class="bubble" v-scrollanimation>$350</span>
               </h6>
               <div class="d-flex align-items-end mb-3" v-if="!mobile">
-                <button @click.stop="toggleModal">See More</button>
+                <button @click="toggleModal">See More</button>
               </div>
             </div>
             <div
               class="d-flex justify-content-end align-items-center"
               v-if="mobile"
             >
-              <p class="mb-0" @click.stop="toggleModal">
+              <button class="mb-0" @click="toggleModal">
                 <em>details</em><i class="ms-2 mdi mdi-plus"></i>
-              </p>
+              </button>
             </div>
           </div>
         </div>
@@ -139,16 +139,16 @@
                 <span class="bubble" v-scrollanimation>$350</span>
               </h6>
               <div v-if="!mobile" class="d-flex align-items-end mb-3">
-                <button @click.stop="toggleModal2">See More</button>
+                <button @click="toggleModal2">See More</button>
               </div>
             </div>
             <div
               class="d-flex justify-content-end align-items-center"
               v-if="mobile"
             >
-              <p class="mb-0" @click.stop="toggleModal2">
+              <button class="mb-0" @click="toggleModal2">
                 <em>details</em><i class="ms-2 mdi mdi-plus"></i>
-              </p>
+              </button>
             </div>
           </div>
         </div>
@@ -443,19 +443,28 @@ button {
   border-radius: 5px;
   padding: 1rem;
   background: transparent;
+  -webkit-transition: all ease 0.15s;
+  -o-transition: all ease 0.15s;
   transition: all ease 0.15s;
   outline: black solid 3px;
   border: none;
+  z-index: 10;
+  cursor: pointer;
 }
 button:hover {
-  box-shadow: 0px 12px 0px -2px $secondary;
-  transform: translateY(-0.25em);
+  -webkit-box-shadow: 0px 12px 0px -2px $secondary;
+          box-shadow: 0px 12px 0px -2px $secondary;
+  -webkit-transform: translateY(-0.25em);
+      -ms-transform: translateY(-0.25em);
+          transform: translateY(-0.25em);
 }
 button:focus {
-  box-shadow: 0px 30px 0px -12px $secondary;
-  transform: translateY(-0.25em);
+  -webkit-box-shadow: 0px 30px 0px -12px $secondary;
+          box-shadow: 0px 30px 0px -12px $secondary;
+  -webkit-transform: translateY(-0.25em);
+      -ms-transform: translateY(-0.25em);
+          transform: translateY(-0.25em);
 }
-
 h6,
 h2,
 .card,

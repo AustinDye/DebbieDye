@@ -38,7 +38,7 @@
             <a class="nav-link" @click="$emit('scroll', 'Reviews')">Reviews</a>
           </li>
           <li class="nav-item mx-md-5">
-            <a class="nav-link" href="#">Contact</a>
+            <a class="nav-link" @click="$emit('scroll', 'footer')">Contact</a>
           </li>
         </ul>
       </div>

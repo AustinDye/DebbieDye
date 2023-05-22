@@ -60,11 +60,7 @@
           <p>
             <span>8.</span> Information about utilites are sent to the buyer.
           </p>
-          <p>
-            <span>9.</span>The settlement statement is reviewed for accuracy by
-            extra set of eyes, and is signed and uploaded to the transaction
-            management system.
-          </p>
+        
           <div class="svgCanvas svg-2">
             <svg id="svg-2" xmlns="http://www.w3.org/2000/svg"></svg>
           </div>
@@ -73,14 +69,14 @@
       <div class="col-md-5">
         <div class="section section-4">
           <p>
-            <span>10.</span>The settlement statement is reviewed by an extra set
+            <span>9.</span>The settlement statement is reviewed by an extra set
             of eyes and once recorded the final signed documents, including
             copies of commission checks are uploaded to the transaction
             management system.
           </p>
 
           <p>
-            <span>11.</span>Property folder in Google Drive is closed and
+            <span>10.</span>Property folder in Google Drive is closed and
             archived for 1 year.
           </p>
 

@@ -9,6 +9,7 @@
     <ServicesSection />
     <div ref="Reviews"></div>
     <ReviewsSwiper />
+    <div ref="footer"></div>
     <Footer />
   </main>
 </template>

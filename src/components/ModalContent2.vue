@@ -43,7 +43,7 @@
           <p><span>5.</span> Order sign installation per agents request</p>
           <p>
             <span>6.</span>
-            Upload RE25, LPD, CC&R’s, etc to Paragon
+            Upload RE25, LPD, CC&R’s, and Photos to Paragon
           </p>
 
           <div class="svgCanvas svg-2">
