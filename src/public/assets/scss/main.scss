@@ -59,8 +59,10 @@ b {
 
 @media (max-width: 768px) {
   .parallax::after {
+
     -webkit-transform: translateZ(-1px) scale(1.5);
             transform: translateZ(-1px) scale(1.5);
+            
   }
 }
 

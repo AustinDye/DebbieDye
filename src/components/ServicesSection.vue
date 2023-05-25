@@ -210,7 +210,7 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 19;
+  z-index: 30;
   height: 100%;
   width: 100%;
   top: 0;
@@ -220,7 +220,7 @@ export default {
 
 .modalDialog {
   position: absolute;
-  z-index: 20;
+  z-index: 31;
   top: 0;
   left: 0;
   height: 100%;
@@ -242,11 +242,12 @@ export default {
     top: 25%;
   }
   width: 90%;
-  z-index: 21;
+  z-index: 32;
   overflow: hidden;
 }
 
 .parallax {
+
   position: relative;
   -webkit-transform-style: preserve-3d;
           transform-style: preserve-3d;
@@ -469,7 +470,7 @@ h6,
 h2,
 .card,
 .p {
-  z-index: 34;
+  z-index: 29;
 }
 
 .bubble {
