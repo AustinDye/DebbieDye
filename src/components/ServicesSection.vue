@@ -248,8 +248,9 @@ export default {
 
 .parallax {
   position: relative;
-  transform-style: preserve-3d;
-  // min-height: fit-content;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  
   @media (min-width: 1400px) {
     min-height: 290vh;
   }
@@ -269,15 +270,13 @@ export default {
   @media (orientation: portrait) and (max-width: 1200px) {
     min-height: 280vh;
   }
-  // @media (orientation: landscape) and (max-width: 1400px) {
-  //   min-height: 360vh;
-  // }
+
   @media (orientation: portrait) and (max-width: 1200px) {
     min-height: 220vh;
   }
   @media (orientation: portrait) and (max-width: 992px) {
     min-height: 300vh;
-    // min-height: fit-content;
+ 
   }
   @media (orientation: portrait) and (max-width: 767px) {
     min-height: 300vh;
@@ -448,7 +447,8 @@ button {
   transition: all ease 0.15s;
   outline: black solid 3px;
   border: none;
-  z-index: 10;
+
+  position: relative;
   cursor: pointer;
 }
 button:hover {
@@ -469,7 +469,7 @@ h6,
 h2,
 .card,
 .p {
-  z-index: 5;
+  z-index: 34;
 }
 
 .bubble {

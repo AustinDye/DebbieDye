@@ -41,6 +41,7 @@ b {
   font-family: "quicksand";
 }
 
+
 .parallax::after {
   content: " ";
   position: absolute;
@@ -48,14 +49,18 @@ b {
   right: 0;
   bottom: 0;
   left: 0;
-  transform: translateZ(-1px) scale(1.6);
+  -webkit-transform: translateZ(-1px) scale(1.6);
+          transform: translateZ(-1px) scale(1.6);
   background-size: 100%;
   z-index: -1;
+  pointer-events: none;
 }
+
 
 @media (max-width: 768px) {
   .parallax::after {
-    transform: translateZ(-1px) scale(1.5);
+    -webkit-transform: translateZ(-1px) scale(1.5);
+            transform: translateZ(-1px) scale(1.5);
   }
 }
 
